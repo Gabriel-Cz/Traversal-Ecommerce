@@ -1,0 +1,85 @@
+$linksFont: 'Unna', serif;
+
+.customJumbotron{
+    background-image: url('../public/FooterBackground.jpg');
+    background-repeat: no-repeat, repeat;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 0px;
+}
+
+.footerSlogan{
+    font-family: 'Parisienne', cursive;
+    font-size: 38px;
+    line-height: 65px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: rgba($color: floralwhite, $alpha: 0.8);
+}
+
+.rowContentWrapper{
+    background-color: rgba(91, 91, 91, 0.5);
+    color: white; 
+    display: flex;
+    justify-content: center;
+    padding: 30px 30px;
+    .headers {
+        font-family: $linksFont;
+        font-size: 18px;
+    }
+    .links {
+        margin-top: 20px;
+        font-family: $linksFont;
+        font-size: 14px;
+        padding: 0;
+        text-align: center;
+        opacity: 0.5;
+        display: flex;
+        flex-direction: column;
+    }
+    .aboutLink {
+        font-family: 'Volkhov', serif;
+        font-style: italic;
+        font-size: 18px; 
+        line-height: 36px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        text-decoration-line: underline;
+    }
+    .linksMedia {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .newsLetterForm {
+        font-family: $linksFont;
+        font-size: 18px;
+        line-height: 28px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        opacity: 0.5;
+    }
+    .customInput {
+        background: rgba(196, 196, 196, 0.5);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 2px 0px 2px 2px; 
+        color: floralwhite;
+        border: none;
+    }
+    .customButton {
+        background: #4787A3;
+        border-radius: 0px 0px 2px 0px;
+    }
+    .smallLetters {
+        color: rgba($color: white, $alpha: 0.5);
+        font-family: $linksFont;
+    }
+}

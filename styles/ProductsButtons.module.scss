@@ -1,0 +1,36 @@
+$base-padding: 10px 15px;
+$base-alpha: 0.8;
+$base-alphaHover: 1;
+$base-font: italic 16px 'Roboto', serif;
+
+@mixin buttonColors($color, $hoverColor) {
+    color: $color;
+    &:hover {
+        transition: ease-in-out 0.5s;
+        transform: translateY(20);
+        color: $hoverColor;
+    }
+}
+
+.productButton {
+    background-color: transparent;
+    padding: $base-padding;
+    border: none;
+    font: $base-font;
+    text-decoration: underline
+}
+
+.silverBtn {
+    @extend .productButton;
+    @include buttonColors(rgba($color: silver, $alpha: $base-alpha), rgba($color: silver, $alpha: $base-alphaHover));
+}
+
+.goldBtn {
+    @extend .productButton;
+    @include buttonColors(rgba($color: gold, $alpha: $base-alpha), rgba($color: gold, $alpha: $base-alphaHover));
+}
+
+.seeMoreBtn {
+    @extend .productButton;
+    @include buttonColors(rgba($color: #4384A9, $alpha: $base-alpha), rgba($color: #4384A9, $alpha: $base-alphaHover));
+}

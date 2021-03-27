@@ -1,0 +1,48 @@
+$fontHeaders: 'Crimson Text', serif;
+$fontSubheaders: 'Unna', serif;
+
+.card {
+    border: none;
+    background-color: none;
+    box-shadow: 4px 4px 8px rgba($color: gray, $alpha: 0.25);
+    border-bottom-right-radius: 10px;
+    .cardImage {
+        border-bottom-left-radius: 10px;
+    }
+    .cardBody{
+        border-bottom: 6px double rgba($color: gray, $alpha: 0.5);
+        background-color: transparent;
+        border-bottom-right-radius: 10px;
+    }
+    .cardTitle {
+        font-family: $fontHeaders;
+        text-shadow: 0px 2px 2px rgba($color: gray, $alpha: 0.25);
+        font-size: 26px;
+        display: flex;
+    }
+    .cardText {
+        color: rgba($color: black, $alpha: 0.5);
+        font-family: $fontHeaders;
+        font-size: 14px;
+        font-style: italic;
+        text-align: center;
+    }
+    .cardPrice {
+        margin-left: 10px;
+        justify-self: end;
+        text-decoration: underline;
+        text-align: end;
+        font-size: 18px;
+    }
+    &:hover {
+        cursor: pointer;
+        transition: ease-in;
+        transition-duration: 350ms;
+        transform: translateY(-10px);
+        box-shadow: 8px 8px 12px rgba($color: gray, $alpha: 0.50);
+    }
+}
+
+
+
+

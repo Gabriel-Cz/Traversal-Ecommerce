@@ -1,0 +1,137 @@
+[
+  {
+      "id": "G1",
+      "title": "Zaphire Light",
+      "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
+      "image": "productsImages/GoldEarring1.jpg",
+      "rating": "",
+      "state": "trending",
+      "categorie": "necks"
+  },
+    {
+      "id": "G2",
+      "title": "sunt qui excepturi placeat culpa",
+      "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
+      "image": "productsImages/GoldEarring2.jpg",
+      "rating": "",
+      "state": "trending",
+      "categorie": "necks"
+  },
+    {
+      "id": "G3",
+      "title": "omnis laborum odio",
+      "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
+      "image": "productsImages/GoldRing1.jpg",
+      "rating": "",
+      "state": "trending",
+      "categorie": "necks"
+    },
+    {
+      "id": "G4",
+      "title": "non esse culpa ",
+      "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
+      "image": "productsImages/GoldWatch1.jpg",
+      "rating": "",
+      "state": "trending",
+      "categorie": "necks"
+  },
+    {
+      "id": "S1",
+      "title": "eaque aut omnis a",
+      "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
+      "image": "productsImages/SilverEarring1.jpg",
+      "rating": "",
+      "state": "dealOffer",
+      "categorie": "necks"
+  },
+    {
+      "id": "S2",
+      "title": "natus impedit quibusdam illo est",
+      "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
+      "image" : "productsImages/SilverNeck1.jpg",
+      "rating" : "",
+      "state": "dealOffer",
+      "categorie": "necks"
+  },
+    {
+      "id": "S3",
+      "title": "quibusdam autem ",
+      "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
+      "image": "productsImages/SilverNeck2.jpg",
+      "rating": "",
+      "state": "dealOffer",
+      "categorie": "necks"
+  },
+    {
+      "id": "S4",
+      "title": "qui fuga est a eum",
+      "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
+      "image": "productsImages/SilverRing1.jpg",
+      "rating": "",
+      "state": "",
+      "categorie": "rings"
+  },
+    {
+      "id": "S5",
+      "title": "saepe unde necessitatibus rem",
+      "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
+      "image": "productsImages/SilverRing2.jpg",
+      "rating": "",
+      "state": "",
+      "categorie": "rings"
+  },
+    {
+      "id": "S6",
+      "title": "distinctio laborum qui",
+      "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
+      "image": "productsImages/SilverRing3.jpg",
+      "rating": "",
+      "state": "",
+      "categorie": "earrings"
+  },
+    {
+      "id": "S7",
+      "title": "quam nostrum ",
+      "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
+      "image": "productsImages/SilverWatch.jpg",
+      "rating": "",
+      "state": "",
+      "categorie": "watchers"
+  },
+    {
+      "id": "S8",
+      "title": "consequatur autem ",
+      "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
+      "image": "productsImages/SilverWatch2.jpg",
+      "rating": "",
+      "state": "",
+      "categorie": "watchers"
+  },
+    {
+      "id": "S9",
+      "title": "ab rerum non",
+      "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
+      "image": "",
+      "rating": "",
+      "state": "",
+      "categorie": "rings"
+  },
+    {
+      "id": "S10",
+      "title": "ducimus molestias eos animi atque nihil",
+      "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
+      "image": "",
+      "rating": "",
+      "state": "",
+      "categorie": "rings"
+  },
+    {
+      "id": "S11",
+      "title": "ut pariatur rerum ipsum natus repellendus praesentium",
+      "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
+      "image": "",
+      "rating": "",
+      "state": "",
+      "categorie": "earrings"
+  }
+]

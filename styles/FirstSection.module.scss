@@ -1,0 +1,170 @@
+$breakpoint-xs: 360px;
+$breakpoint-sm: 767px;
+$breakpoint-md: 1023px;
+$breakpoint-lg: 1360px;
+
+@mixin media($media) {
+  @if $media == xs {
+    @media (max-width: $breakpoint-sm) { @content; }
+  }
+  @else if $media == sm {
+    @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) { @content; }
+  }
+  @else if $media == md {
+    @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) { @content; }
+  }
+  @else if $media == lg {
+    @media (min-width: $breakpoint-lg) { @content; }
+  }
+}
+
+.customContainer{
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.customShape {  
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.moreInfoContainer{
+  position: relative;
+  .img {
+    width: 50%;
+  }
+  .moreInfoWrapper {
+    position: absolute;
+    left: 15%;
+    bottom: 15%;
+    width: 75%;
+    font-family: 'Unna', serif;
+    font-weight: lighter;
+    font-size: 26px;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.carouselWrappers{
+    padding-bottom: 20px;
+    color: black;
+}
+
+.ribbon {
+    @include media(xs) {
+      width: 83%;
+    }
+    z-index: 9;
+    width: 77%;
+    height: 60px;
+    margin-bottom: -64px;
+    margin: 100px auto 0px;
+    position: relative;
+    color: #fff;
+    font: 24px/56px 'Parisienne', cursive;
+    font-style: italic;
+    text-align: center;
+    text-justify: center;
+    background: #3D79D0;
+    box-shadow: 0px 3px 3px rgba($color: gray, $alpha: 0.5);
+
+    -webkit-animation: main 250ms;
+    -moz-animation: main 250ms;
+    -ms-animation: main 250ms;
+    animation: main 250ms;
+  }
+  
+  .ribbon i {
+    position: absolute;
+  }
+  
+  
+  .ribbon i:nth-child(3), .ribbon i:last-child {
+    @include media(xs) {
+      display: none;
+    }
+    width: 20px;
+    bottom: -20px;
+    left: -60px;
+    z-index: -2;
+    border: 30px solid #1D53C0;
+    border-left-color: transparent;
+    
+    -webkit-animation: back 600ms;
+    -moz-animation: back 600ms;
+    -ms-animation: back 600ms;
+    animation: back 600ms;
+    
+    -webkit-transform-origin: 100% 0;
+    -moz-transform-origin: 100% 0;
+    -ms-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+  }
+  
+  .ribbon i:last-child {
+    @include media(xs) {
+      display: none;
+    }
+    bottom: -20px;
+    left: auto;
+    right: -60px;
+    border: 30px solid #1D53C0;
+    border-right-color: transparent;
+  
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+  }
+
+  @-webkit-keyframes main {
+    0% { -webkit-transform: scaleX(0); }
+    100% { -webkit-transform: scaleX(1); }
+  }
+  
+  @-webkit-keyframes edge {
+    0%, 50% { -webkit-transform: scaleY(0); }
+    100% { -webkit-transform: scaleY(1); }
+  }
+  
+  @-webkit-keyframes back {
+    0%, 75% { -webkit-transform: scaleX(0); }
+    100% { -webkit-transform: scaleX(1); }
+  }
+  
+  
+  @-moz-keyframes main {
+    0% { -moz-transform: scaleX(0); }
+    100% { -moz-transform: scaleX(1); }
+  }
+  
+  @-moz-keyframes edge {
+    0%, 50% { -moz-transform: scaleY(0); }
+    100% { -moz-transform: scaleY(1); }
+  }
+  
+  @-moz-keyframes back {
+    0%, 75% { -moz-transform: scaleX(0); }
+    100% { -moz-transform: scaleX(1); }
+  }
+  
+  
+  @keyframes main {
+    0% { transform: scaleX(0); }
+    100% { transform: scaleX(1); }
+  }
+  
+  @keyframes edge {
+    0%, 50% { transform: scaleY(0); }
+    100% { transform: scaleY(1); }
+  }
+  
+  @keyframes back {
+    0%, 75% { transform: scaleX(0); }
+    100% { transform: scaleX(1); }
+  }
