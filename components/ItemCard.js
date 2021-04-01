@@ -7,23 +7,6 @@ import Badge from 'react-bootstrap/Badge'
 import { FormControl, InputGroup } from 'react-bootstrap'
 import styles from '../styles/ItemCard.module.scss'
 
-const InputCartQuantity = () => {
-    return(
-        <InputGroup>
-          <InputGroup.Prepend>
-              <Button>-</Button>
-          </InputGroup.Prepend>
-          <FormControl placeholder="1" />
-          <InputGroup.Append>
-              <Button>+</Button>
-          </InputGroup.Append>
-          <InputGroup.Append className="ml-2">
-               <Button>Add to cart</Button>
-          </InputGroup.Append>
-        </InputGroup>
-    );
-}
-
 export default function ItemCard(props) {
     return(
         <>

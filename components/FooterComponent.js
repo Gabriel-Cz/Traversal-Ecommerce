@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import Container from 'react-bootstrap/Container'
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import Row from 'react-bootstrap/Row'
@@ -15,16 +16,17 @@ export default class FooterComponent extends React.Component {
     }
     render() {
         return(
-            <Jumbotron fluid className={styles.customJumbotron}>
-                    <Row className="justify-content-md-center">
-                        <Col xs={12} md={6} className="justify-content-center">
-                            <div className="px-5 px-xs-0 text-center" >
+            <footer className={styles.footer}>
+                <Jumbotron className={styles.customJumbotron}>
+                    <Row className="justify-content-center">
+                        <Col xs={12} sm={8} md={10} lg={6} className="justify-content-center">
+                            <div className="text-center" >
                                 <h1 className={styles.footerSlogan}>We belive in the Meaning, Beauty, Powerful that Jewelry can be.</h1>
                             </div>
                         </Col>
                     </Row>
                     <Row className={styles.rowContentWrapper}>
-                        <Col xs={4} md={1}>
+                        <Col xs={4} md={2} lg={1}>
                             <div className="text-center">
                                 <h1 className={styles.headers}>Get Help</h1>
                                 <div className={styles.links}>
@@ -34,7 +36,7 @@ export default class FooterComponent extends React.Component {
                                 </div>
                             </div>
                         </Col>
-                        <Col xs={4} md={1}>
+                        <Col xs={4} md={2} lg={1}>
                             <div className="text-center">
                                 <h1 className={styles.headers}>Products</h1>
                                 <div className={styles.links}>
@@ -45,7 +47,7 @@ export default class FooterComponent extends React.Component {
                                 </div>
                             </div>
                         </Col>
-                        <Col xs={4} md={1}>
+                        <Col xs={4} md={2} lg={1}>
                             <div className="text-center">
                                 <h1 className={styles.headers}>Contact Us</h1>
                                 <div className={styles.linksMedia}>
@@ -56,7 +58,13 @@ export default class FooterComponent extends React.Component {
                             </div>
                         </Col>
                         <Col xs={5} md={3} className="d-flex align-items-center justify-content-center">
-                            <h1 className={styles.aboutLink}>About Us</h1>
+                                <Link href="/about" passHref>
+                                    <a>
+                                      <h1 className={styles.aboutLink}>
+                                      About Us
+                                      </h1>
+                                    </a>
+                                </Link>
                         </Col>
                         <Col xs={7} md={3}>
                             <h1 className={styles.newsLetterForm}>Suscribe to our Newsletter</h1>
@@ -71,8 +79,8 @@ export default class FooterComponent extends React.Component {
                         </Col>
                     </Row>
                     <Row className="d-flex justify-content-center">
-                        <Col xs={10} md={2} >
-                            <div className={styles.smallLetters}>
+                        <Col xs={10} md={2}>
+                            <div className={styles.smallLettersWrapper}>
                                 <small>
                                    TraverSal - 2021
                                 </small>
@@ -80,6 +88,7 @@ export default class FooterComponent extends React.Component {
                         </Col>
                     </Row>
             </Jumbotron>
+            </footer>
         );
     }
 }

@@ -1,42 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { getProducts } from '../store/actions/productsActions';
 import CarouselCards from '../components/CarouselCards'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
-import { SeeMoreButton } from '../components/ProductButtons'
+import { SeeMoreButton } from '../components/ProductsLinks'
 import data from '../public/productsData.json'
 import styles from '../styles/FirstSection.module.scss'
-
-const ultimateDeals = [
-    {
-        id: "G1",
-        title: "Zaphire Light",
-        description: "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
-        image: "ProductsImages/GoldEarring1.jpg",
-        rating: "",
-        price: "$250",
-        state: "trending"
-    },
-      {
-        id: "G2",
-        title: "sunt qui excepturi placeat culpa",
-        description: "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
-        image: "ProductsImages/GoldEarring2.jpg",
-        price: "$250",
-        state: "trending"
-    },
-      {
-        id: "G3",
-        title: "omnis laborum odio",
-        description: "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit adssaaaaaaaaaaaaaaaaaaaaaaaaaaa",  
-        image: "ProductsImages/GoldRing1.jpg",
-        price: "$150",
-        state: "trending"
-      },
-]
-
-const product = data[1];
 
 const MoreInfo = () => {
     return(
@@ -44,7 +16,7 @@ const MoreInfo = () => {
         <div className={styles.moreInfoContainer}>
           <Image className={styles.img} src="EllipseBlue.png" />
           <div className={styles.moreInfoWrapper}>
-              <p>Find Out why traversal is one of the Jewellery Market Leads around the world... </p>
+              <p>Find Out why traversal is one of the Jewellery Market Leads around the world. </p>
               <SeeMoreButton></SeeMoreButton>
           </div>
         </div>
@@ -53,7 +25,14 @@ const MoreInfo = () => {
 }
 
 export default function FirstSection() {
+    const {products} = useSelector(state => state.productsReducer);
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(getProducts());
+    }, []);
+    const filteredProducts = products.filter(item => item.state === 'dealOffer');
     return(
+
         <>
           <Container fluid className={styles.customContainer}>
               <Row className="justify-content-md-center pb-5">
@@ -69,7 +48,7 @@ export default function FirstSection() {
                               <i></i>
                               <i></i>
                           </div>
-                          <CarouselCards carouselItems={ultimateDeals}></CarouselCards>
+                          <CarouselCards carouselItems={filteredProducts}></CarouselCards>
                       </div>
                   </Col>
               </Row>

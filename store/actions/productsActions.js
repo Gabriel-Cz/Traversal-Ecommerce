@@ -1,19 +1,16 @@
-import data from '../../public/productsData.json'
+import axios from 'axios'
 import * as types from '../types'
 
 export const getProducts = () => async dispatch => {
+    const resData = await axios.get('api/products')
+    .then(res => {
+      console.log(res.data)
+      return res.data
+    })
+    .catch(e => console.log(e));
     dispatch({
         type: types.GET_PRODUCTS,
-        payload: [
-            {
-                title: "Product One",
-                description: "ProductOneOfTen"
-            },
-            {
-                title: "Product One",
-                description: "ProductOneOfTen"
-            }
-        ]
+        payload: resData
     })
 }
 

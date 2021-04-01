@@ -15,8 +15,8 @@ export default function CarouselCards(props) {
               {props.carouselItems.map(item => (
                   <Carousel.Item key={item.title}>
                       <Row class="d-flex justify-content-center">
-                        <Col xs={11} sm={12} md={12} lg={10} xl={10} className="">
-                            <ItemCard productName={item.title} productImage={item.image} productPrice={item.price} productDescription={item.description}></ItemCard>
+                        <Col xs={11} sm={12} md={12} lg={10} xl={10} className="" style={{height: "100%"}}>
+                            <ItemCard productTitle={item.title} productImage={item.image} productPrice={item.price} productDescription={item.description}></ItemCard>
                         </Col>
                       </Row>
                   </Carousel.Item>

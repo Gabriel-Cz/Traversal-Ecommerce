@@ -23,13 +23,13 @@ const links = [
 
 export default function NavbarComponent() {
     return(
-        <Navbar collapseOnSelect expand="lg" className="justify-content-center">
+        <Navbar style={{backgroundColor: "transparent"}} collapseOnSelect expand="lg">
             <Navbar.Brand href="/">
                 TraverSal
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
-                <Nav>
+                <Nav className="d-flex justify-content-center" style={{width: "90%"}}>
                   {links.map(link => (
                       <Nav.Link key={link.name} href={"/categories" + link.link} className="mx-3">{link.name}</Nav.Link>
                   ))}

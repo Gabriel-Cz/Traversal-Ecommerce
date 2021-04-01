@@ -1,22 +1,4 @@
-$breakpoint-xs: 360px;
-$breakpoint-sm: 767px;
-$breakpoint-md: 1023px;
-$breakpoint-lg: 1360px;
-
-@mixin media($media) {
-  @if $media == xs {
-    @media (max-width: $breakpoint-sm) { @content; }
-  }
-  @else if $media == sm {
-    @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) { @content; }
-  }
-  @else if $media == md {
-    @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) { @content; }
-  }
-  @else if $media == lg {
-    @media (min-width: $breakpoint-lg) { @content; }
-  }
-}
+@use "../styles/mediaMixin" as mixin;
 
 .customContainer{
   background-repeat: no-repeat;
@@ -38,6 +20,14 @@ $breakpoint-lg: 1360px;
     width: 50%;
   }
   .moreInfoWrapper {
+    @include mixin.media(xs) {
+      bottom: 0;
+      font-size: 18px;
+    }
+    @include mixin.media(sm) {
+      bottom: 0%;
+      font-size: 22px;
+    }
     position: absolute;
     left: 15%;
     bottom: 15%;
@@ -50,14 +40,20 @@ $breakpoint-lg: 1360px;
   }
 }
 
-.carouselWrappers{
+.carouselWrappers{  
+    @include mixin.media(sm) {
+      height: 100%;
+    }
     padding-bottom: 20px;
     color: black;
 }
 
 .ribbon {
-    @include media(xs) {
+    @include mixin.media(xs) {
       width: 83%;
+    }
+    @include mixin.media(sm) {
+      width: 89%;
     }
     z-index: 9;
     width: 77%;
@@ -85,7 +81,10 @@ $breakpoint-lg: 1360px;
   
   
   .ribbon i:nth-child(3), .ribbon i:last-child {
-    @include media(xs) {
+    @include mixin.media(xs) {
+      display: none;
+    }
+    @include mixin.media(sm) {
       display: none;
     }
     width: 20px;
@@ -107,7 +106,7 @@ $breakpoint-lg: 1360px;
   }
   
   .ribbon i:last-child {
-    @include media(xs) {
+    @include mixin.media(xs) {
       display: none;
     }
     bottom: -20px;

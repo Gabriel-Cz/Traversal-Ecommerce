@@ -1,7 +1,9 @@
+@use '../styles/mediaMixin' as media;
+
 $base-padding: 10px 15px;
 $base-alpha: 0.8;
 $base-alphaHover: 1;
-$base-font: italic 16px 'Roboto', serif;
+$base-font: 22px 'Unna', serif;
 
 @mixin buttonColors($color, $hoverColor) {
     color: $color;
@@ -13,19 +15,24 @@ $base-font: italic 16px 'Roboto', serif;
 }
 
 .productButton {
-    background-color: transparent;
+    @include media.media(xs) {
+        font: 18px 'Unna', serif;
+    }
+    @include media.media(sm) {
+        font: 18px 'Unna', serif;
+    }
+    background-color: transparent; 
     padding: $base-padding;
     border: none;
     font: $base-font;
-    text-decoration: underline
 }
 
-.silverBtn {
+.silverLink {
     @extend .productButton;
     @include buttonColors(rgba($color: silver, $alpha: $base-alpha), rgba($color: silver, $alpha: $base-alphaHover));
 }
 
-.goldBtn {
+.goldLink {
     @extend .productButton;
     @include buttonColors(rgba($color: gold, $alpha: $base-alpha), rgba($color: gold, $alpha: $base-alphaHover));
 }
@@ -33,4 +40,5 @@ $base-font: italic 16px 'Roboto', serif;
 .seeMoreBtn {
     @extend .productButton;
     @include buttonColors(rgba($color: #4384A9, $alpha: $base-alpha), rgba($color: #4384A9, $alpha: $base-alphaHover));
+    font-style: italic;
 }

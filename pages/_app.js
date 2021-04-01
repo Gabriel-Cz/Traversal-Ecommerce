@@ -1,6 +1,7 @@
 import store from '../store'
 import { Provider } from 'react-redux'
 import NavbarComponent from '../components/NavbarComponent'
+import FooterComponent from '../components/FooterComponent'
 import { createWrapper } from 'next-redux-wrapper'
 import '../styles/globals.scss'
 
@@ -9,6 +10,7 @@ function MyApp({ Component, pageProps }) {
     <Provider store={store}> 
       <NavbarComponent></NavbarComponent>
       <Component {...pageProps} />
+      <FooterComponent></FooterComponent>
     </Provider>
   )
 }

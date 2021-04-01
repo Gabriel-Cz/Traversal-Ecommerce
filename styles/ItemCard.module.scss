@@ -1,11 +1,18 @@
+@use '../styles/mediaMixin' as media;
+
 $fontHeaders: 'Crimson Text', serif;
 $fontSubheaders: 'Unna', serif;
 
 .card {
+    @include media.media(sm) {
+        height: 90%;
+        overflow: hidden;
+    }
     border: none;
     background-color: none;
     box-shadow: 4px 4px 8px rgba($color: gray, $alpha: 0.25);
     border-bottom-right-radius: 10px;
+    transition: ease-in-out 0.5s;
     .cardImage {
         border-bottom-left-radius: 10px;
     }
@@ -36,10 +43,9 @@ $fontSubheaders: 'Unna', serif;
     }
     &:hover {
         cursor: pointer;
-        transition: ease-in;
-        transition-duration: 350ms;
-        transform: translateY(-10px);
-        box-shadow: 8px 8px 12px rgba($color: gray, $alpha: 0.50);
+        transition: ease-in 0.5s;
+        transform: scale(1.015);
+        box-shadow: 10px 10px 20px rgba($color: gray, $alpha: 0.5);
     }
 }
 
