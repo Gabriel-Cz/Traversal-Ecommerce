@@ -1,14 +1,27 @@
-const countItems = (state, action) => {
-    switch (action.type) {
-        case 'COUNT_ITEMS':
+import * as types from '../types';
+
+const initialState = {
+    productsInCart: [],
+    productsToAdd: [], 
+}
+
+const ShoppingCart = (state = initialState, action) => {
+    switch(action.type) {
+        case types.ADD_TO_CART:
             return {
-                itemsNumber: () => {
-                    return items.lenght();
-                } 
+                ...state,
+                productsInCart: state.productsInCart.concat(action.payload),
+            }
+        case types.INCREASE_QUANTITY:
+            return {
+                ...state,
+                productsInCart: state.productsInCart.map(product => product.id === action.id 
+                    ? {...product, quantity: product.quantity + 1} 
+                    : product),
             }
         default:
-            return state = null;
+            return state;
     }
 }
 
-export default countItems;
+export default ShoppingCart;

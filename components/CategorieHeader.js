@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -21,7 +21,7 @@ const Shape = () => {
 export default function CategorieHeader(props) {
     return(
         <>
-          <Container fluid className={styles.parallax}>
+          <Container fluid className={styles[`${props.categorieName}`]}>
             <Shape></Shape>
             <div className={styles.overflowDiv}></div>
             <Row className="justify-content-center py-2 pt-5">

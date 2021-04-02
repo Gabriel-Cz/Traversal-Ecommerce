@@ -1,4 +1,5 @@
 import React from 'react'
+import Cart from '../components/Cart'
 import Container from 'react-bootstrap/Container'
 
 export default function About() {
@@ -10,6 +11,7 @@ export default function About() {
                  <p className="px-5" style={{font: "italic 28px 'Unna', serif", color: "rgba($color: black $alpha: 0.7)"}}>
                     Lorem Ipsum dolor asimet lorem asimet ipsum, 
                     Lorem Ipsum dolor asimet lorem asimet ipsum. Lorem Ipsum dolor asimet lorem asimet ipsum
+                    <Cart></Cart>
                 </p>
               </div>
           </Container>

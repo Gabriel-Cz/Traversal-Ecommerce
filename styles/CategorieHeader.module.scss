@@ -1,41 +1,51 @@
 $fontHeader: 52px 'Parisienne';
 $fontSubheader: 18px 'Unna';
 
-.parallax{
-  background-image: url('../public/ParallaxRings.jpg');
+@mixin parallaxSetup($image) {
   height: 100%;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   backdrop-filter: brightness(40%);
-  .overflowDiv {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    background-color: rgba($color: white, $alpha: 0.55);
-  }
-  .shape {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
+  background-image: $image;
+}
+
+.rings {
+  @include parallaxSetup(url('../public/ParallaxRings.jpg'))
+}
+
+.necks {
+  @include parallaxSetup(url('../public/ParallaxImage.jpg'))
+}
+
+.overflowDiv {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  background-color: rgba($color: white, $alpha: 0.55);
+}
+.shape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
 }
 
 .shape svg {
-    position: relative;
-    display: block;
-    width: calc(160% + 1.3px);
-    height: 150px;
+  position: relative;
+  display: block;
+  width: calc(160% + 1.3px);
+  height: 150px;
 }
 
 .shape .shapeFill{
-    fill: #FFFFFF;
+  fill: #FFFFFF;
 }
-}
+
 
 .header {
   text-transform: capitalize;
