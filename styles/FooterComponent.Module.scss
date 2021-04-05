@@ -1,18 +1,23 @@
 @use '../styles/mediaMixin' as media;
 
-$linksFont: 'Unna', serif;
+$linksHeadersFont: 18px 'Unna', serif;
+$linksFont: 14px 'Unna', serif;
 
 .footer{
     background-image: url('../public/FooterBackground.jpg');
     background-repeat: no-repeat, repeat;
     background-position: center;
     background-size: cover;
+    height: 100%;
+    margin-bottom: 0px;
 }
 
  .customJumbotron{
     background: transparent !important;
     backdrop-filter: brightness(40%);
     margin-bottom: 0px;
+    height: 100%;
+    border-bottom: none;
 } 
  
 .footerSlogan{
@@ -39,26 +44,30 @@ $linksFont: 'Unna', serif;
     display: flex;
     justify-content: center;
     .headers {
-        font-family: $linksFont;
-        font-size: 18px;
+        font: $linksHeadersFont;
     }
     .links {
         margin-top: 20px;
-        font-family: $linksFont;
-        font-size: 14px;
+        font: $linksFont;
         padding: 0;
         text-align: center;
-        opacity: 0.5;
+        opacity: 0.7;
+        color: white;
+        text-decoration: none;
         display: flex;
         flex-direction: column;
+        &:hover .link {
+            opacity: 1;
+        }
     }
     .aboutLink {
         font-family: 'Crimson Text', serif;
-        font-size: 18px; 
+        font-size: 22px; 
         line-height: 36px;
         display: flex;
         align-items: center;
         text-align: center;
+        color: floralwhite;
         opacity: 0.5;
         border-bottom: 1px ridge gray;
         transition: ease-in-out 0.5s;
@@ -66,6 +75,8 @@ $linksFont: 'Unna', serif;
             transition: ease-in 0.5s;
             opacity: 1;
             cursor: pointer;
+            text-decoration: none;
+            text-decoration-color: transparent;
         }
     }
     .linksMedia {
@@ -77,8 +88,7 @@ $linksFont: 'Unna', serif;
         align-items: center;
     }
     .newsLetterForm {
-        font-family: $linksFont;
-        font-size: 18px;
+        font: $linksHeadersFont;
         line-height: 28px;
         display: flex;
         align-items: center;
@@ -86,14 +96,17 @@ $linksFont: 'Unna', serif;
         opacity: 0.5;
     }
     .customInput {
-        background: rgba(196, 196, 196, 0.5);
+        background-color: rgba($color: gray, $alpha: 0.3);
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         border-radius: 2px 0px 2px 2px; 
         color: floralwhite;
         border: none;
     }
     .customButton {
-        background: #4787A3;
+        background: #1a3b49;
         border-radius: 0px 0px 2px 0px;
+    }
+    .smallLetters {
+        align-self: flex-end;
     }
 } 

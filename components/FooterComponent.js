@@ -1,20 +1,15 @@
 import React from 'react'
 import Link from 'next/link'
-import Container from 'react-bootstrap/Container'
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import InputGroup from 'react-bootstrap/InputGroup'
 import FormControl from 'react-bootstrap/FormControl'
 import Button from 'react-bootstrap/Button'
+import {linksCategories} from '../components/NavbarComponent';
 import styles from '../styles/FooterComponent.module.scss'
 
-
-export default class FooterComponent extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-    render() {
+export default function FooterComponent() {
         return(
             <footer className={styles.footer}>
                 <Jumbotron className={styles.customJumbotron}>
@@ -40,10 +35,9 @@ export default class FooterComponent extends React.Component {
                             <div className="text-center">
                                 <h1 className={styles.headers}>Products</h1>
                                 <div className={styles.links}>
-                                    <a>Necks</a>
-                                    <a>Watchers</a>
-                                    <a>Earrings</a>
-                                    <a>Rings</a>
+                                    {linksCategories.map(link => (
+                                        <Link className={styles.link} href={'/categories' + link.link}>{link.name}</Link>
+                                    ))}
                                 </div>
                             </div>
                         </Col>
@@ -79,16 +73,13 @@ export default class FooterComponent extends React.Component {
                         </Col>
                     </Row>
                     <Row className="d-flex justify-content-center">
-                        <Col xs={10} md={2}>
-                            <div className={styles.smallLettersWrapper}>
-                                <small>
+                        <Col xs={10} md={3} className="text-center">                            
+                                <small className={styles.smallLetters}>
                                    TraverSal - 2021
                                 </small>
-                            </div>
                         </Col>
                     </Row>
             </Jumbotron>
             </footer>
         );
-    }
 }

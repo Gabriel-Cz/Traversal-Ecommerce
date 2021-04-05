@@ -15,8 +15,16 @@ $fontSubheader: 18px 'Unna';
   @include parallaxSetup(url('../public/ParallaxRings.jpg'))
 }
 
+.earrings {
+  @include parallaxSetup((url('../public/ParallaxEarrings.jpg')))
+}
+
 .necks {
   @include parallaxSetup(url('../public/ParallaxImage.jpg'))
+}
+
+.watches {
+  @include parallaxSetup(url('../public/ParallaxWatch1.jpg'))
 }
 
 .overflowDiv {

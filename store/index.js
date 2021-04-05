@@ -9,7 +9,7 @@ const initialState = {};
 const store = createStore(
     reducers,
     initialState,
-    composeWithDevTools(
+     composeWithDevTools(
         applyMiddleware(...middleware)
     ) 
 );

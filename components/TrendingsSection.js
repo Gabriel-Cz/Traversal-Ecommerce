@@ -16,9 +16,9 @@ export default function TrendingSection() {
     const {products} = useSelector(state => state.productsReducer);
     const dispatch = useDispatch();
     useEffect(() => {
-        dispatch(getProducts());
-    }, []);
-    const filteredProducts = products.filter(item => item.state === 'trending')
+        dispatch(getProducts())
+    }, [])
+    const filteredProducts = products.filter(product => product.state === 'trending')
     return(
         <>
           <Container className="mt-5">
@@ -28,7 +28,7 @@ export default function TrendingSection() {
               <Row className="justify-content-center mt-5">
                   {filteredProducts.map(item => (
                       <Col md={4} className="">
-                        <ItemCard key={item.id} productTitle={item.title} productImage={item.image} productDescription={item.description} productPrice={item.price}></ItemCard>
+                        <ItemCard key={item.id} productTitle={item.title} productImage={item.image} productDescription={item.description} productPrice={item.price} productRating={item.rating}></ItemCard>
                       </Col>
                   ))}
               </Row>

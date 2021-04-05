@@ -41,7 +41,7 @@ export default class CustomersReviewsSection extends React.Component {
                 <Row className="justify-content-md-center my-5 py-5">
                     {customers.map(customer => (
                         <Col md={5} lg={3} key={customer.id} className="mx-4">
-                            <CustomerCard name={customer.name} image={customer.image} review={customer.review}></CustomerCard>
+                            <CustomerCard name={customer.name} image={customer.image} review={customer.review} rating={customer.rating}></CustomerCard>
                         </Col>
                     ))}
                 </Row>

@@ -1,4 +1,6 @@
 export const GET_PRODUCTS = 'GET_PRODUCTS';
+export const GET_PRODUCT = 'GET_PRODUCT';
 export const GET_CART = 'GET_CART';
 export const ADD_TO_CART = 'ADD_TO_CART';
 export const INCREASE_QUANTITY = 'INCREASE_QUANTITY';
+export const FILTER_PRODUCTS = 'FILTER_PRODUCTS';

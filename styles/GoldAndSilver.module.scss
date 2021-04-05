@@ -7,7 +7,10 @@ $font: 16px 'Unna', serif;
 .customContainer{
     padding-top: 75px;
     padding-bottom: 75px;
-    margin-top: 50px;
+    margin-top: 70px;
+    background: linear-gradient(106.73deg, #DBDBDB 0%, #F4F4F4 56.44%, #F0F0F0 98.57%);
+    border-top: 4px double rgba($color: gray, $alpha: 0.25);
+    border-bottom: 4px double rgba($color: gray, $alpha: 0.25);
     .imageContainer {
         position: relative;
         border-radius: 10px;

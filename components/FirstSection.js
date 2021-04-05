@@ -7,7 +7,6 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
 import { SeeMoreButton } from '../components/ProductsLinks'
-import data from '../public/productsData.json'
 import styles from '../styles/FirstSection.module.scss'
 
 const MoreInfo = () => {
@@ -25,14 +24,14 @@ const MoreInfo = () => {
 }
 
 export default function FirstSection() {
-    const {products} = useSelector(state => state.productsReducer);
     const dispatch = useDispatch();
+    const {products} = useSelector(state => state.productsReducer);
     useEffect(() => {
-        dispatch(getProducts());
-    }, []);
-    const filteredProducts = products.filter(item => item.state === 'dealOffer');
+        dispatch(getProducts())
+    }, [])
+    const filteredProducts = products.filter(product => product.state === 'dealOffer');
+    const filteredProductsTest = [{title: "Shapire Silver", price: "$4099", image: "./ProductsImages/SilverNeck1.jpg", description: "lorem ipsum a dasde lorem asimpu lorem"}]
     return(
-
         <>
           <Container fluid className={styles.customContainer}>
               <Row className="justify-content-md-center pb-5">
@@ -48,8 +47,8 @@ export default function FirstSection() {
                               <i></i>
                               <i></i>
                           </div>
-                          <CarouselCards carouselItems={filteredProducts}></CarouselCards>
-                      </div>
+                          <CarouselCards carouselItems={filteredProductsTest}></CarouselCards>
+                      </div> 
                   </Col>
               </Row>
           </Container>

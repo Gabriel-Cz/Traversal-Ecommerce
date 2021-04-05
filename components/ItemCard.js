@@ -1,25 +1,35 @@
 import React from 'react'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+import Link from 'next/link'
+import Image from 'react-bootstrap/Image'
 import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Button'
-import Badge from 'react-bootstrap/Badge'
-import { FormControl, InputGroup } from 'react-bootstrap'
 import styles from '../styles/ItemCard.module.scss'
+import Rating from 'react-rating'
+import { useRouter } from 'next/router'
 
 export default function ItemCard(props) {
     return(
         <>
-      <Card className={styles.card}>
-          <Card.Img className={styles.cardImage} fluid src={props.productImage}></Card.Img>
+      <Link href={'/products/' + props.productId} passHreff>
+        <a>
+        <Card className={styles.card}>
+          <div className={styles.topImage}>
+            <Image className={styles.cardImage} fluid src={props.productImage} />
+            <Card.Title className={styles.cardTitle}>{props.productTitle}</Card.Title>
+          </div>
           <Card.Body className={styles.cardBody}>
-              <div className={styles.cardTitle}>
-                  <Card.Title>{props.productTitle}</Card.Title>
+              <div className={styles.cardPriceWrapper}>
                   <div className={styles.cardPrice}>{props.productPrice}</div>
               </div>
-              <Card.Text className={styles.cardText}>{props.productDescription}</Card.Text>
+              <div>
+                <Card.Text className={styles.cardDescription}>{props.productDescription}</Card.Text>
+                <div>
+                  <Rating readonly emptySymbol={<img src="./EmptyStar.png" className="icon" />} fullSymbol={<img src="./FullStar.png" className="icon" />} initialRating={props.productRating} />
+                </div>
+              </div>
           </Card.Body>
-      </Card>
+        </Card>
+        </a>
+      </Link>
     </>
     )
-} 
+}   

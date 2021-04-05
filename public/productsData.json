@@ -1,81 +1,81 @@
 [
   {
       "id": "G1",
-      "title": "Zaphire Light",
+      "title": "Gold Light",
       "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
       "price": "$500",
-      "image": "productsImages/GoldEarring1.jpg",
-      "rating": "",
+      "image": "../ProductsImages/GoldEarring1.jpg",
+      "rating": 4.5,
       "state": "trending",
       "categorie": "necks"
   },
     {
       "id": "G2",
-      "title": "sunt qui excepturi placeat culpa",
+      "title": "Gold Earrings with diamonds",
       "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
-      "price": "$500",
-      "image": "productsImages/GoldEarring2.jpg",
-      "rating": "",
-      "state": "trending",
+      "price": "$559",
+      "image": "../ProductsImages/GoldEarring2.jpg",
+      "rating": 4.5,
+      "state": "",
       "categorie": "necks"
   },
     {
       "id": "G3",
-      "title": "omnis laborum odio",
+      "title": "Gold Ring",
       "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
-      "price": "$500",
-      "image": "productsImages/GoldRing1.jpg",
-      "rating": "",
+      "price": "$349",
+      "image": "../ProductsImages/GoldRing1.jpg",
+      "rating": 4.5,
       "state": "trending",
-      "categorie": "necks"
+      "categorie": "rings"
     },
     {
       "id": "G4",
-      "title": "non esse culpa ",
+      "title": "Greek Watch",
       "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
       "price": "$500",
-      "image": "productsImages/GoldWatch1.jpg",
-      "rating": "",
+      "image": "../ProductsImages/GoldWatch1.jpg",
+      "rating": 4,
       "state": "trending",
-      "categorie": "necks"
+      "categorie": "watches"
   },
     {
       "id": "S1",
-      "title": "eaque aut omnis a",
+      "title": "Silver Earrings with diamonds",
       "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
-      "price": "$500",
-      "image": "productsImages/SilverEarring1.jpg",
-      "rating": "",
+      "price": "$4199",
+      "image": "../ProductsImages/SilverEarring1.jpg",
+      "rating": 4,
       "state": "dealOffer",
-      "categorie": "necks"
+      "categorie": "earrings"
   },
     {
       "id": "S2",
-      "title": "natus impedit quibusdam illo est",
+      "title": "white stones neck",
       "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
       "price": "$500",
-      "image" : "productsImages/SilverNeck1.jpg",
-      "rating" : "",
+      "image" : "../ProductsImages/SilverNeck1.jpg",
+      "rating" : 4,
       "state": "dealOffer",
       "categorie": "necks"
   },
     {
       "id": "S3",
-      "title": "quibusdam autem ",
+      "title": "Zhapire Silver light",
       "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
       "price": "$500",
-      "image": "productsImages/SilverNeck2.jpg",
-      "rating": "",
+      "image": "../ProductsImages/SilverNeck2.jpg",
+      "rating": 4,
       "state": "dealOffer",
       "categorie": "necks"
   },
     {
       "id": "S4",
-      "title": "qui fuga est a eum",
+      "title": "Shapire Silver ring",
       "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
-      "price": "$500",
-      "image": "productsImages/SilverRing1.jpg",
-      "rating": "",
+      "price": "$3499",
+      "image": "../ProductsImages/SilverRing1.jpg",
+      "rating": 4,
       "state": "",
       "categorie": "rings"
   },
@@ -83,41 +83,41 @@
       "id": "S5",
       "title": "saepe unde necessitatibus rem",
       "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
-      "price": "$500",
-      "image": "productsImages/SilverRing2.jpg",
-      "rating": "",
+      "price": "Centurion Ring",
+      "image": "../ProductsImages/SilverRing2.jpg",
+      "rating": 5,
       "state": "",
       "categorie": "rings"
   },
     {
       "id": "S6",
-      "title": "distinctio laborum qui",
+      "title": "Diamond Heart ring",
       "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
-      "price": "$500",
-      "image": "productsImages/SilverRing3.jpg",
-      "rating": "",
+      "price": "$5799",
+      "image": "../ProductsImages/SilverRing3.jpg",
+      "rating": 5,
       "state": "",
-      "categorie": "earrings"
+      "categorie": "rings"
   },
     {
       "id": "S7",
-      "title": "quam nostrum ",
+      "title": "",
       "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
-      "price": "$500",
-      "image": "productsImages/SilverWatch.jpg",
-      "rating": "",
+      "price": "$499",
+      "image": "../ProductsImages/SilverWatch.jpg",
+      "rating": 5,
       "state": "",
-      "categorie": "watchers"
+      "categorie": "watches"
   },
     {
       "id": "S8",
       "title": "consequatur autem ",
       "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
       "price": "$500",
-      "image": "productsImages/SilverWatch2.jpg",
-      "rating": "",
+      "image": "../ProductsImages/SilverWatch2.jpg",
+      "rating": 3,
       "state": "",
-      "categorie": "watchers"
+      "categorie": "watches"
   },
     {
       "id": "S9",
@@ -125,7 +125,7 @@
       "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
       "price": "$500",
       "image": "",
-      "rating": "",
+      "rating": 3.5,
       "state": "",
       "categorie": "rings"
   },
@@ -135,7 +135,7 @@
       "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
       "price": "$500",
       "image": "",
-      "rating": "",
+      "rating": 5,
       "state": "",
       "categorie": "rings"
   },
@@ -145,7 +145,7 @@
       "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
       "price": "$500",
       "image": "",
-      "rating": "",
+      "rating": 5,
       "state": "",
       "categorie": "earrings"
   }

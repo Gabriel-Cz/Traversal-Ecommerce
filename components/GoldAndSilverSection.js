@@ -23,7 +23,7 @@ function OverflowSilverInfo() {
     );
 }
 
-function Quote() {
+export function Quote() {
     return(
         <blockquote className="blockquote mb-0 card-body text-center mt-3" style={{fontFamily: "Unna"}}>
             <p>

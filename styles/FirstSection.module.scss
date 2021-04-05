@@ -1,8 +1,10 @@
 @use "../styles/mediaMixin" as mixin;
 
 .customContainer{
-  background-repeat: no-repeat;
+  background-image: url('../public/FirstSectionSvgBg.svg');
+  background-repeat: no-repeat, repeat;
   background-position: center;
+  background-size: cover;
 }
 
 .customShape {  

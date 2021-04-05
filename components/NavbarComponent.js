@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 
-const links = [
+export const linksCategories = [
     { 
         name: 'Rings',
         link: '/rings' 
@@ -16,8 +16,8 @@ const links = [
         link: '/earrings'
     },
     {
-        name: 'Watchers',
-        link: '/watchers'
+        name: 'Watches',
+        link: '/watches'
     }
 ]
 
@@ -30,7 +30,7 @@ export default function NavbarComponent() {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="d-flex justify-content-center" style={{width: "90%"}}>
-                  {links.map(link => (
+                  {linksCategories.map(link => (
                       <Nav.Link key={link.name} href={"/categories" + link.link} className="mx-3">{link.name}</Nav.Link>
                   ))}
                 </Nav>
