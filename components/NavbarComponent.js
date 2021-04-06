@@ -23,7 +23,7 @@ export const linksCategories = [
 
 export default function NavbarComponent() {
     return(
-        <Navbar style={{backgroundColor: "transparent"}} collapseOnSelect expand="lg">
+        <Navbar style={{backgroundColor: "transparent", boxShadow: "none"}} collapseOnSelect expand="lg">
             <Navbar.Brand href="/">
                 TraverSal
             </Navbar.Brand>

@@ -2,7 +2,7 @@ import * as types from '../types'
 
 const initialState = {
     products: [],
-    product: null,
+    product: {},
     filteredProducts: null,
 }
 
@@ -16,7 +16,7 @@ const setProducts = (state = initialState, action) => {
         case types.GET_PRODUCT:
             return {
                 ...state,
-                product: state.products.map(product => product.id === action.payload ? {...product} : false)
+                product: action.payload
             }
         case types.FILTER_PRODUCTS:
             return {

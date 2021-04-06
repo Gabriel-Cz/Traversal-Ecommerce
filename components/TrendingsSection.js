@@ -12,6 +12,10 @@ const trendingHeader = {
     fontSize: "22px" 
 }
 
+const border = {
+    borderBottom: "4px double rgba($color: gray, $alpha: 0.25)"
+}
+
 export default function TrendingSection() {
     const {products} = useSelector(state => state.productsReducer);
     const dispatch = useDispatch();
@@ -22,7 +26,7 @@ export default function TrendingSection() {
     return(
         <>
           <Container className="mt-5">
-              <Row className="border-bottom justify-content-md-center">
+              <Row className="justify-content-md-center" style={border}>
                   <Col md="10" className="text-center my-2" style={trendingHeader}>Trending</Col>
               </Row>
               <Row className="justify-content-center mt-5">
