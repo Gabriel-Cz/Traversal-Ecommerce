@@ -9,8 +9,8 @@ import { useRouter } from 'next/router'
 export default function ItemCard(props) {
     return(
         <>
-      <Link href={'/products/' + props.productId} passHreff>
-        <a>
+      <Link className={styles.link} href={'/products/' + props.productId} passHreff>
+        <a className={styles.a}>
         <Card className={styles.card}>
           <div className={styles.topImage}>
             <Image className={styles.cardImage} fluid src={props.productImage} />

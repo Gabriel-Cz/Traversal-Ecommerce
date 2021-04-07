@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from '../styles/Product.module.scss'
 
 const SvgTruck = () => {
     return(
@@ -43,7 +44,7 @@ export default function ProductInformation({title, material, description, rating
     return(
         <>
           <div>
-              <h2>{title}</h2>
+              <h2 className={styles.header}>{title}</h2>
               <div className="mt-5 px-3">
                   <p className="my-3">{description}</p>
                   <h4>Material: {material}</h4>

@@ -28,16 +28,16 @@ export default function Product() {
         dispatch(getProduct(productId));
         console.log(product)
         console.log(productId);
-    }, [])
+    }, [], [product])
     return(
         <>
           <Container>
               <Row>
                   <Col md={6}>
-                    <ProductInformation title="title" description="{description}" rating="{rating}" type="{type}"></ProductInformation>
+                    <ProductInformation title={product.title} description={product.description} rating={product.rating} type={product.type}></ProductInformation>
                   </Col>
                   <Col md={6}>
-                    <ProductImageWithCheckout image="{image}"></ProductImageWithCheckout>
+                    <ProductImageWithCheckout image={product.image}></ProductImageWithCheckout>
                   </Col>
               </Row>
           </Container>

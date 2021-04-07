@@ -1,10 +1,18 @@
 @import "~bootstrap/scss/bootstrap";
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css");
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Unna&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Volkhov&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC&family=Tangerine&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Playfair+Display+SC&family=Tangerine&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Playfair+Display+SC&family=Tangerine&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC&family=Tangerine&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Satisfy&display=swap');
+
+$fontHeader: 32px 'Crimson Text', serif;
 
 .carousel-caption {
     background-color: rgba($color: gray, $alpha: 0.5);

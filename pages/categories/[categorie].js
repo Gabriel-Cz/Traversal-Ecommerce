@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import CategorieHeader from '../../components/CategorieHeader'
 import CategorieContent from '../../components/CategorieContent'
+import {wrapper} from '../_app'
 
 export default function Categories() {
   const router = useRouter();
@@ -13,3 +14,5 @@ export default function Categories() {
     </>
 );
 }
+
+

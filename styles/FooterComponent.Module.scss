@@ -15,8 +15,8 @@ $linksFont: 14px 'Unna', serif;
  .customJumbotron{
     background: transparent !important;
     backdrop-filter: brightness(40%);
-    margin-bottom: 0px;
-    height: 100%;
+    margin-bottom: 0px !important;
+    height: 100% !important;
     border-bottom: none;
 } 
  
@@ -50,15 +50,20 @@ $linksFont: 14px 'Unna', serif;
         margin-top: 20px;
         font: $linksFont;
         padding: 0;
+        color: rgba($color: floralwhite, $alpha: 0.75);
         text-align: center;
         opacity: 0.7;
-        color: white;
-        text-decoration: none;
         display: flex;
         flex-direction: column;
-        &:hover .link {
-            opacity: 1;
-        }
+    }
+    .linksMedia {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        height: 100%;
+        opacity: 0.7;
+        justify-content: center;
+        align-items: center;
     }
     .aboutLink {
         font-family: 'Crimson Text', serif;
@@ -69,23 +74,22 @@ $linksFont: 14px 'Unna', serif;
         text-align: center;
         color: floralwhite;
         opacity: 0.5;
-        border-bottom: 1px ridge gray;
         transition: ease-in-out 0.5s;
         &:hover {
             transition: ease-in 0.5s;
             opacity: 1;
             cursor: pointer;
-            text-decoration: none;
-            text-decoration-color: transparent;
         }
     }
-    .linksMedia {
-        display: flex;
-        flex-direction: column;
-        margin-top: 20px;
-        height: 100%;
-        justify-content: center;
-        align-items: center;
+    .a {
+        text-decoration: none;
+        text-decoration-color: none;
+        color: rgba($color: floralwhite, $alpha: 0.75);
+        &:hover {
+            text-decoration: none;
+            text-decoration-color: none;
+            color: rgba($color: floralwhite, $alpha: 1);
+        }
     }
     .newsLetterForm {
         font: $linksHeadersFont;

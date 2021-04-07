@@ -4,6 +4,17 @@ $fontHeader: 18px 'Crimson Text', serif;
 $fontPrice: 14px 'Crimson Text', serif;
 $fontSubheader: italic 14px 'Unna', serif;
 
+.a {
+    text-decoration: none;
+    text-decoration-color: none;
+    color: rgba($color: black, $alpha: 0.8);
+    &:hover { 
+        text-decoration: none;
+        text-decoration-color: none;
+        color: rgba($color: rgb(28, 95, 156), $alpha: 1);
+    }
+}
+
 .card {
     @include media.media(sm) {
         height: 90%;

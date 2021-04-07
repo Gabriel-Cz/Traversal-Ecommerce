@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { getProducts } from '../store/actions/productsActions';
+import { filterProducts } from '../store/actions/productsActions';
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -17,12 +17,11 @@ const border = {
 }
 
 export default function TrendingSection() {
-    const {products} = useSelector(state => state.productsReducer);
+    const filteredProducts = useSelector(state => state.productsReducer.filteredProducts);
     const dispatch = useDispatch();
     useEffect(() => {
-        dispatch(getProducts())
+        dispatch(filterProducts('state', 'trending'))
     }, [])
-    const filteredProducts = products.filter(product => product.state === 'trending')
     return(
         <>
           <Container className="mt-5">

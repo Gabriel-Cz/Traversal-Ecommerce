@@ -9,6 +9,18 @@ import Button from 'react-bootstrap/Button'
 import {linksCategories} from '../components/NavbarComponent';
 import styles from '../styles/FooterComponent.module.scss'
 
+const linksMedia = [
+    "bi bi-instagram",
+    "bi bi-twitter",
+    "bi bi-envelope-fill",
+]
+
+const linksHelp = [
+    'Get Help',
+    'Shipment Statement',
+    'Products Returns'
+]
+
 export default function FooterComponent() {
         return(
             <footer className={styles.footer}>
@@ -25,18 +37,22 @@ export default function FooterComponent() {
                             <div className="text-center">
                                 <h1 className={styles.headers}>Get Help</h1>
                                 <div className={styles.links}>
-                                    <a>Client Support</a>
-                                    <a>Shippment Statement</a>
-                                    <a>Products Returns</a> 
+                                    {linksHelp.map(link =>  (
+                                        <a className={styles.a}>{link}</a>
+                                    ))} 
                                 </div>
                             </div>
                         </Col>
                         <Col xs={4} md={2} lg={1}>
                             <div className="text-center">
-                                <h1 className={styles.headers}>Products</h1>
+                                <h1 className={styles.headers}>Categories</h1>
                                 <div className={styles.links}>
                                     {linksCategories.map(link => (
-                                        <Link className={styles.link} href={'/categories' + link.link}>{link.name}</Link>
+                                        <Link shallow passHref href={'/categories' + link.link}>
+                                            <a className={styles.a}>
+                                              {link.name}
+                                            </a>
+                                        </Link>
                                     ))}
                                 </div>
                             </div>
@@ -45,17 +61,19 @@ export default function FooterComponent() {
                             <div className="text-center">
                                 <h1 className={styles.headers}>Contact Us</h1>
                                 <div className={styles.linksMedia}>
-                                    <i className="bi bi-instagram"></i>
-                                    <i className="bi bi-twitter"></i>
-                                    <i className="bi bi-envelope-fill"></i>
+                                    {linksMedia.map(link => (
+                                        <a className={styles.a}>
+                                            <i className={link}></i>
+                                        </a>
+                                    ))}
                                 </div>
                             </div>
                         </Col>
                         <Col xs={5} md={3} className="d-flex align-items-center justify-content-center">
                                 <Link href="/about" passHref>
-                                    <a>
+                                    <a className={styles.a}>
                                       <h1 className={styles.aboutLink}>
-                                      About Us
+                                        About Us
                                       </h1>
                                     </a>
                                 </Link>
@@ -73,7 +91,7 @@ export default function FooterComponent() {
                         </Col>
                     </Row>
                     <Row className="d-flex justify-content-center">
-                        <Col xs={10} md={3} className="text-center">                            
+                        <Col xs={10} md={3} className="text-center align-self-center border">                            
                                 <small className={styles.smallLetters}>
                                    TraverSal - 2021
                                 </small>

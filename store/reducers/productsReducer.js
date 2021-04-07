@@ -3,7 +3,7 @@ import * as types from '../types'
 const initialState = {
     products: [],
     product: {},
-    filteredProducts: null,
+    filteredProducts: [],
 }
 
 const setProducts = (state = initialState, action) => {
