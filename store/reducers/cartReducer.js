@@ -2,15 +2,15 @@ import * as types from '../types';
 
 const initialState = {
     productsInCart: [],
-    productsToAdd: [], 
+    productToAdd: {}, 
 }
 
 const ShoppingCart = (state = initialState, action) => {
     switch(action.type) {
-        case types.ADD_TO_CART:
+        case types.ADD_PRODUCT_TO_CART:
             return {
                 ...state,
-                productsInCart: state.productsInCart.concat(action.payload),
+                productsInCart: [...state.productsInCart, action.payload]
             }
         case types.INCREASE_QUANTITY:
             return {

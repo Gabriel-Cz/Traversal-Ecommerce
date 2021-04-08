@@ -6,6 +6,11 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import ItemCard from '../components/ItemCard'
 
+const containerStyle = {
+    marginTop: "100px",
+    marginBottom: "100px"
+}
+
 const trendingHeader = {
     fontFamily: '"Crimson Text", serif',
     color: "rgba(0,0,0,0.5)",
@@ -24,14 +29,14 @@ export default function TrendingSection() {
     }, [])
     return(
         <>
-          <Container className="mt-5">
+          <Container style={containerStyle}>
               <Row className="justify-content-md-center" style={border}>
                   <Col md="10" className="text-center my-2" style={trendingHeader}>Trending</Col>
               </Row>
               <Row className="justify-content-center mt-5">
-                  {filteredProducts.map(item => (
+                  {filteredProducts.map(product => (
                       <Col md={4} className="">
-                        <ItemCard key={item.id} productTitle={item.title} productImage={item.image} productDescription={item.description} productPrice={item.price} productRating={item.rating}></ItemCard>
+                        <ItemCard key={product.id} productId={product.id} productTitle={product.title} productImage={product.image} productDescription={product.description} productPrice={product.price} productRating={product.rating}></ItemCard>
                       </Col>
                   ))}
               </Row>

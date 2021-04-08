@@ -1,0 +1,28 @@
+$fontEspecial: 32px 'Italianno', serif;
+$fontDisplay: 26px 'Playfair Display SC', serif;
+$fontHeader: 22px 'Playfair Display SC', serif;
+$fontSubheader: 18px 'Bitter', serif;
+$fontLink: 16px 'Playfair Display';
+$fontButton: 18px ;
+
+$fontSize: (
+    "especial": 32px,
+    "display": 28px,
+    "header": 24px,
+    "subheader": 20px,
+    "button": 18px,
+    "link": 16px
+);
+
+$fonts: (
+    "fontEspecial": "32px 'Italianno', serif",
+    "fontDisplay": "26px 'Playfair Display SC', serif",
+    "fontHeader": "22px 'Playfair Display SC', serif",
+    "fontSubheader": "18px 'Bitter', serif",
+    "fontLink": "16px 'Playfair Display'",
+    "fontButton": "18px 'Playfair Display', serif",
+);
+
+@mixin fontMixin() {
+    font: map-get($fonts, "fontButton");
+}

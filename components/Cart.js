@@ -1,12 +1,16 @@
 import React, { useState } from 'react'
 import { addItems } from '../store/actions/cartActions'
 import { useSelector, useDispatch } from 'react-redux';
+import Image from 'react-bootstrap '
+import styles from '../styles/Cart.module.scss';
 
-const List = ({products}) => {
+const ProductsInCart = ({products}) => {
     return(
         <ul>
             {products.map(product => (
-                <li>{product}</li>
+                <div style={{display: "flex"}}>
+                    <li>{product.title} <Image src={product.image}></Image> <em>{product.price}</em></li> 
+                </div>
             ))}
         </ul>
     );
@@ -14,31 +18,21 @@ const List = ({products}) => {
 
 const ErrorInCart = () => {
     return(
-        <h1>AN Error ocuerred go to shop</h1>
+        <h1>You still dont have any products in your cart, please <Link href="/" passHref><a style={styles.a}>continue shopping.</a></Link></h1>
     );
 }
 
 export default function Cart() {
-    const [input, setInput] = useState('')
-    const handleInput = e => setInput(e.target.value);
-    const {productsInCart} = useSelector(state => state.cartReducer);
-    const dispatch = useDispatch();
-    const addProducts = () => {
-        dispatch(addItems(input.split(',')));
-    }
+    const productsInCart = useSelector(state => state.cartReducer)
     return(
         <>
           <div>
-              <h1>
-                  <h1>{productsInCart 
-                       ?
-                       <List products={productsInCart}></List>
-                       :
-                       <ErrorInCart></ErrorInCart> 
-                    }</h1>
-                  <input type="text" onChange={handleInput} value={input} />
-                  <button type="submit" onClick={addProducts}>add products</button>
-              </h1>
+            {productsInCart.length > 0 
+              ? 
+               <ProductsInCart products={productsInCart}/>  
+              : 
+               <ErrorInCart />  
+            } 
           </div>
         </>
     );

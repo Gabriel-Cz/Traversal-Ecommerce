@@ -24,7 +24,6 @@ $fontSubheader: italic 14px 'Unna', serif;
     background-color: none;
     box-shadow: 4px 4px 8px rgba($color: gray, $alpha: 0.25);
     border-bottom-right-radius: 10px;
-    transition: ease-in-out 0.5s;
     .topImage {
         .cardImage {
             position: relative;
@@ -32,6 +31,7 @@ $fontSubheader: italic 14px 'Unna', serif;
             border-bottom-right-radius: 10px;
         }
         .cardTitle {
+            z-index: 9;
             position: absolute;
             top: 0;
             display: grid;
@@ -46,6 +46,20 @@ $fontSubheader: italic 14px 'Unna', serif;
             overflow: hidden; 
             width: 100%;
             white-space: nowrap;
+        }
+        .divOverflowCartWrapper {
+            z-index: 8;
+            width: 100%;
+            margin-top: 50px;
+            display: grid;
+            place-items: center;
+            height: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba($color: azure, $alpha: 0.70);
+            transition: ease-in-out 0.5s;
+            opacity: 0;
         }
     }
     .cardBody{
@@ -85,13 +99,19 @@ $fontSubheader: italic 14px 'Unna', serif;
         overflow: hidden; 
         white-space: nowrap;
     }
-    &:hover {
-        cursor: pointer;
-        transition: ease-in 0.5s;
-        transform: scale(1.015);
-        box-shadow: 10px 10px 20px rgba($color: gray, $alpha: 0.5);
+    @include media.media(lg) {
+        &:hover {
+            cursor: pointer;
+            .divOverflowCartWrapper {
+                display: grid;
+                place-items: center;
+                transition: ease-in-out 0.5;
+                opacity: 1;
+            }
+        }
     }
 }
+
 
 
 

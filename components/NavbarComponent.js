@@ -27,7 +27,7 @@ export default function NavbarComponent() {
             <Navbar.Brand href="/">
                 TraverSal
             </Navbar.Brand>
-            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Toggle className="bi bi-instagram" aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="d-flex justify-content-center" style={{width: "90%"}}>
                   {linksCategories.map(link => (
