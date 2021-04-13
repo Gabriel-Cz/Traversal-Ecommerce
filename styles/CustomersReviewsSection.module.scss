@@ -2,22 +2,20 @@
 $fontHeaders: 32px 'Crimson Text', serif;
 
 
-.customSection {
+.customSection { 
     position: relative;
-    .rightBlocks {
+    overflow: hidden;
+    .blockBehind {
         position: absolute;
         top: 0;
-        right: 0 !important;
+        left: 0;
         width: 100%;
-        overflow: hidden;
-        line-height: 0;
+        height: 100%;
+        transform-origin: center;
+        transform: skewY(-15deg);
+        background: linear-gradient(267.59deg, rgba(52, 79, 94, 0.4) 0%, rgba(66, 78, 120, 0.4) 100%);
+        z-index: -1;
     }  
-    .svg {
-        position: relative;
-        display: block;
-        width: calc(160% + 1.3px);
-        height: 150px;
-    }
 }
 .customContainer {
     @include mixin.media(lg) {

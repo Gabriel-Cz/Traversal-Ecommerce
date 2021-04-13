@@ -23,6 +23,6 @@ $fonts: (
     "fontButton": "18px 'Playfair Display', serif",
 );
 
-@mixin fontMixin() {
-    font: map-get($fonts, "fontButton");
+@mixin fontMixin($font) {
+    font: map-get($fonts, $font);
 }

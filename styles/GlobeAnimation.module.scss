@@ -1,0 +1,90 @@
+@use "../styles/mediaMixin" as mixin;
+
+.Globe {
+    transition: ease-in-out;
+    animation: constantRotation 50s infinite;
+    @include mixin.media(xs) {
+        width: 50%;
+    }
+   .fragment1 {
+        transition: fade-in;
+        animation: flashlight 3s infinite;
+        animation-delay: 2s;
+         opacity: 0;
+      }
+      
+    .fragment2 {
+        animation: flashlight 3s infinite;
+        animation-delay: 5s;
+        opacity: 0;
+      }
+      
+    .fragment3 {
+        animation: flashlight 3s infinite;
+        animation-delay: 8s;
+         opacity: 0;
+      }
+      
+    .fragment4 {
+        animation: flashlight 3s infinite;
+        animation-delay: 6s;
+         opacity: 0;
+      }
+      
+    .fragment5 {
+        animation: flashlight 3s infinite;
+        animation-delay: 3.5s;
+        opacity: 0;
+      }
+      
+    .fragment6 {
+        animation: flashlight 3s infinite;
+        animation-delay: 7s;
+        opacity: 0;
+      }
+      
+    .fragment7 {
+        animation: flashlight 3s infinite;
+        animation-delay: 10s;
+        opacity: 0;
+      }
+      
+    .fragment8 {
+        animation: flashlight 3s infinite;
+        animation-delay: 9s;
+        opacity: 0;
+      }
+      
+    .fragment9 {
+        animation: flashlight 3s infinite;
+        animation-delay: 10.5s;
+        opacity: 0;
+      }
+  }
+  
+  @keyframes constantRotation {
+    0% {
+      transform: rotate(50deg);
+    }
+    40% {
+      transform: rotate(100deg);
+    }
+    80% {
+      transform: rotate(50deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  @keyframes flashlight {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      width: 200%;
+      height: 200%;
+      transform: scale(1.05);
+    }
+  }

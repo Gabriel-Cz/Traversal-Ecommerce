@@ -15,8 +15,8 @@ export default function Home() {
       <FirstSection></FirstSection>
       <TrendingSection></TrendingSection>
       <GoldAndSilverSection></GoldAndSilverSection>
-      <ShipmentsInformation></ShipmentsInformation>
       <CustomersReviewsSection></CustomersReviewsSection>
+      <ShipmentsInformation></ShipmentsInformation>
     </>
   )
 }

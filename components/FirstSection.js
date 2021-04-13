@@ -6,6 +6,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
+import GlobeAnimation from '../components/GlobeAnimation'
 import { SeeMoreButton } from '../components/ProductsLinks'
 import styles from '../styles/FirstSection.module.scss'
 
@@ -13,10 +14,10 @@ const MoreInfo = () => {
     return(
         <>
         <div className={styles.moreInfoContainer}>
-          <Image className={styles.img} src="EllipseBlue.png" />
+          <Image className={styles.img} src="BlueEllipse.png" />
           <div className={styles.moreInfoWrapper}>
-              <p>Find Out why traversal is one of the Jewellery Market Leads around the world. </p>
-              <SeeMoreButton></SeeMoreButton>
+            <p>Find Out why traversal is one of the Jewellery Market Leads around the world. </p>
+            <SeeMoreButton></SeeMoreButton>
           </div>
         </div>
         </>
@@ -34,10 +35,10 @@ export default function FirstSection() {
     return(
         <>
           <Container fluid className={styles.customContainer}>
-              <div className={styles.overflowDiv}></div>
-              <Row className="justify-content-md-center pb-5">
-                  <Col xs={12} sm={5} md={7} lg={6} xl={6} xxl={5} className=" mt-5">
-                      <MoreInfo></MoreInfo>
+              <div className={styles.divOverflow}></div>
+              <Row className="justify-content-md-start mt-5">
+                  <Col xs={12} sm={5} md={7} lg={{span: 6, offset: 2}} xl={6} xxl={5} className="justify-center mt-5">
+                    <MoreInfo></MoreInfo>
                   </Col>
               </Row>
           </Container>

@@ -1,4 +1,5 @@
 @use '../styles/mediaMixin' as media;
+@use '../styles/fontsMixin' as fonts;
 
 $linksHeadersFont: 18px 'Unna', serif;
 $linksFont: 14px 'Unna', serif;
@@ -26,15 +27,15 @@ $linksFont: 14px 'Unna', serif;
         padding-top: 60px;
         padding-bottom: 60px;   
     }
-    font-family: 'Parisienne', cursive;
-    font-size: 38px;
+    @include fonts.fontMixin("fontEspecial");
+    font: 38px 'Italianno', cursive;
     line-height: 65px;
     padding-top: 100px;
     padding-bottom: 100px;
     padding-right: 50px;
     padding-left: 50px;
-    display: flex;
-    align-items: center;
+    display: grid;
+    place-items: center;
     text-align: center;
     color: rgba($color: floralwhite, $alpha: 0.8);
 } 
@@ -66,8 +67,8 @@ $linksFont: 14px 'Unna', serif;
         align-items: center;
     }
     .aboutLink {
-        font-family: 'Crimson Text', serif;
-        font-size: 22px; 
+        font-family: 'Unna', serif;
+        font-size: 16px; 
         line-height: 36px;
         display: flex;
         align-items: center;
@@ -93,11 +94,11 @@ $linksFont: 14px 'Unna', serif;
     }
     .newsLetterForm {
         font: $linksHeadersFont;
-        line-height: 28px;
+        letter-spacing: 1px;
         display: flex;
         align-items: center;
         text-align: center;
-        opacity: 0.5;
+        opacity: 1;
     }
     .customInput {
         background-color: rgba($color: gray, $alpha: 0.3);

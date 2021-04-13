@@ -91,7 +91,7 @@ export default function FooterComponent() {
                         </Col>
                     </Row>
                     <Row className="d-flex justify-content-center">
-                        <Col xs={10} md={3} className="text-center align-self-center border">                            
+                        <Col xs={10} md={3} className="text-center align-end">                            
                                 <small className={styles.smallLetters}>
                                    TraverSal - 2021
                                 </small>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { addItems } from '../store/actions/cartActions'
 import { useSelector, useDispatch } from 'react-redux';
-import Image from 'react-bootstrap '
+import Image from 'react-bootstrap/Image'
 import styles from '../styles/Cart.module.scss';
 
 const ProductsInCart = ({products}) => {

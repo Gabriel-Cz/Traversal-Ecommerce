@@ -118,7 +118,6 @@ class GoldAndSilverSection extends React.Component {
     render() {
         return( 
             <Container fluid className={styles.customContainer}>
-                <LeftBlocks />
                 <Row className="d-flex justify-content-center align-items-center py-5 py-1-sm">
                     <Col lg={5}>
                         <SilverBlock></SilverBlock>
