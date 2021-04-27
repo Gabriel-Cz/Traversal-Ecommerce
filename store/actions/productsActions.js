@@ -1,5 +1,4 @@
 import axios from 'axios'
-import productsData from '../../public/productsData.json'
 import * as types from '../types'
 
 export const getProducts = () => async (dispatch) => {

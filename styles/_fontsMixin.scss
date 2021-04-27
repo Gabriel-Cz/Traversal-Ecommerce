@@ -3,7 +3,7 @@ $fontDisplay: 26px 'Playfair Display SC', serif;
 $fontHeader: 22px 'Playfair Display SC', serif;
 $fontSubheader: 18px 'Bitter', serif;
 $fontLink: 16px 'Playfair Display';
-$fontButton: 18px ;
+$fontButton: 16px 'Playfair Display', serif;
 
 $fontSize: (
     "especial": 32px,
@@ -20,9 +20,14 @@ $fonts: (
     "fontHeader": "22px 'Playfair Display SC', serif",
     "fontSubheader": "18px 'Bitter', serif",
     "fontLink": "16px 'Playfair Display'",
-    "fontButton": "18px 'Playfair Display', serif",
+    "fontButton": "16px 'Playfair Display', serif",
 );
 
 @mixin fontMixin($font) {
-    font: map-get($fonts, $font);
+    @if($font == fontButton) {
+        font: $fontButton;
+    }
+    @else if ($font == fontDisplay) {
+        font: $fontEspecial;
+    }
 }

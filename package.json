@@ -16,13 +16,13 @@
     "react-bootstrap": "^1.5.2",
     "react-dom": "17.0.1",
     "react-rating": "^2.0.5",
-    "react-redux": "^7.2.3",
-    "redux": "^4.0.5",
+    "react-redux": "^7.2.4",
+    "redux": "^4.1.0",
     "redux-devtools-extension": "^2.13.9",
     "redux-persist": "^6.0.0",
     "redux-thunk": "^2.3.0",
-    "sass": "^1.32.8",
-    "stripe": "^8.142.0"
+    "sass": "^1.32.11",
+    "stripe": "^8.145.0"
   },
   "devDependencies": {
     "json-loader": "^0.5.7"

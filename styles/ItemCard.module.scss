@@ -15,6 +15,23 @@ $fontSubheader: italic 14px 'Unna', serif;
     }
 }
 
+.overflowInfoXs {
+    @include media.media(lg) {
+        display: none;
+    }
+}
+
+.input {
+    margin: 20px 20px;
+    border: none;
+    border-bottom: ridge;
+    outline-color: azure;
+    background-color: rgba($color: azure, $alpha: 0.5);
+    padding: 10px 10px;
+    font-family: 'Unna', serif;
+    font-style: italic;
+}
+
 .card {
     @include media.media(sm) {
         height: 90%;
@@ -25,6 +42,8 @@ $fontSubheader: italic 14px 'Unna', serif;
     box-shadow: 4px 4px 8px rgba($color: gray, $alpha: 0.25);
     border-bottom-right-radius: 10px;
     .topImage {
+        position: relative;
+        overflow: hidden;
         .cardImage {
             position: relative;
             border-bottom-left-radius: 10px;
@@ -53,7 +72,8 @@ $fontSubheader: italic 14px 'Unna', serif;
             margin-top: 50px;
             display: grid;
             place-items: center;
-            height: 50%;
+            height: 100%;
+            overflow: visible;
             position: absolute;
             top: 0;
             left: 0;
@@ -108,6 +128,11 @@ $fontSubheader: italic 14px 'Unna', serif;
                 transition: ease-in-out 0.5;
                 opacity: 1;
             }
+        }
+    }
+    .productRating {
+        @include media.media(xs) {
+            display: none;
         }
     }
 }

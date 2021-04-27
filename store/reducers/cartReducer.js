@@ -1,11 +1,8 @@
 import * as types from '../types';
-import { HYDRATE } from 'next-redux-wrapper';
 
 const initialState = {
-    server: null,
-    client: null,
-    productsInCart: [],
-    productToAdd: {}, 
+    productsInCart: null,
+    productToAdd: null, 
 }
 
 const ShoppingCart = (state = initialState, action) => {

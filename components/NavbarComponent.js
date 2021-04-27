@@ -21,13 +21,17 @@ export const linksCategories = [
     }
 ]
 
+const ToggleStyle = {
+    backgroundImage: "url('../public/Toogle.svg)"
+}
+
 export default function NavbarComponent() {
     return(
         <Navbar style={{backgroundColor: "transparent", boxShadow: "none"}} collapseOnSelect expand="lg">
             <Navbar.Brand href="/">
                 TraverSal
             </Navbar.Brand>
-            <Navbar.Toggle className="bi bi-instagram" aria-controls="responsive-navbar-nav" />
+            <Navbar.Toggle className={ToggleStyle} aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="d-flex justify-content-center" style={{width: "90%"}}>
                   {linksCategories.map(link => (

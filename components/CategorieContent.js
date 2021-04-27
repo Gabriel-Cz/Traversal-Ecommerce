@@ -12,13 +12,7 @@ const customContainer = {
     borderBottom: 'none', 
 }
 
-export default function CategorieContent({categorieName}) {
-    const {products} = useSelector(state => state.productsReducer);
-    const dispatch = useDispatch();
-    useEffect(() => {
-        dispatch(getProducts())
-    }, [])
-    const filteredProducts = products.filter(product => product.categorie === categorieName);
+export default function CategorieContent({filteredProducts}) {
     return(
         <>
           <Container className="mx-auto my-5 py-5" fluid>

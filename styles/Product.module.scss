@@ -1,5 +1,52 @@
-$fontHeader: 22px 'Bitter', serif;
+@use '../styles/mediaMixin' as media;
 
-.header {
-    font: $fontHeader;
+$productNameFont: 22px 'Lora', serif;
+$headers: 18px 'Lora', serif;
+$subheaders: 14px 'Lora', serif;
+$bgCard: #ECEFF1;
+$boxShadow: 0 50px 100px -20px rgb(50 50 93 / 25%), 0 30px 60px -30px rgb(0 0 0 / 30%);
+
+.container {
+    @include media.media(lg) {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    display: flex !important;
+    justify-content: center !important;
+    align-content: center !important;
+}
+
+.productCard {
+    @include media.media(md) {
+        width: 60%;
+    }
+    @include media.media(lg) {
+        width: 70%;
+    }
+    margin-bottom: 50px;
+    margin-top: 50px;
+    background-color: $bgCard;
+    box-shadow: $boxShadow;
+    .checkoutSection {
+        height: 100%;
+        display: flex;
+        align-self: flex-end;
+        margin-top: 50px;
+        justify-content: center;        
+    }
+}
+
+.productName {
+    font: $productNameFont;
+}
+
+.extraProductInfo {
+    .headers {
+        font: $headers;
+    }
+    .subheaders {
+        font: $subheaders;
+        margin-left: 20px;
+        margin-top: 5px;
+    }
 }
