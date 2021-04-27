@@ -1,3 +1,5 @@
+@use '../styles/mediaMixin' as media;
+
 .a {
     text-decoration: none;
     color: rgb(29, 20, 148);
@@ -5,3 +7,16 @@
         text-decoration: none;
     }
 }
+
+.input {
+    @include media.media(xs) {
+    }
+    text-align: center;
+    border: none;
+    border-left: 2px ridge #4469A0;
+    outline-color: azure;
+    background-color: rgba($color: azure, $alpha: 0.5);
+    padding: 0px 20px;
+    font-family: 'Unna', serif;
+    font-style: italic;
+}   

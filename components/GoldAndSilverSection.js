@@ -41,7 +41,7 @@ export function Quote() {
 function GoldBlock() {
     return(
         <div className={styles.imageContainer}>
-            <Link href="/products/gold" passHref>
+            <Link href="/elements/gold" passHref>
                 <a>
                   <Image fluid className={styles.image} src="/GoldImage.jpg" />
                   <OverflowGoldInfo></OverflowGoldInfo>
@@ -54,7 +54,7 @@ function GoldBlock() {
 function SilverBlock() {
     return(
         <div className={styles.imageContainer}>
-            <Link href="/products/silver" passHref>
+            <Link href="/elements/silver" passHref>
                 <a>
                   <Image fluid className={styles.image} src="/SilverImage.jpg" />
                   <OverflowSilverInfo></OverflowSilverInfo>

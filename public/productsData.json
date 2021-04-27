@@ -7,8 +7,9 @@
       "image": "../ProductsImages/GoldEarring1.jpg",
       "rating": 4.5,
       "state": "trending",
-      "categorie": "necks"
-  },
+      "categorie": "necks",
+      "element": "gold"}
+  ,
     {
       "id": "G2",
       "title": "Gold Earrings with diamonds",
@@ -17,8 +18,9 @@
       "image": "../ProductsImages/GoldEarring2.jpg",
       "rating": 4.5,
       "state": "",
-      "categorie": "necks"
-  },
+      "categorie": "necks",
+      "element": "gold"}
+  ,
     {
       "id": "G3",
       "title": "Gold Ring",
@@ -27,7 +29,8 @@
       "image": "../ProductsImages/GoldRing1.jpg",
       "rating": 4.5,
       "state": "trending",
-      "categorie": "rings"
+      "categorie": "rings",
+      "element": "gold"
     },
     {
       "id": "G4",
@@ -37,8 +40,9 @@
       "image": "../ProductsImages/GoldWatch1.jpg",
       "rating": 4,
       "state": "trending",
-      "categorie": "watches"
-  },
+      "categorie": "watches",
+      "element": "gold"
+    },
     {
       "id": "S1",
       "title": "Silver Earrings with diamonds",
@@ -47,8 +51,9 @@
       "image": "../ProductsImages/SilverEarring1.jpg",
       "rating": 4,
       "state": "dealOffer",
-      "categorie": "earrings"
-  },
+      "categorie": "earrings",
+      "element": "silver"}
+  ,
     {
       "id": "S2",
       "title": "white stones neck",
@@ -57,8 +62,9 @@
       "image" : "../ProductsImages/SilverNeck1.jpg",
       "rating" : 4,
       "state": "dealOffer",
-      "categorie": "necks"
-  },
+      "categorie": "necks",
+      "element": "silver"}
+  ,
     {
       "id": "S3",
       "title": "Zhapire Silver light",
@@ -67,8 +73,9 @@
       "image": "../ProductsImages/SilverNeck2.jpg",
       "rating": 4,
       "state": "dealOffer",
-      "categorie": "necks"
-  },
+      "categorie": "necks",
+      "element": "silver"}
+  ,
     {
       "id": "S4",
       "title": "Shapire Silver ring",
@@ -77,8 +84,9 @@
       "image": "../ProductsImages/SilverRing1.jpg",
       "rating": 4,
       "state": "",
-      "categorie": "rings"
-  },
+      "categorie": "rings",
+      "element": "silver"}
+  ,
     {
       "id": "S5",
       "title": "saepe unde necessitatibus rem",
@@ -87,8 +95,9 @@
       "image": "../ProductsImages/SilverRing2.jpg",
       "rating": 5,
       "state": "",
-      "categorie": "rings"
-  },
+      "categorie": "rings",
+      "element": "silver"}
+  ,
     {
       "id": "S6",
       "title": "Diamond Heart ring",
@@ -97,8 +106,9 @@
       "image": "../ProductsImages/SilverRing3.jpg",
       "rating": 5,
       "state": "",
-      "categorie": "rings"
-  },
+      "categorie": "rings",
+      "element": "silver"}
+  ,
     {
       "id": "S7",
       "title": "",
@@ -107,8 +117,9 @@
       "image": "../ProductsImages/SilverWatch.jpg",
       "rating": 5,
       "state": "",
-      "categorie": "watches"
-  },
+      "categorie": "watches",
+      "element": "silver"}
+  ,
     {
       "id": "S8",
       "title": "consequatur autem ",
@@ -117,8 +128,9 @@
       "image": "../ProductsImages/SilverWatch2.jpg",
       "rating": 3,
       "state": "",
-      "categorie": "watches"
-  },
+      "categorie": "watches",
+      "element": "silver"}
+  ,
     {
       "id": "S9",
       "title": "ab rerum non",
@@ -127,8 +139,9 @@
       "image": "",
       "rating": 3.5,
       "state": "",
-      "categorie": "rings"
-  },
+      "categorie": "rings",
+      "element": "silver"}
+  ,
     {
       "id": "S10",
       "title": "ducimus molestias eos animi atque nihil",
@@ -137,8 +150,9 @@
       "image": "",
       "rating": 5,
       "state": "",
-      "categorie": "rings"
-  },
+      "categorie": "rings",
+      "element": "silver"}
+  ,
     {
       "id": "S11",
       "title": "ut pariatur rerum ipsum natus repellendus praesentium",
@@ -147,6 +161,7 @@
       "image": "",
       "rating": 5,
       "state": "",
-      "categorie": "earrings"
-  }
+      "categorie": "earrings",
+      "element": "silver"
+    }
 ]

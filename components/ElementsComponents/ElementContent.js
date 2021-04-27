@@ -1,18 +1,12 @@
-import React, { useEffect, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { getProducts } from '../store/actions/productsActions';
+import React from 'react'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import ItemCard from '../components/ItemCard'
+import PropTypes from 'prop-types';
+import ItemCard from '../ItemCard'
 import Container from 'react-bootstrap/Container'
-import { Quote } from './GoldAndSilverSection';
+import { Quote } from '../GoldAndSilverSection';
 
-const customContainer = {
-    border: "6px double gray",
-    borderBottom: 'none', 
-}
-
-export default function CategorieContent({filteredProducts}) {
+function CategorieContent({filteredProducts}) {
     return(
         <>
           <Container className="mx-auto my-5 py-5" fluid>
@@ -41,3 +35,9 @@ export default function CategorieContent({filteredProducts}) {
         </>
     );
 }
+
+CategorieContent.PropTypes = {
+    filteredProducts: PropTypes.array
+}
+
+export default CategorieContent;

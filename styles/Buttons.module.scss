@@ -30,6 +30,7 @@ $base-Shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     padding: $base-padding;
     box-shadow: $base-Shadow;
     transition: 0.5s ease-in-out;
+    letter-spacing: 1px;
 }
 
 .link {
@@ -59,6 +60,7 @@ $base-Shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 .addToCartButton {
     @extend .button;
     @include buttonColor(#4469A0, transparent);
+    box-shadow: none;
     border: 1px ridge #4469A0;
     &:hover {
         @include buttonColor(floralwhite, #4469A0)
@@ -68,4 +70,7 @@ $base-Shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 .checkoutButton {
     @extend .button;
     @include buttonColor(floralwhite, #7CB342);
+    &:hover {
+        transform: scale(1.02);
+    }
 }
