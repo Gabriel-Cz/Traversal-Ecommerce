@@ -1,13 +1,19 @@
 import * as types from '../types'
+import { HYDRATE } from "next-redux-wrapper";
 
 const initialState = {
-    products: null,
-    product: null,
-    filteredProducts: null
 }
 
 const setProducts = (state = initialState, action) => {
     switch (action.type) {
+        case HYDRATE: 
+            return {
+                ...state,
+                server: {
+                    ...state.server,
+                    ...action.payload.productsReducer.server
+                },
+            }
         case types.GET_PRODUCTS:
             return {
                 ...state,
@@ -24,7 +30,10 @@ const setProducts = (state = initialState, action) => {
         case types.FILTER_PRODUCTS:
             return {
                 ...state,
-                filteredProducts: action.payload
+                server: {
+                    ...state.server,
+                    filteredProducts: action.payload
+                }
             }
         default:
             return state;

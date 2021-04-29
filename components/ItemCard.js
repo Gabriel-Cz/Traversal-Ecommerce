@@ -2,20 +2,21 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'react-bootstrap/Image'
 import Card from 'react-bootstrap/Card'
-import {AddToCartButton} from './Buttons'
+import AddToCartInput from '../components/CartComponents/AddToCartInput'
 import styles from '../styles/ItemCard.module.scss'
 import Rating from 'react-rating'
 
-const OverflowInfo = ({product}) => {
+const OverflowInfo = ({id}) => {
   return(
     <>
       <div className={styles.overflowInfo}>
-          <div className="flex">
-            <input placeholder="How Many?" className={styles.input} />
-            <AddToCartButton className="ml-4" />
+          <div className="text-center justify-content-center d-flex justify-items-center">
+            <div>
+              <AddToCartInput id={id} />
+            </div>
           </div>
           <div className="text-center mt-5">
-            <Link href={'/products/' + `${product}`} passHref>
+            <Link href={'/products/' + `${id}`} passHref>
               <a style={{fontFamily: "'Unna', serif"}}>
                 Product Details
               </a>
@@ -26,16 +27,17 @@ const OverflowInfo = ({product}) => {
   );
 }
 
-const OverflowInfoXs = ({product}) => {
+const OverflowInfoXs = ({id}) => {
   return(
     <>
       <div className={styles.overflowInfoXs}>
-          <div className="flex">
-            <input placeholder="How Many?" className={styles.input} />
-            <AddToCartButton className="ml-4" />
+          <div className="text-center justify-content-center d-flex justify-items-center">
+            <div>
+              <AddToCartInput id={id} />
+            </div>
           </div>
-          <div className="text-center mt-5">
-            <Link href={'/products/' + `${product}`} passHref>
+          <div className="text-center mt-3">
+            <Link href={'/products/' + `${id}`} passHref>
               <a style={{fontFamily: "'Unna', serif"}}>
                 Product Details
               </a>
@@ -54,7 +56,7 @@ export default function ItemCard(props) {
             <Image className={styles.cardImage} fluid src={props.productImage} />
             <Card.Title className={styles.cardTitle}>{props.productTitle}</Card.Title>
             <div className={styles.divOverflowCartWrapper}>
-              <OverflowInfo product={props.productId} />
+              <OverflowInfo id={props.productId} />
             </div>
           </div>
           <Card.Body className={styles.cardBody}>
@@ -63,7 +65,7 @@ export default function ItemCard(props) {
               </div>
               <div>
                 <Card.Text className={styles.cardDescription}>{props.productDescription}</Card.Text>
-                <OverflowInfoXs product={props.productId} />
+                <OverflowInfoXs id={props.productId} />
                 <div className={styles.productRating}>
                   <Rating readonly emptySymbol={<img src="./EmptyStar.png" className="icon" />} fullSymbol={<img src="./FullStar.png" className="icon" />} initialRating={props.productRating} />
                 </div>

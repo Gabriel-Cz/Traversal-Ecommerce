@@ -4,12 +4,11 @@ import {addProduct} from '../store/actions/cartActions';
 import styles from '../styles/Buttons.module.scss';
 /* import ProductAlert from './ProductAlert'; */
 
-export const AddToCartButton = ({id}) => {
+export const AddToCartButton = ({id, quantity}) => {
     const dispatch = useDispatch();
-    const productsInCart = useSelector(state => state.productsReducer.productsInCart);
     return(
         <>
-        <button onClick={() => dispatch(addProduct(id))} className={styles.addToCartButton}>
+        <button onClick={() => dispatch(addProduct(id, quantity))} className={styles.addToCartButton}>
             Add To Cart
         </button>
         </>

@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { wrapper } from '../../store'
+import { useSelector } from 'react-redux' 
 import { getProduct } from '../../store/actions/productsActions'
 import Container from 'react-bootstrap/Container'
 import ProductInformation from '../../components/ProductsPageComponents/ProductInformation'
-import ProductImageWithCheckout from '../../components/ProductsPageComponents/ProductImageWithCheckout'
-import Image from 'react-bootstrap/Image';
+import Image from 'react-bootstrap/Image'
 import styles from '../../styles/Product.module.scss'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -46,21 +46,13 @@ const ShipmentInformation = () => {
   );
 }
 
-export const getServerSideProps = wrapper.getServerSideProps(async ({store}) => {
-  await store.dispatch(getProduct('G3'))
+export const getServerSideProps = wrapper.getServerSideProps(async ({store, query}) => {
+  const params = query.productId;
+  await store.dispatch(getProduct(params));
 })
 
 function Product() {
-  const product = {
-    "id": "G3",
-    "title": "Gold Ring",
-    "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt",  
-    "price": "$349",
-    "image": "../ProductsImages/GoldRing1.jpg",
-    "rating": 4.5,
-    "state": "trending",
-    "categorie": "rings"
-  }; 
+  const {product} = useSelector(state => state.productsReducer.server);
   return(
         <>
           <Container fluid className={styles.container}>

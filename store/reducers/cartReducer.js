@@ -1,16 +1,26 @@
 import * as types from '../types';
+import { HYDRATE } from "next-redux-wrapper";
+import localStorage from './localStorage';
 
 const initialState = {
-    productsInCart: null,
-    productToAdd: null, 
+    client: {
+        productsInCart: localStorage.getItem('productsInCart') ? [...localStorage.productsInCart] : [],
+    }
 }
 
 const ShoppingCart = (state = initialState, action) => {
     switch(action.type) {
-        case types.ADD_PRODUCT_TO_CART:
+        case HYDRATE: 
             return {
                 ...state,
-                productsInCart: [...state.productsInCart, action.payload]
+                server: {
+                    ...state.server,
+                    ...action.payload.cartReducer.server
+                }
+            }
+        case types.ADD_PRODUCT_TO_CART:
+            return {
+                ...localStorage.productsInCart.push(action.payload),
             }
         case types.INCREASE_QUANTITY:
             return {

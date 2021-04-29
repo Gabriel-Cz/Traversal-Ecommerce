@@ -1,5 +1,5 @@
 import { createStore, applyMiddleware } from 'redux'
-import { HYDRATE, createWrapper } from 'next-redux-wrapper'
+import { createWrapper } from 'next-redux-wrapper'
 import thunkMiddleware from 'redux-thunk'
 import reducers from './reducers'
  

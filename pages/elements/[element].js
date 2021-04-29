@@ -1,18 +1,20 @@
 import React, { useEffect } from 'react'
-import { useRouter } from 'next/router'
 import ElementHeader from '../../components/ElementsComponents/ElementHeader'
 import ElementContent from '../../components/ElementsComponents/ElementContent'
 import { useSelector, useDispatch } from 'react-redux'
+import { wrapper } from '../../store'
 import { filterProducts } from '../../store/actions/productsActions'
+import { useRouter } from 'next/router'
 
-export default function Categories() {
+export const getServerSideProps = wrapper.getServerSideProps(async ({store, query}) => {
+  const params = query.element;
+  await store.dispatch(filterProducts('element', params));
+})
+
+function Element() {
   const router = useRouter();
   const {element} = router.query;
-  const dispatch = useDispatch();
-  const filteredProducts = useSelector(state => state.productsReducer.filteredProducts);
-  useEffect(() => {
-    dispatch(filterProducts('element', element))
-  }, []);
+  const {filteredProducts} = useSelector(state => state.productsReducer.server)
   return(
     <>
       <ElementHeader elementName={element}></ElementHeader>
@@ -20,3 +22,5 @@ export default function Categories() {
     </>
 );
 }
+
+export default Element;
