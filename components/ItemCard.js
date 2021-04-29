@@ -6,13 +6,13 @@ import AddToCartInput from '../components/CartComponents/AddToCartInput'
 import styles from '../styles/ItemCard.module.scss'
 import Rating from 'react-rating'
 
-const OverflowInfo = ({id}) => {
+const OverflowInfo = ({id, price}) => {
   return(
     <>
       <div className={styles.overflowInfo}>
           <div className="text-center justify-content-center d-flex justify-items-center">
             <div>
-              <AddToCartInput id={id} />
+              <AddToCartInput id={id} price={price} />
             </div>
           </div>
           <div className="text-center mt-5">
@@ -27,13 +27,13 @@ const OverflowInfo = ({id}) => {
   );
 }
 
-const OverflowInfoXs = ({id}) => {
+const OverflowInfoXs = ({id, price}) => {
   return(
     <>
       <div className={styles.overflowInfoXs}>
           <div className="text-center justify-content-center d-flex justify-items-center">
             <div>
-              <AddToCartInput id={id} />
+              <AddToCartInput id={id} price={price} />
             </div>
           </div>
           <div className="text-center mt-3">
@@ -56,7 +56,7 @@ export default function ItemCard(props) {
             <Image className={styles.cardImage} fluid src={props.productImage} />
             <Card.Title className={styles.cardTitle}>{props.productTitle}</Card.Title>
             <div className={styles.divOverflowCartWrapper}>
-              <OverflowInfo id={props.productId} />
+              <OverflowInfo id={props.productId} price={props.price} />
             </div>
           </div>
           <Card.Body className={styles.cardBody}>
@@ -65,7 +65,7 @@ export default function ItemCard(props) {
               </div>
               <div>
                 <Card.Text className={styles.cardDescription}>{props.productDescription}</Card.Text>
-                <OverflowInfoXs id={props.productId} />
+                <OverflowInfoXs id={props.productId} price={props.price} />
                 <div className={styles.productRating}>
                   <Rating readonly emptySymbol={<img src="./EmptyStar.png" className="icon" />} fullSymbol={<img src="./FullStar.png" className="icon" />} initialRating={props.productRating} />
                 </div>

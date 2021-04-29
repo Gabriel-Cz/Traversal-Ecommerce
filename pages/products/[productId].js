@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
 import { wrapper } from '../../store'
-import { useSelector } from 'react-redux' 
+import { useDispatch, useSelector } from 'react-redux' 
 import { getProduct } from '../../store/actions/productsActions'
+import { setNewCartState } from '../../store/actions/cartActions'
 import Container from 'react-bootstrap/Container'
 import ProductInformation from '../../components/ProductsPageComponents/ProductInformation'
 import Image from 'react-bootstrap/Image'
@@ -46,6 +47,14 @@ const ShipmentInformation = () => {
   );
 }
 
+const Loading = () => {
+  return(
+    <>
+    <h1>Loading...</h1>
+    </>
+  );
+}
+
 export const getServerSideProps = wrapper.getServerSideProps(async ({store, query}) => {
   const params = query.productId;
   await store.dispatch(getProduct(params));
@@ -71,7 +80,7 @@ function Product() {
             <ShipmentInformation />
           </Container>
         </>
-    );
+  );
 }
 
 export default Product;

@@ -6,14 +6,14 @@ import InputGroup from 'react-bootstrap/InputGroup'
 import {AddToCartButton} from '../Buttons'
 import styles from '../../styles/Cart.module.scss'
 
-export default function AddToCartInput({id}) {
+export default function AddToCartInput({id, price}) {
     const [quantity, setQuantity] = useState(0)
     const handleInput = e => setQuantity(e.target.value);
     return(
         <>
           <div className="d-flex">
                 <input className={styles.input} type="number" onChange={handleInput} defaultValue="1" min="1" max="20"/>
-                <AddToCartButton id={id} quantity={quantity} />
+                <AddToCartButton id={id} quantity={quantity} price={price} />
           </div>
         </>
     );

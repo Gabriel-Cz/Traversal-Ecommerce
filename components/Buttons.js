@@ -1,14 +1,14 @@
 import React from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import {addProduct} from '../store/actions/cartActions';
+import { addProductToCart } from '../store/actions/cartActions';
 import styles from '../styles/Buttons.module.scss';
 /* import ProductAlert from './ProductAlert'; */
 
-export const AddToCartButton = ({id, quantity}) => {
+export const AddToCartButton = ({id, quantity, price}) => {
     const dispatch = useDispatch();
     return(
         <>
-        <button onClick={() => dispatch(addProduct(id, quantity))} className={styles.addToCartButton}>
+        <button onClick={() => dispatch(addProductToCart(id, quantity, price))} className={styles.addToCartButton}>
             Add To Cart
         </button>
         </>
