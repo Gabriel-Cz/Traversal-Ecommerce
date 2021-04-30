@@ -13,7 +13,7 @@ export default function AddToCartInput({id, price}) {
         <>
           <div className="d-flex">
                 <input className={styles.input} type="number" onChange={handleInput} defaultValue="1" min="1" max="20"/>
-                <AddToCartButton id={id} quantity={quantity} price={price} />
+                <AddToCartButton id={id} price={price} quantity={quantity} />
           </div>
         </>
     );

@@ -23,13 +23,15 @@ const ShoppingCart = (state = initialState, action) => {
                 }
             }
         case types.ADD_PRODUCT_TO_CART:
-            return [
+            return {
                 ...state,
-                ...state.products.slice(0, action.index),
-                action.payload,
-                ...state.products.slice(0, action.index)    
-            ]
-
+                products: [action.payload, ...state.products]
+            }
+        case types.INCREASE_QUANTITY:
+            return {
+                ...state,
+                ...state.products, 
+            } 
         /* case types.INCREASE_QUANTITY:
             return {
                 ...state,

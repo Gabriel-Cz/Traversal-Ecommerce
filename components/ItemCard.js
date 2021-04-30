@@ -56,7 +56,7 @@ export default function ItemCard(props) {
             <Image className={styles.cardImage} fluid src={props.productImage} />
             <Card.Title className={styles.cardTitle}>{props.productTitle}</Card.Title>
             <div className={styles.divOverflowCartWrapper}>
-              <OverflowInfo id={props.productId} price={props.price} />
+              <OverflowInfo id={props.productId} price={props.productPrice} />
             </div>
           </div>
           <Card.Body className={styles.cardBody}>
@@ -65,7 +65,7 @@ export default function ItemCard(props) {
               </div>
               <div>
                 <Card.Text className={styles.cardDescription}>{props.productDescription}</Card.Text>
-                <OverflowInfoXs id={props.productId} price={props.price} />
+                <OverflowInfoXs id={props.productId} price={props.productPrice} />
                 <div className={styles.productRating}>
                   <Rating readonly emptySymbol={<img src="./EmptyStar.png" className="icon" />} fullSymbol={<img src="./FullStar.png" className="icon" />} initialRating={props.productRating} />
                 </div>
