@@ -18,10 +18,11 @@ function MyApp({ Component, pageProps }) {
   )
 }
 
-export const getServerSideProps = wrapper.getServerSideProps(async ({store}) => {
-  await store.subscribe(() => {
-    console.log('products:', store.getState().cartReducer.products)
-  });
+export const getServerSideProps = wrapper.getServerSideProps(
+  ({store}) => {
+    store.subscribe(() => {
+      console.log(store.getState)
+    });
 })
 
 

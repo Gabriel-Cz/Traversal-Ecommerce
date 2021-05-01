@@ -1,6 +1,6 @@
 import React from 'react'
 import FirstSection from '../components/FirstSection'
-import TrendingSection from '../components/TrendingsSection'
+import TrendingSection from '../components/TrendingSection'
 import GoldAndSilverSection from '../components/GoldAndSilverSection'
 import ShipmentsInformation from '../components/ShipmentsInformation'
 import CustomersReviewsSection from '../components/CustomersReviewsSection'

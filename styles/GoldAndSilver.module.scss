@@ -7,6 +7,10 @@ $font: 16px 'Unna', serif;
 $border: 4px double rgba($color: gray, $alpha: 0.25);
 
 .customContainer{
+    @include mixin.media(xs) {
+        margin-top: 20px;
+        border: 1px solid gray;
+    }
     @include mixin.media(lg) {
         margin-top: 100px;
     }

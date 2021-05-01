@@ -1,0 +1,29 @@
+@use '../styles//mediaMixin' as media;
+
+.container {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.contentForLargeScreen {
+    @include media.media(xs) {
+        display: none;
+    }
+}
+
+.mobileCarousel {
+    @include media.media(xs) {
+        display: flex;
+    }
+    display: none;
+}
+
+.trendingHeader {
+    font-family: 'Crimson Text', serif;
+    color: rgba(0,0,0,0.5);
+    font-size: 22px;
+}
+
+.borderTrendingRow {
+    border-bottom: 4px double rgba(128,128.128,0.25);
+}
