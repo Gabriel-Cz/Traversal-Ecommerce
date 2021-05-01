@@ -69,7 +69,7 @@ export default function FooterComponent() {
                                 </div>
                             </div>
                         </Col>
-                        <Col xs={5} md={3} className="d-flex align-items-center justify-content-center">
+                        <Col xs={4} md={3} className="d-flex align-items-center justify-content-center">
                                 <Link href="/about" passHref>
                                     <a className={styles.a}>
                                       <h1 className={styles.aboutLink}>
@@ -78,7 +78,7 @@ export default function FooterComponent() {
                                     </a>
                                 </Link>
                         </Col>
-                        <Col xs={7} md={3}>
+                        <Col xs={8} md={3} className="mt-4">
                             <h1 className={styles.newsLetterForm}>Suscribe to our Newsletter</h1>
                             <div>
                                 <InputGroup>

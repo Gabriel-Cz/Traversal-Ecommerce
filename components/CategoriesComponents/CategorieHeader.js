@@ -20,7 +20,7 @@ const Shape = () => {
 export default function CategorieHeader(props) {
     return(
         <>
-          <Container fluid className={styles[`${props.categorieName}`]}>
+          <Container fluid className={styles[`${props.categorieName}`]} style={{borderBottom: "2px ridge rgba(128, 128, 128, 0.5)"}}>
             <Shape></Shape>
             <div className={styles.overflowDiv}></div>
             <Row className="justify-content-center py-2 pt-5">

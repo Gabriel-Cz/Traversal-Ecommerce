@@ -5,7 +5,7 @@ import GoldAndSilverSection from '../components/GoldAndSilverSection'
 import ShipmentsInformation from '../components/ShipmentsInformation'
 import CustomersReviewsSection from '../components/CustomersReviewsSection'
 import styles from '../styles/Home.module.scss'
-import { wrapper } from '../store'
+import { wrapper } from '../store' 
 import { filterProducts } from '../store/actions/productsActions'
 import { useSelector } from 'react-redux'
 

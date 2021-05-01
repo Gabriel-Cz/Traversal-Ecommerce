@@ -1,6 +1,7 @@
 import { createStore, applyMiddleware } from 'redux'
 import { createWrapper } from 'next-redux-wrapper'
 import thunkMiddleware from 'redux-thunk'
+import { saveCartState } from '../cartStore'
 import reducers from './reducers'
  
 const bindMiddleware = (middleware) => {
@@ -11,8 +12,6 @@ const bindMiddleware = (middleware) => {
     return applyMiddleware(...middleware)
   }
 
-const store = () => {
-    return createStore(reducers, bindMiddleware([thunkMiddleware]));
-}
+export const store = context => createStore(reducers, bindMiddleware([thunkMiddleware]))
 
-export const wrapper = createWrapper(store);
+export const wrapper = createWrapper(store, {debug: true});

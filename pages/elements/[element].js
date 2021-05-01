@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import ElementHeader from '../../components/ElementsComponents/ElementHeader'
 import ElementContent from '../../components/ElementsComponents/ElementContent'
 import { useSelector, useDispatch } from 'react-redux'
-import { wrapper } from '../../store'
+import { wrapper } from '../../store' 
 import { filterProducts } from '../../store/actions/productsActions'
 import { useRouter } from 'next/router'
 

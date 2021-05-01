@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import CategorieHeader from '../../components/CategoriesComponents/CategorieHeader'
 import CategorieContent from '../../components/CategoriesComponents/CategorieContent'
 import { useSelector } from 'react-redux'
-import { wrapper } from '../../store'
+import { wrapper } from '../../store' 
 import { filterProducts } from '../../store/actions/productsActions'
 
 export const getServerSideProps = wrapper.getServerSideProps(async ({store, query}) => {

@@ -5,7 +5,8 @@ import { createStore } from 'redux';
 import products from '../../pages/api/products';
 
 const initialState = {
-    products: []
+    products: [],
+    client: {}
 }
 
 const ShoppingCart = (state = initialState, action) => {
@@ -19,7 +20,7 @@ const ShoppingCart = (state = initialState, action) => {
                 },
                 client: {
                     ...state.client,
-                    cartState: {...loadCartState()}
+                    cartState: {...loadCartState()},
                 }
             }
         case types.ADD_PRODUCT_TO_CART:

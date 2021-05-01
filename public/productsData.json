@@ -1,6 +1,7 @@
 [
   {
       "id": "G1",
+      "sku": "G1",
       "title": "Gold Light",
       "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
       "price": "$500",
@@ -8,10 +9,13 @@
       "rating": 4.5,
       "state": "trending",
       "categorie": "necks",
-      "element": "gold"}
+      "element": "gold",
+      "currency": "USD"
+    }
   ,
     {
       "id": "G2",
+      "sku": "G2",
       "title": "Gold Earrings with diamonds",
       "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
       "price": "$559",
@@ -19,10 +23,13 @@
       "rating": 4.5,
       "state": "",
       "categorie": "necks",
-      "element": "gold"}
+      "element": "gold",
+      "currency": "USD"
+    }
   ,
     {
       "id": "G3",
+      "sku": "G3",
       "title": "Gold Ring",
       "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
       "price": "$349",
@@ -30,10 +37,12 @@
       "rating": 4.5,
       "state": "trending",
       "categorie": "rings",
-      "element": "gold"
+      "element": "gold",
+      "currency": "USD"
     },
     {
       "id": "G4",
+      "sku": "G4",
       "title": "Greek Watch",
       "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
       "price": "$500",
@@ -41,10 +50,12 @@
       "rating": 4,
       "state": "trending",
       "categorie": "watches",
-      "element": "gold"
+      "element": "gold",
+      "currency": "USD"
     },
     {
       "id": "S1",
+      "sku": "S1",
       "title": "Silver Earrings with diamonds",
       "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
       "price": "$4199",
@@ -52,10 +63,13 @@
       "rating": 4,
       "state": "dealOffer",
       "categorie": "earrings",
-      "element": "silver"}
+      "element": "silver",
+      "currency": "USD"
+    }
   ,
     {
       "id": "S2",
+      "sku": "S2",
       "title": "white stones neck",
       "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
       "price": "$500",
@@ -63,10 +77,13 @@
       "rating" : 4,
       "state": "dealOffer",
       "categorie": "necks",
-      "element": "silver"}
+      "element": "silver",
+      "currency": "USD"
+    }
   ,
     {
       "id": "S3",
+      "sku": "S3",
       "title": "Zhapire Silver light",
       "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
       "price": "$500",
@@ -74,10 +91,13 @@
       "rating": 4,
       "state": "dealOffer",
       "categorie": "necks",
-      "element": "silver"}
+      "element": "silver",
+      "currency": "USD"
+    }
   ,
     {
       "id": "S4",
+      "sku": "S4",
       "title": "Shapire Silver ring",
       "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
       "price": "$3499",
@@ -85,10 +105,13 @@
       "rating": 4,
       "state": "",
       "categorie": "rings",
-      "element": "silver"}
+      "element": "silver",
+      "currency": "USD"
+    }
   ,
     {
       "id": "S5",
+      "sku": "S5",
       "title": "saepe unde necessitatibus rem",
       "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
       "price": "Centurion Ring",
@@ -96,10 +119,13 @@
       "rating": 5,
       "state": "",
       "categorie": "rings",
-      "element": "silver"}
+      "element": "silver",
+      "currency": "USD"
+    }
   ,
     {
       "id": "S6",
+      "sku": "S6",
       "title": "Diamond Heart ring",
       "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
       "price": "$5799",
@@ -107,10 +133,13 @@
       "rating": 5,
       "state": "",
       "categorie": "rings",
-      "element": "silver"}
+      "element": "silver",
+      "currency": "USD"
+    }
   ,
     {
       "id": "S7",
+      "sku": "S7",
       "title": "",
       "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
       "price": "$499",
@@ -118,10 +147,13 @@
       "rating": 5,
       "state": "",
       "categorie": "watches",
-      "element": "silver"}
+      "element": "silver",
+      "currency": "USD"
+    }
   ,
     {
       "id": "S8",
+      "sku": "S8",
       "title": "consequatur autem ",
       "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
       "price": "$500",
@@ -129,10 +161,13 @@
       "rating": 3,
       "state": "",
       "categorie": "watches",
-      "element": "silver"}
+      "element": "silver",
+      "currency": "USD"
+    }
   ,
     {
       "id": "S9",
+      "sku": "S9",
       "title": "ab rerum non",
       "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
       "price": "$500",
@@ -140,10 +175,13 @@
       "rating": 3.5,
       "state": "",
       "categorie": "rings",
-      "element": "silver"}
+      "element": "silver",
+      "currency": "USD"
+    }
   ,
     {
       "id": "S10",
+      "sku": "S10",
       "title": "ducimus molestias eos animi atque nihil",
       "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
       "price": "$500",
@@ -151,10 +189,13 @@
       "rating": 5,
       "state": "",
       "categorie": "rings",
-      "element": "silver"}
+      "element": "silver",
+      "currency": "USD"
+    }
   ,
     {
       "id": "S11",
+      "sku": "S11",
       "title": "ut pariatur rerum ipsum natus repellendus praesentium",
       "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
       "price": "$500",
@@ -162,6 +203,7 @@
       "rating": 5,
       "state": "",
       "categorie": "earrings",
-      "element": "silver"
+      "element": "silver",
+      "currency": "USD"
     }
 ]
