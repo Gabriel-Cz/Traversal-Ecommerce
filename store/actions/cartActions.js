@@ -19,8 +19,7 @@ export const setNewCartState = () => async (dispatch, getState) => {
     })
 }
 
-export const addProductToCart = (id, quantity, price) => (dispatch, getState) => {
-    let product = {id: id, quantity: quantity, price: price};
+export const addProductToCart = (product) => (dispatch, getState) => {
     let products = getState().cartReducer.products;
     let conditionalProduct = products.find(el => el.id === product.id) ? false : true;
     console.log(conditionalProduct)

@@ -18,13 +18,7 @@ export default function CategorieContent({filteredProducts}) {
                   {filteredProducts.map(product => (
                     <Col className="my-4 mx-xl-5" key={product.id} xs={12} sm={6} md={6} xl={{span: 2, offset: 2}} xl={3}>
                       <ItemCard 
-                       productId={product.id}
-                       productTitle={product.title} 
-                       productImage={product.image} 
-                       productsPrice={product.price} 
-                       productPrice={product.price} 
-                       productDescription={product.description}
-                       productRating={product.rating}
+                       product={product}
                       >
                       </ItemCard>
                     </Col>
