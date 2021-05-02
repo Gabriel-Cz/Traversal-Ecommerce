@@ -2,8 +2,8 @@ import React from 'react'
 import { wrapper } from '../store'
 import NavbarComponent from '../components/NavbarComponent'
 import FooterComponent from '../components/FooterComponent'
+import { CartProvider } from 'use-shopping-cart' 
 import { loadStripe } from '@stripe/stripe-js'
-import { saveCartState } from '../cartStore'
 import '../styles/globals.scss'
 
 const stripePromise = loadStripe("pk_test_51IcujzEZ6RTsruQyD67ngSbKcBzZkwqOVptnHLgGW03YIsWf3kWwqipopF3soMKPJ4OFAg9ULLiQMLrTwHXg2Mz800FmGYz55w")
@@ -11,19 +11,16 @@ const stripePromise = loadStripe("pk_test_51IcujzEZ6RTsruQyD67ngSbKcBzZkwqOVptnH
 function MyApp({ Component, pageProps }) {
   return (
       <>
-        <NavbarComponent></NavbarComponent>
-        <Component {...pageProps} />
-        <FooterComponent></FooterComponent>
+        <CartProvider 
+          mode="client-only"
+          currency="USD"
+        >
+          <NavbarComponent></NavbarComponent>
+          <Component {...pageProps} />
+          <FooterComponent></FooterComponent>
+        </CartProvider>
       </>
   )
 }
-
-export const getServerSideProps = wrapper.getServerSideProps(
-  ({store}) => {
-    store.subscribe(() => {
-      console.log(store.getState)
-    });
-})
-
 
 export default wrapper.withRedux(MyApp);
