@@ -4,19 +4,23 @@ import Col from 'react-bootstrap/Col'
 import ItemCard from '../ItemCard'
 import Container from 'react-bootstrap/Container'
 import { Quote } from '../GoldAndSilverSection';
+import styles from '../../styles/Categories.module.scss'
 
 const customContainer = {
     border: "6px double gray",
     borderBottom: 'none', 
 }
 
-export default function CategorieContent({filteredProducts}) {
+export default function CategorieContent({filteredProducts, categorie}) {
     return(
         <>
-          <Container className="mx-auto my-5 py-5" fluid style={{borderBottom: "3px double rgba(128, 128, 128, 0.5)", borderTop: "3px double rgba(128, 128, 128, 0.5)"}}>
+          <Container className={styles.container}>
+              <span className={styles.categorieName}>{categorie}</span>
+              <div className={styles.firstDiv}>
+              <div className={styles.secondDiv}>
               <Row className="justify-content-center align-items-center">
-                  {filteredProducts.map(product => (
-                    <Col className="my-4 mx-xl-5" key={product.id} xs={12} sm={6} md={6} xl={{span: 2, offset: 2}} xl={3}>
+                {filteredProducts.map(product => (
+                    <Col className="my-4 mx-xl-2" key={product.id} xs={12} sm={6} md={6} xl={{span: 2, offset: 2}} xl={5}>
                       <ItemCard 
                        product={product}
                       >
@@ -29,6 +33,8 @@ export default function CategorieContent({filteredProducts}) {
                       <Quote></Quote>
                   </Col>
               </Row>
+                  </div>
+              </div>
           </Container>
         </>
     );

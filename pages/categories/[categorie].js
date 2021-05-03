@@ -18,7 +18,7 @@ function Categories() {
   return(
     <>
       <CategorieHeader categorieName={categorie}></CategorieHeader>
-      <CategorieContent filteredProducts={filteredProducts}></CategorieContent>
+      <CategorieContent filteredProducts={filteredProducts} categorie={categorie}></CategorieContent>
     </>
 );
 }

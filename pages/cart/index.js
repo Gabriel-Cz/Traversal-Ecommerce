@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -8,6 +8,11 @@ import styles from '../../styles/Cart.module.scss'
 
 export default function Cart() {
     const { cartDetails } = useShoppingCart();
+    const object = cartDetails.G1
+    const products = []
+    useEffect(() => {
+        console.log(object);
+    }, [])
     return(
         <>
         <Container>
@@ -19,7 +24,7 @@ export default function Cart() {
                        </div>
                     </Col>
                     <Col cols={12}>
-                        <ProductsTable products={cartDetails}></ProductsTable>
+                        <ProductsTable products={products}></ProductsTable>
                     </Col>
                 </Row>
             </div>

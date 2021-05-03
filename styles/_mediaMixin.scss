@@ -1,7 +1,8 @@
-$breakpoint-xs: 360px;
-$breakpoint-sm: 767px;
-$breakpoint-md: 1023px;
-$breakpoint-lg: 1360px;
+$breakpoint-xs: 300px;
+$breakpoint-sm: 600px;
+$breakpoint-md: 960px;
+$breakpoint-lg: 1264px;
+$breakpoint-xl: 1904px;
 
 @mixin media($media) {
   @if $media == xs {
@@ -14,6 +15,9 @@ $breakpoint-lg: 1360px;
     @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) { @content; }
   }
   @else if $media == lg {
+    @media (min-width: $breakpoint-lg) { @content; }
+  }
+  @else if $media == xl {
     @media (min-width: $breakpoint-lg) { @content; }
   }
 }

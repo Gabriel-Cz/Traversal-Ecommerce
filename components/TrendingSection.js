@@ -10,11 +10,11 @@ function TrendingSection({trendingProducts}) {
     return(
         <>
           <Container className={styles.container}>
-              <Row className="justify-content-md-center" className={styles.borderTrendingRow}>
-                  <Col md="10" className="text-center my-5" className={styles.trendingHeader}>Trending</Col>
+              <Row className="justify-content-center">
+                  <Col md="10" className={styles.trendingHeader}>Trending</Col>
               </Row>
               <div className={styles.contentForLargeScreen}>
-              <Row className="justify-content-center mt-5">
+              <Row className={styles.borderTrendingRow}>
                   {trendingProducts.map(product => (
                       <Col md={4} className="">
                         <ItemCard 
@@ -30,7 +30,7 @@ function TrendingSection({trendingProducts}) {
                 {trendingProducts.map(product => (
                   <Carousel.Item key={product.id}>
                       <Row class="d-flex justify-content-center">
-                        <Col xs={12} style={{height: "100%"}}>
+                        <Col xs={12} sm={4} style={{height: "100%"}}>
                             <ItemCard product={product}></ItemCard>
                         </Col>
                       </Row>

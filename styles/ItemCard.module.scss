@@ -38,7 +38,7 @@ $fontSubheader: italic 14px 'Unna', serif;
     }
     border: none;
     background-color: none;
-    box-shadow: 4px 4px 8px rgba($color: gray, $alpha: 0.25);
+    box-shadow: 5px 5px 10px rgba($color: gray, $alpha: 0.25);
     border-bottom-right-radius: 10px;
     .topImage {
         position: relative;
@@ -53,7 +53,7 @@ $fontSubheader: italic 14px 'Unna', serif;
             position: absolute;
             top: 0;
             display: grid;
-            background-color: rgba($color: white, $alpha: 0.5);
+            background-color: rgba($color: white, $alpha: 0.65);
             place-items: center;
             padding: 20px 20px;
             font: $fontHeader;
@@ -76,7 +76,7 @@ $fontSubheader: italic 14px 'Unna', serif;
             position: absolute;
             top: 0;
             left: 0;
-            background-color: rgba($color: azure, $alpha: 0.70);
+            background-color: rgba($color: azure, $alpha: 0.80);
             transition: ease-in-out 0.5s;
             opacity: 0;
         }
@@ -126,6 +126,9 @@ $fontSubheader: italic 14px 'Unna', serif;
                 place-items: center;
                 transition: ease-in-out 0.5;
                 opacity: 1;
+            }
+            .cardTitle {
+                box-shadow: none;
             }
         }
     }
