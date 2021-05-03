@@ -20,7 +20,7 @@ export default function CategorieContent({filteredProducts, categorie}) {
               <div className={styles.secondDiv}>
               <Row className="justify-content-center align-items-center">
                 {filteredProducts.map(product => (
-                    <Col className="my-4 mx-xl-2" key={product.id} xs={12} sm={6} md={6} xl={{span: 2, offset: 2}} xl={5}>
+                    <Col className="my-4 mx-xl-2" key={product.id} xs={11} sm={6} md={6} xl={{span: 2, offset: 2}} xl={5}>
                       <ItemCard 
                        product={product}
                       >

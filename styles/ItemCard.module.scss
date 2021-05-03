@@ -47,8 +47,12 @@ $fontSubheader: italic 14px 'Unna', serif;
             position: relative;
             border-bottom-left-radius: 10px;
             border-bottom-right-radius: 10px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
         }
         .cardTitle {
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
             z-index: 9;
             position: absolute;
             top: 0;
@@ -106,6 +110,12 @@ $fontSubheader: italic 14px 'Unna', serif;
     }
     .cardDescription {
         @include media.media(xs) {
+            display: none;
+        }
+        @include media.media(sm) {
+            display: none;
+        }
+        @include media.media(md) {
             display: none;
         }
         margin-top: 0px;

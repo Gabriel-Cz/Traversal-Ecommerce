@@ -64,6 +64,21 @@ function SilverBlock() {
     );
 }
 
+const GoldBlocksSvg = () => {
+    return(
+        <div className={styles.goldBlockSvg}>
+            <iframe src="/GoldBlocks.svg"></iframe>
+        </div>
+    );
+}
+
+const SilverBlocksSvg = () => {
+    return(
+        <div className={styles.goldBlockSvg}>
+            <iframe src="/SilverBlocks.svg"></iframe>
+        </div>
+    );
+}
 
 class GoldAndSilverSection extends React.Component {
     constructor(props) {
@@ -72,6 +87,7 @@ class GoldAndSilverSection extends React.Component {
     render() {
         return( 
             <Container fluid className={styles.customContainer}>
+                <GoldBlocksSvg />
                 <Row className="d-flex justify-content-center align-items-center py-sm-5 py-1-sm">
                     <Col lg={5}>
                         <SilverBlock></SilverBlock>
@@ -84,7 +100,8 @@ class GoldAndSilverSection extends React.Component {
                     <Col lg={5}>
                         <Quote></Quote>
                     </Col>
-                </Row>   
+                </Row>
+                <SilverBlocksSvg />   
             </Container>
         ); 
     }

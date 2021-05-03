@@ -28,7 +28,7 @@ $fonts: (
 @mixin fontMixin($font) {
     @if($font == fontButton) {
         @include media.media(xs) {
-            font-size: 14px; 
+            font-size: 10px; 
         }
         font: $fontButton;
     }
