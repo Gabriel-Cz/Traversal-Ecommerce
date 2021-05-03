@@ -7,19 +7,23 @@ import { CartButton } from '../components/Buttons'
 export const linksCategories = [
     { 
         name: 'Rings',
-        link: '/rings' 
+        link: '/rings',
+        image: './CategoriesThumbnails/RingsThumbnail.jpg'
     },
     {
         name: 'Necks',
-        link: '/necks'
+        link: '/necks',
+        image: './CategoriesThumbnails/NecklacesThumbnail.jpg'
     },
     {
         name: 'Earring',
-        link: '/earrings'
+        link: '/earrings',
+        image: './CategoriesThumbnails/EarringsThumbnail.jpg'
     },
     {
         name: 'Watches',
-        link: '/watches'
+        link: '/watches',
+        image: './CategoriesThumbnails/WatchesThumbnail.jpg'
     }
 ]
 

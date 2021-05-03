@@ -10,6 +10,8 @@ import styles from '../styles/Buttons.module.scss';
 
 const stripePromise = loadStripe("pk_test_51IcujzEZ6RTsruQyD67ngSbKcBzZkwqOVptnHLgGW03YIsWf3kWwqipopF3soMKPJ4OFAg9ULLiQMLrTwHXg2Mz800FmGYz55w")
 
+//Checkout Buttons
+
 const handleCheckout = async (products) => {
     const stripe = await stripePromise;
     const response = await axios.post("/api/cart", {products: products});
@@ -22,17 +24,15 @@ const handleCheckout = async (products) => {
     }
 }
 
-export const AddToCartButton = ({product, quantity}) => {
-    const { addItem } = useShoppingCart()
-    product.quantity = quantity;
+export const CheckoutButton = () => {
     return(
-        <>
-        <button onClick={() => addItem(product)} className={styles.addToCartButton}>
-            Add To Cart
+        <button className={styles.checkoutButton} role="link" onClick={handleCheckout}>
+            Checkout
         </button>
-        </>
     );
 }
+
+//Cart Buttons
 
 export function CartButton() {
     const { redirectToCheckout, cartCount } = useShoppingCart()
@@ -54,27 +54,33 @@ export function CartButton() {
     );
 }
 
-export const CheckoutButton = () => {
+export const AddToCartButton = ({product, quantity}) => {
+    const { addItem } = useShoppingCart()
+    product.quantity = quantity;
     return(
-        <button className={styles.checkoutButton} role="link" onClick={handleCheckout}>
-            Checkout
+        <>
+        <button onClick={() => addItem(product)} className={styles.addToCartButton}>
+            Add To Cart
         </button>
+        </>
     );
 }
 
-export const CheckoutSingleProductButton = () => {
-    return(
-        <button>
-            Checkout This Product
-        </button>
-    );
-}
 
-export const CheckoutCart = () => {
+export const CheckoutCartButton = () => {
     const { cartDetails } = useShoppingCart();
     return(
-        <button onClick={handleCheckout(cartDetails)} role="link">
+        <button onClick={handleCheckout(cartDetails)} role="link" className={styles.checkoutCartButton}>
             Checkout Cart
         </button>
     )
+}
+
+export const ClearCartButton = () => {
+    const { clearCart } = useShoppingCart();
+    return(
+        <button onClick={clearCart} className={styles.clearCartButton}>
+            Clear Cart
+        </button>
+    );
 }

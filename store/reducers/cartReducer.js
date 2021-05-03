@@ -26,12 +26,18 @@ const ShoppingCart = (state = initialState, action) => {
         case types.ADD_PRODUCT_TO_CART:
             return {
                 ...state,
-                products: [action.payload, ...state.products]
+                server: {
+                    ...state.server,
+                    products: [action.payload, ...state.server.products]
+                }
             }
         case types.INCREASE_QUANTITY:
             return {
                 ...state,
-                ...state.products, 
+                server: {
+                    ...state.server,
+                    product: action.payload
+                }
             } 
         /* case types.INCREASE_QUANTITY:
             return {

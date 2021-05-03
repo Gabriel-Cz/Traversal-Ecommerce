@@ -75,7 +75,22 @@ const GoldBlocksSvg = () => {
 const SilverBlocksSvg = () => {
     return(
         <div className={styles.goldBlockSvg}>
-            <iframe src="/SilverBlocks.svg"></iframe>
+            <svg width="100%" height="100%" viewBox="0 0 1255 163" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d)">
+<path d="M5 22.5H1251M359.998 84.9453H1160M228.998 153.945H728.998M544 0.5H1044M90 54.5H890M4.99683 123.482H1248" stroke="#CBC6C6"/>
+</g>
+<defs>
+<filter id="filter0_d" x="0.996826" y="0" width="1254" height="162.445" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+</defs>
+</svg>
         </div>
     );
 }
@@ -87,7 +102,7 @@ class GoldAndSilverSection extends React.Component {
     render() {
         return( 
             <Container fluid className={styles.customContainer}>
-                <GoldBlocksSvg />
+                <SilverBlocksSvg />
                 <Row className="d-flex justify-content-center align-items-center py-sm-5 py-1-sm">
                     <Col lg={5}>
                         <SilverBlock></SilverBlock>
@@ -101,7 +116,6 @@ class GoldAndSilverSection extends React.Component {
                         <Quote></Quote>
                     </Col>
                 </Row>
-                <SilverBlocksSvg />   
             </Container>
         ); 
     }
