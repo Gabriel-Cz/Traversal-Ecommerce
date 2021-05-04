@@ -59,7 +59,7 @@ export const AddToCartButton = ({product, quantity}) => {
     product.quantity = quantity;
     return(
         <>
-        <button onClick={() => addItem(product)} className={styles.addToCartButton}>
+        <button onClick={() => addItem(product, quantity)} className={styles.addToCartButton}>
             Add To Cart
         </button>
         </>

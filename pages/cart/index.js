@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -6,7 +6,7 @@ import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
 import ProductsTable from '../../components/CartComponents/ProductsTable'
 import CartFooter from '../../components/CartComponents/CartFooter'
-import TrendingSection from '../../components/TrendingSection'
+import { Quote } from '../../components/GoldAndSilverSection'
 import { useShoppingCart } from 'use-shopping-cart'
 import { wrapper } from '../../store' 
 import { linksCategories } from '../../components/NavbarComponent'
@@ -14,19 +14,10 @@ import { filterProducts } from '../../store/actions/productsActions'
 import { useSelector } from 'react-redux' 
 import styles from '../../styles/Cart.module.scss' 
 
-export const getServerSideProps = wrapper.getServerSideProps(async ({store}) => {
-    await store.dispatch(filterProducts('state', 'trending'))
-    return {
-        props: {
-            filteredProducts: store.getState().productsReducer.server.filteredProducts
-        }
-    }
-})
-
 const EmptyCartMessage = () => {
     return(
         <>
-          <Container className="mx-auto my-5">
+          <Container className={styles.containerMessageWrapper}>
               <div className="d-flex flex-column justify-content-center align-items-center py-4">
                   <h1 className={styles.messageHeader}>
                       Your Cart is currently empty go to add something.
@@ -56,20 +47,25 @@ const EmptyCartMessage = () => {
 }
 
 export function Cart({filteredProducts}) {
+    const [emptyCartMessage, setEmptyCartMessage ] = useState(true);
     const { cartDetails } = useShoppingCart();
-    /* const {filteredProducts} = useSelector(state => state.productsReducer.server); */
     const products = Object.values(cartDetails)
-    if (products[0] === undefined) {
+    useEffect(() => {
+        products[0] === undefined ? setEmptyCartMessage(true) : setEmptyCartMessage(false);
+    }, [products])
+    if (emptyCartMessage === true) {
         return(
             <>
               <EmptyCartMessage />
-            <TrendingSection trendingProducts={filteredProducts}></TrendingSection>
+              <div className="mt-4 py-2 d-flex justify-content-center align-items-center">
+                  <Quote></Quote>
+              </div>
             </>
         );
     } else {
         return(
             <>
-            <Container className={styles.container}>
+            <Container className={styles.cartContainer}>
                 <div>
                     <Row classNmae="justify-content-center">
                         <Col xs={12}>
@@ -86,7 +82,9 @@ export function Cart({filteredProducts}) {
                     </Row>
                 </div>
             </Container>
-            <TrendingSection trendingProducts={filteredProducts}></TrendingSection>
+            <div className="mt-4 py-2 d-flex justify-content-center align-items-center">
+                <Quote></Quote>
+            </div>
             </>
         );
     }

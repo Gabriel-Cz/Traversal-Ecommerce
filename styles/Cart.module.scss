@@ -25,7 +25,8 @@ $tableFontSmall: 18px 'Lora', serif;
     font-style: italic;
 }   
 
-.container {
+.cartContainer {
+    animation: fadeIn 2s ease-in-out 1;
     @include media.media(xs) {
         margin-top: 50px;
         margin-bottom: 50px;
@@ -45,6 +46,11 @@ $tableFontSmall: 18px 'Lora', serif;
 }
 
 //Empty Cart Message 
+
+.containerMessageWrapper {
+    animation: fadeIn 2s ease-in-out 1;
+    margin-top: 50px;
+}
 
 .messageHeader {
     font: 22px 'Lora', serif;
@@ -79,4 +85,13 @@ $tableFontSmall: 18px 'Lora', serif;
     color: white;
     font: 22px 'Parisienne', serif;
     background-color: rgba($color: black, $alpha: 0.75);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

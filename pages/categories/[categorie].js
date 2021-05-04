@@ -9,12 +9,16 @@ import { filterProducts } from '../../store/actions/productsActions'
 export const getServerSideProps = wrapper.getServerSideProps(async ({store, query}) => {
   const params = query.categorie;
   await store.dispatch(filterProducts('categorie', params));
+  return {
+    props: {
+      filteredProducts: store.getState().productsReducer.server.filteredProducts
+    }
+  }
 })
 
-function Categories() {
+function Categories({filteredProducts}) {
   const router = useRouter();
   const {categorie} = router.query;
-  const {filteredProducts} = useSelector(state => state.productsReducer.server);
   return(
     <>
       <CategorieHeader categorieName={categorie}></CategorieHeader>
