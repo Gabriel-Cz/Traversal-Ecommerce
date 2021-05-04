@@ -1,6 +1,10 @@
 import axios from 'axios'
 import * as types from '../types'
 
+const axiosConfig = {
+    headers: {'Content-Type': 'application/x-www-form-urlencoded'} 
+}
+
 export const getProducts = () => async (dispatch) => {
     let response = await axios.get('http://localhost:3000/api/products')
                   .then(res => res.data)
