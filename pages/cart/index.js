@@ -6,12 +6,9 @@ import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
 import ProductsTable from '../../components/CartComponents/ProductsTable'
 import CartFooter from '../../components/CartComponents/CartFooter'
-import { Quote } from '../../components/HomePageComponents/GoldAndSilverSection'
+import { Quote } from '../../components//HomePageComponents/GoldAndSilverSection'
 import { useShoppingCart } from 'use-shopping-cart'
-import { wrapper } from '../../store' 
 import { linksCategories } from '../../components/NavbarComponent'
-import { filterProducts } from '../../store/actions/productsActions'
-import { useSelector } from 'react-redux' 
 import styles from '../../styles/Cart.module.scss' 
 
 const EmptyCartMessage = () => {
@@ -46,7 +43,7 @@ const EmptyCartMessage = () => {
     );
 }
 
-export function Cart({filteredProducts}) {
+export function Cart() {
     const [emptyCartMessage, setEmptyCartMessage ] = useState(true);
     const { cartDetails } = useShoppingCart();
     const products = Object.values(cartDetails)

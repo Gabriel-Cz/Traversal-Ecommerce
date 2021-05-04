@@ -4,7 +4,7 @@ import Col from 'react-bootstrap/Col'
 import PropTypes from 'prop-types';
 import ItemCard from '../ItemCard'
 import Container from 'react-bootstrap/Container'
-import { Quote } from '../GoldAndSilverSection';
+import { Quote } from '../HomePageComponents/GoldAndSilverSection';
 
 function CategorieContent({filteredProducts}) {
     return(
