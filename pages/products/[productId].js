@@ -1,14 +1,12 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { wrapper } from '../../store'
-import { useDispatch, useSelector } from 'react-redux' 
 import { getProduct } from '../../store/actions/productsActions'
-import { setNewCartState } from '../../store/actions/cartActions'
 import Container from 'react-bootstrap/Container'
 import ProductInformation from '../../components/ProductsPageComponents/ProductInformation'
 import Image from 'react-bootstrap/Image'
-import styles from '../../styles/Product.module.scss'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import styles from '../../styles/Product.module.scss'
 
 const SvgTruck = () => {
   return(
@@ -47,14 +45,6 @@ const ShipmentInformation = () => {
   );
 }
 
-const Loading = () => {
-  return(
-    <>
-    <h1>Loading...</h1>
-    </>
-  );
-}
-
 export const getServerSideProps = wrapper.getServerSideProps(async ({store, query}) => {
   const params = query.productId;
   await store.dispatch(getProduct(params));
@@ -67,7 +57,6 @@ export const getServerSideProps = wrapper.getServerSideProps(async ({store, quer
 })
 
 function Product({product}) {
-  /* const {product} = useSelector(state => state.productsReducer.server); */ 
   return(
         <>
           <Container fluid className={styles.container}>
