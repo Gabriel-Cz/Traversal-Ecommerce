@@ -6,9 +6,22 @@ import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
 import ProductsTable from '../../components/CartComponents/ProductsTable'
 import CartFooter from '../../components/CartComponents/CartFooter'
+import TrendingSection from '../../components/TrendingSection'
 import { useShoppingCart } from 'use-shopping-cart'
-import { linksCategories } from '../../components/NavbarComponent' 
+import { wrapper } from '../../store' 
+import { linksCategories } from '../../components/NavbarComponent'
+import { filterProducts } from '../../store/actions/productsActions'
+import { useSelector } from 'react-redux' 
 import styles from '../../styles/Cart.module.scss' 
+
+export const getServerSideProps = wrapper.getServerSideProps(async ({store}) => {
+    await store.dispatch(filterProducts('state', 'trending'))
+    return {
+        props: {
+            filteredProducts: store.getState().productsReducer.server.filteredProducts
+        }
+    }
+})
 
 const EmptyCartMessage = () => {
     return(
@@ -20,8 +33,8 @@ const EmptyCartMessage = () => {
                   </h1>
                   <Row className="mt-5" justify-content-center>
                       {linksCategories.map(link => (
-                          <Col xs={6} md={3}>
-                              <Link href={link.link} passHref>
+                          <Col xs={6} md={3} key={link.name}>
+                              <Link href={'/categories' + link.path} passHref>
                                 <a>
                                 <div className={styles.thumbnailContainer}>
                                 <div className={styles.thumbnailOverflow}>
@@ -42,12 +55,16 @@ const EmptyCartMessage = () => {
     );
 }
 
-export default function Cart() {
+export function Cart({filteredProducts}) {
     const { cartDetails } = useShoppingCart();
+    /* const {filteredProducts} = useSelector(state => state.productsReducer.server); */
     const products = Object.values(cartDetails)
     if (products[0] === undefined) {
         return(
-            <EmptyCartMessage />
+            <>
+              <EmptyCartMessage />
+            <TrendingSection trendingProducts={filteredProducts}></TrendingSection>
+            </>
         );
     } else {
         return(
@@ -69,7 +86,10 @@ export default function Cart() {
                     </Row>
                 </div>
             </Container>
+            <TrendingSection trendingProducts={filteredProducts}></TrendingSection>
             </>
         );
     }
 }
+
+export default Cart;

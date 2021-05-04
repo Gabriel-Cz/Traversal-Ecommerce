@@ -58,20 +58,26 @@ const Loading = () => {
 export const getServerSideProps = wrapper.getServerSideProps(async ({store, query}) => {
   const params = query.productId;
   await store.dispatch(getProduct(params));
+  const product = store.getState().productsReducer.server.product
+  return { 
+    props: {
+      product: product
+    }
+  };
 })
 
-function Product() {
-  const {product} = useSelector(state => state.productsReducer.server);
+function Product({product}) {
+  /* const {product} = useSelector(state => state.productsReducer.server); */ 
   return(
         <>
           <Container fluid className={styles.container}>
           <div className={styles.productCard}>
               <Row className="d-flex align-items-center justify-center">
                   <Col xs={12} sm={8} md={6}>
-                    <ProductInformation title={product.title} description={product.description} rating={product.rating} type={product.type} image={product.image}></ProductInformation>
+                    <ProductInformation product={product} />
                   </Col>
                   <Col xs={12} sm={4} md={6} className={styles.colImageWrapper}>
-                    <Image src={product.image} fluid className=""/>
+                    <Image src={product.image} fluid/>
                   </Col>
               </Row>
           </div>

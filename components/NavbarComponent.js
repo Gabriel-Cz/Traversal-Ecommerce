@@ -7,22 +7,22 @@ import { CartButton } from '../components/Buttons'
 export const linksCategories = [
     { 
         name: 'Rings',
-        link: '/rings',
+        path: '/rings',
         image: './CategoriesThumbnails/RingsThumbnail.jpg'
     },
     {
         name: 'Necks',
-        link: '/necks',
+        path: '/necks',
         image: './CategoriesThumbnails/NecklacesThumbnail.jpg'
     },
     {
         name: 'Earring',
-        link: '/earrings',
+        path: '/earrings',
         image: './CategoriesThumbnails/EarringsThumbnail.jpg'
     },
     {
         name: 'Watches',
-        link: '/watches',
+        path: '/watches',
         image: './CategoriesThumbnails/WatchesThumbnail.jpg'
     }
 ]
@@ -42,7 +42,7 @@ export default function NavbarComponent() {
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="d-flex justify-content-center align-items-center align-items-lg-none w-xl-90 w-100">
                   {linksCategories.map(link => (
-                      <Nav.Link key={link.name} href={"/categories" + link.link} className="mx-3">{link.name}</Nav.Link>
+                      <Nav.Link key={link.name} href={"/categories" + link.path} className="mx-3">{link.name}</Nav.Link>
                   ))}
                 </Nav>
             </Navbar.Collapse>
