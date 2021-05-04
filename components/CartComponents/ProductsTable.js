@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Table from 'react-bootstrap/Table'
-import { CheckoutButton } from '../Buttons'
+import { CheckoutButton, RemoveFromCartButton } from '../Buttons'
 import { useShoppingCart } from 'use-shopping-cart'
 import styles from '../../styles/Cart.module.scss' 
 
@@ -60,8 +60,9 @@ export const TableContent = ({products}) => {
                                   <ProductQuantity sku={product.sku} currentQuantity={product.quantity} />
                               </td>
                               <td>{product.price}</td>
-                              <td>
+                              <td classname="d-flex">
                                   <CheckoutButton product={product} />
+                                  <RemoveFromCartButton product={product.sku}></RemoveFromCartButton>
                               </td>
                           </tr>
                       ))}

@@ -55,17 +55,39 @@ export function CartButton() {
 }
 
 export const AddToCartButton = ({product, quantity}) => {
-    const { addItem } = useShoppingCart()
+    const { addItem, setItemQuantity, incrementItem } = useShoppingCart()
     product.quantity = quantity;
+    const setProductWithQuantity = (productToAdd, quantityToAdd) => {
+        addItem(productToAdd);
+        setTimeout(() => {
+            const productSku = productToAdd.sku;
+            if (productToAdd.quantity === 8) {
+                setItemQuantity(productSku, quantityToAdd);
+            } else {
+                incrementItem(productSku, quantityToAdd);
+            }
+        }, 20)
+    }
+    console.log(quantity)
     return(
         <>
-        <button onClick={() => addItem(product, quantity)} className={styles.addToCartButton}>
+        <button onClick={() => setProductWithQuantity(product, quantity)} className={styles.addToCartButton}>
             Add To Cart
         </button>
         </>
     );
 }
 
+export const RemoveFromCartButton = (sku) => {
+    const { removeItem } = useShoppingCart();
+    return(
+        <>
+        <button onClick={() => removeItem(sku)} className={styles.removeProductButton}>
+            Remove
+        </button>
+        </>
+    );
+}
 
 export const CheckoutCartButton = () => {
     const { cartDetails } = useShoppingCart();
