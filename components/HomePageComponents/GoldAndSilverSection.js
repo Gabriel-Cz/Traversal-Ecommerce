@@ -4,7 +4,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
 import Link from 'next/link'
-import styles from '../styles/GoldAndSilver.module.scss'
+import styles from '../../styles/GoldAndSilver.module.scss'
 
 function OverflowGoldInfo() {
     return(

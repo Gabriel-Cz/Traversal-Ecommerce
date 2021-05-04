@@ -2,7 +2,7 @@ import React from 'react'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import styles from '../styles/ShipmentsInformation.module.scss'
+import styles from '../../styles/ShipmentsInformation.module.scss'
 
 export function Quote() {
     return(

@@ -1,6 +1,6 @@
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel'
-import ItemCard from '../../components/ItemCard'
+import ItemCard from '../ItemCard'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 

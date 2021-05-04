@@ -4,7 +4,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Carousel from 'react-bootstrap/Carousel'
 import ItemCard from '../ItemCard'
-import styles from '../styles/TrendingSection.module.scss'
+import styles from '../../styles/TrendingSection.module.scss'
 
 function TrendingSection({trendingProducts}) {
     return(
