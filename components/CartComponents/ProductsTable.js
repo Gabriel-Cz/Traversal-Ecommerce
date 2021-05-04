@@ -40,8 +40,7 @@ const ProductQuantity = ({currentQuantity, sku}) => {
     );
 }
 
-export const TableContent = ({products}) => {
-    
+export default function TableContent({products}) {
     return(
         <>
           <Table className={styles.cartTable} responsive bordered hover>
@@ -72,16 +71,3 @@ export const TableContent = ({products}) => {
     );
 } 
 
-export default function ProductsTable({products}) {
-    if(products === null) {
-        return(
-            <>
-            <h1>Your cart is empty go to shop.</h1>
-            </>
-        );
-    } else {
-        return(
-            <TableContent products={products} />
-        );
-    }
-} 

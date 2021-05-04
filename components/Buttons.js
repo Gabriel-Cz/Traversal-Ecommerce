@@ -10,9 +10,9 @@ const stripePromise = loadStripe("pk_test_51IcujzEZ6RTsruQyD67ngSbKcBzZkwqOVptnH
 
 //Checkout Buttons
 
-const handleCheckout = async (products) => {
+const handleCheckout = async ({cartDetails}) => {
     const stripe = await stripePromise;
-    const response = await axios.post("/api/cart", {products: products});
+    const response = await axios.post("/api/cart", cartDetails);
     const session = await response.data;
     const result = await stripe.redirectToCheckout({
         sessionId: session.id
@@ -76,7 +76,7 @@ export const AddToCartButton = ({product, quantity}) => {
     );
 }
 
-export const RemoveFromCartButton = (sku) => {
+export const RemoveFromCartButton = ({sku}) => {
     const { removeItem } = useShoppingCart();
     return(
         <>
@@ -90,7 +90,7 @@ export const RemoveFromCartButton = (sku) => {
 export const CheckoutCartButton = () => {
     const { cartDetails } = useShoppingCart();
     return(
-        <button onClick={handleCheckout(cartDetails)} role="link" className={styles.checkoutCartButton}>
+        <button onClick={() => handleCheckout(cartDetails)} role="link" className={styles.checkoutCartButton}>
             Checkout Cart
         </button>
     )

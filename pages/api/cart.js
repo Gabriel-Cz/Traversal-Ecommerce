@@ -10,13 +10,27 @@ const CHECKOUT_DOMAIN = "http://localhost:3000/products/checkout"
 
 export default async function handler(req, res) {
     if (req.method === 'POST') {
-       const { products } = req.body
+        const cartDetails = req.body;
+        console.log(cartDetails);
         try {
+            const line_items = cartDetails;
             /* const cartDetails = req.body;
             const line_items = validateCartItems(inventory, cartDetails); */
             const session = await stripe.checkout.sessions.create({
                 payment_method_types: ['card'],
-                line_items: products,
+                line_items: [
+                    {
+                        price_data: {
+                          currency: 'usd',
+                          product_data: {
+                            name: 'Stubborn Attachments',
+                            images: ['https://i.imgur.com/EHyR2nP.png'],
+                          },
+                          unit_amount: 2000,
+                        },
+                        quantity: 1,
+                      },
+                ],
                 mode: 'payment',
                 success_url: `${CHECKOUT_DOMAIN}?success=true`,
                 cancel_url: `${CHECKOUT_DOMAIN}?canceled=true`
