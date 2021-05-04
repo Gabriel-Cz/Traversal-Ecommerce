@@ -12,6 +12,7 @@
     "@stripe/stripe-js": "^1.14.0",
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
+    "jquery": "^1.12.4",
     "next": "10.0.7",
     "next-redux-wrapper": "^6.0.2",
     "prop-types": "^15.7.2",
