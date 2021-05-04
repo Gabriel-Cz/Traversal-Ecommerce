@@ -3,7 +3,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import ItemCard from '../ItemCard'
 import Container from 'react-bootstrap/Container'
-import { Quote } from '../GoldAndSilverSection';
+import { Quote } from '../HomePageComponents/GoldAndSilverSection';
 import styles from '../../styles/Categories.module.scss'
 
 const customContainer = {
