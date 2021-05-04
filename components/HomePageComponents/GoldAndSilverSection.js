@@ -3,7 +3,6 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
-import { GoldLink, SilverLink } from './ProductsLinks'
 import Link from 'next/link'
 import styles from '../styles/GoldAndSilver.module.scss'
 
@@ -61,14 +60,6 @@ function SilverBlock() {
                 </a>
             </Link>
       </div>
-    );
-}
-
-const GoldBlocksSvg = () => {
-    return(
-        <div className={styles.goldBlockSvg}>
-            <iframe src="/GoldBlocks.svg"></iframe>
-        </div>
     );
 }
 
