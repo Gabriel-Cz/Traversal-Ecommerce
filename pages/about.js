@@ -1,5 +1,4 @@
 import React from 'react'
-import Cart from '../components/Cart'
 import Container from 'react-bootstrap/Container'
 
 export default function About() {

@@ -1,7 +1,5 @@
 import React from 'react';
-import {useDispatch, useSelector} from 'react-redux';
 import { useShoppingCart } from 'use-shopping-cart'
-import { addProductToCart } from '../store/actions/cartActions';
 import { loadStripe } from "@stripe/stripe-js";
 import axios from 'axios';
 import Link from 'next/link';
@@ -35,7 +33,7 @@ export const CheckoutButton = () => {
 //Cart Buttons
 
 export function CartButton() {
-    const { redirectToCheckout, cartCount } = useShoppingCart()
+    const { cartCount } = useShoppingCart()
     return(
         <>
           <Link href="/cart" passHref>

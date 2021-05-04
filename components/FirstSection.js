@@ -3,8 +3,17 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
-import { SeeMoreButton } from '../components/ProductsLinks'
 import styles from '../styles/FirstSection.module.scss'
+
+const SeeMoreButton = () => {
+  return(
+      <Link href="/about" passHref>
+        <a>
+        <span>See More</span>
+        </a>
+      </Link>
+  );
+}
 
 const MoreInfo = () => {
     return(
