@@ -7,17 +7,16 @@ import ShipmentsInformation from '../components/HomePageComponents/ShipmentsInfo
 import { wrapper } from '../store' 
 import { filterProducts } from '../store/actions/productsActions'
 
-/* export const getServerSideProps = wrapper.getServerSideProps(async ({store}) => {
+export const getServerSideProps = wrapper.getServerSideProps(async ({store}) => {
   await store.dispatch(filterProducts('state', 'trending'))
   return {
     props: {
       trendingProducts: store.getState().productsReducer.server.filteredProducts
     }
   }
-}) */
+}) 
 
 export function Home({trendingProducts}) {
-  trendingProducts = [{title: "asd"}]
   return (
     <>
       <FirstSection></FirstSection>

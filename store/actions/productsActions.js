@@ -6,7 +6,7 @@ const axiosConfig = {
 }
 
 export const getProducts = () => async (dispatch) => {
-    let response = await axios.get('http://localhost:3000/api/products')
+    let response = await axios.get('http://localhost:3000/api/products', axiosConfig)
                   .then(res => res.data)
                   .catch(e => console.log(e));
     dispatch({
@@ -16,7 +16,7 @@ export const getProducts = () => async (dispatch) => {
 }
 
 export const getProduct = (id) => async (dispatch) => {
-    let response = await axios.get('http://localhost:3000/api/products')
+    let response = await axios.get('http://localhost:3000/api/products', axiosConfig)
                   .then(res => res.data)
                   .catch(e => console.log(e));
     dispatch({
@@ -26,7 +26,7 @@ export const getProduct = (id) => async (dispatch) => {
 }
 
 export const filterProducts = (type, filter) => async (dispatch) => {
-    let response = await axios.get('http://localhost:3000/api/products')
+    let response = await axios.get('http://localhost:3000/api/products', axiosConfig)
                   .then(res => res.data)
                   .catch(e => console.log(e)); 
     dispatch({
