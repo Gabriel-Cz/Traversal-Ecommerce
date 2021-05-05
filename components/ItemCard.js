@@ -70,7 +70,7 @@ export default function ItemCard({product}) {
         <Card className={styles.card}>
           <div className={styles.topImage}>
             <Image className={styles.cardImage} fluid src={product.image} />
-            <Card.Title className={styles.cardTitle}>{product.title}</Card.Title>
+            <Card.Title className={styles.cardTitle}>{product.name}</Card.Title>
             <div className={styles.divOverflowCartWrapper}>
               <OverflowInfo product={product} />
             </div>

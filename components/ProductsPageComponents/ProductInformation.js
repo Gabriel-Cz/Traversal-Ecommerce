@@ -8,12 +8,12 @@ export default function ProductInformation({product}) {
     return(
         <>
               <div className="py-3 px-2 py-sm-4 px-sm-5">
-                  <h2 className={styles.productName}>{product.title}</h2>
+                  <h2 className={styles.productName}>{product.name}</h2>
                   <div className={styles.productInformationImage}><Image fluid className="mt-2" src={product.image}></Image></div>
                   <p className={styles.productInformationDescription}><i>{product.description}</i></p>
                   <div className={styles.extraProductInfo}>
                     <div className="d-flex my-sm-2">
-                       <h4 className={styles.headers}>Material:</h4><p className={styles.subheaders}>{product.material}</p>
+                       <h4 className={styles.headers}>Element:</h4><p className={styles.subheaders}>{product.element}</p>
                     </div>
                     <div className="d-flex my-sm-2">
                       <h4 className={styles.headers}>General Rating:</h4><p className={styles.subheaders}>{product.rating} of 5</p> 
@@ -25,7 +25,7 @@ export default function ProductInformation({product}) {
                   <AddToCartInput product={product}></AddToCartInput>
                 </div>
                 <div className="px-2 px-sm-5 mt-4 mb-3 d-flex justify-content-center text-center text-sm-left align-items-center" >
-                  <small style={{fontFamily: "Lora"}}>Or you can checkout <b>{product.title}</b> directly</small>
+                  <small style={{fontFamily: "Lora"}}>Or you can checkout <b>{product.name}</b> directly</small>
                   <div className="ml-3" >
                   <CheckoutButton />
                   </div>

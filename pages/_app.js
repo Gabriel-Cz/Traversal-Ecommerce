@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
       <>
         <CartProvider 
           mode="client-only"
-          currency="USD"
+          currency="usd"
         >
           <NavbarComponent></NavbarComponent>
           <Component {...pageProps} />

@@ -1,20 +1,21 @@
- import { validateCartItems } from 'use-shopping-cart/src/serverUtil';
 import Stripe from 'stripe';
-import inventory from '../../public/productsData.json'
-
+import stripeModel from '../../utils/product-stripe-format'
 const stripe = new Stripe("sk_test_51IcujzEZ6RTsruQylOd6Sz2jYm3nOiBmzvdmhDvDUmHxZ9xU0w5WUUePt4U7B1pBjMqy2a9zJMLiBkiaSjjS0bNw003vxECv4X", {
     apiVersion: "2020-08-27"
 })
 
-const CHECKOUT_DOMAIN = "https://traversal.vercel.app/products/checkout"
+const CHECKOUT_DOMAIN = "http://localhost:3000/products/checkout"
 
 export default async function handler(req, res) {
-    const { cartDetails } = req.body;
+  const cartDetails = req.body;
+  const products = Object.values(cartDetails)
+  const productsFormated = stripeModel(products);
     if (req.method === 'POST') {
         try {
-            const session = await stripe.checkout.sessions.create({
+          console.log(productsFormated);
+          const session = await stripe.checkout.sessions.create({
                 payment_method_types: ['card'],
-                line_items: cartDetails,
+                line_items: productsFormated,
                 mode: 'payment',
                 success_url: `${CHECKOUT_DOMAIN}?success=true`,
                 cancel_url: `${CHECKOUT_DOMAIN}?canceled=true`
@@ -23,5 +24,8 @@ export default async function handler(req, res) {
         } catch (err) {
             console.log('error from server:', err);
         }
-    }
+    } /* else {
+        res.setHeader('Allow', 'POST');
+        res.status(405).end('Method Not Allowed');
+    } */
 }

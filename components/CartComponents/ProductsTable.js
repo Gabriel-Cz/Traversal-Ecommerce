@@ -54,7 +54,7 @@ export default function TableContent({products}) {
               <tbody>
                       {products.map(product => (
                           <tr>
-                              <td>{product.title}</td>
+                              <td>{product.name}</td>
                               <td>
                                   <ProductQuantity sku={product.sku} currentQuantity={product.quantity} />
                               </td>

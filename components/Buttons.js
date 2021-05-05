@@ -7,19 +7,23 @@ import styles from '../styles/Buttons.module.scss';
 /* import ProductAlert from './ProductAlert'; */
 
 const stripePromise = loadStripe("pk_test_51IcujzEZ6RTsruQyD67ngSbKcBzZkwqOVptnHLgGW03YIsWf3kWwqipopF3soMKPJ4OFAg9ULLiQMLrTwHXg2Mz800FmGYz55w")
-const reqConfig = {
-    mode: 'cors', 
-    headers: {
-      'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin': "*"
-    }
-}
 
 //Checkout Buttons
 
-const handleCheckout = async ({cartDetails}) => {
+const handleCheckout = async (cartDetails) => {
+    /* const product = {
+        price_data: {
+          currency: 'usd',
+          product_data: {
+            name: 'Stubborn Attachments',
+            images: ['https://i.imgur.com/EHyR2nP.png'],
+          },
+          unit_amount: 2000,
+        },
+        quantity: 1,
+      } */
     const stripe = await stripePromise;
-    const response = await axiosModule.post("/cart", cartDetails, reqConfig);
+    const response = await axiosModule.post("/cart", cartDetails);
     const session = await response.data;
     const result = await stripe.redirectToCheckout({
         sessionId: session.id
@@ -27,11 +31,11 @@ const handleCheckout = async ({cartDetails}) => {
     if (result.error) {
         console.log(result.error.message)
     }
-}
+} 
 
 export const CheckoutButton = () => {
     return(
-        <button className={styles.checkoutButton} role="link" onClick={handleCheckout}>
+        <button className={styles.checkoutButton} role="link">
             Checkout
         </button>
     );
