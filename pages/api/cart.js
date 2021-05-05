@@ -11,7 +11,6 @@ const CHECKOUT_DOMAIN = "http://localhost:3000/products/checkout"
 export default async function handler(req, res) {
     if (req.method === 'POST') {
         const cartDetails = req.body;
-        console.log(cartDetails);
         try {
             const line_items = cartDetails;
             /* const cartDetails = req.body;

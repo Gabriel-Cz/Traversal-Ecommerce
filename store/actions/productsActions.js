@@ -6,7 +6,7 @@ const reqConfig = {
     cache: 'no-cache', 
     credentials: 'same-origin', 
     headers: {
-      'Content-Type': 'application/x-www-form-urlencoded',
+      'Content-Type': 'application/json',
     }
 }
 
@@ -31,7 +31,7 @@ export const getProduct = (id) => async (dispatch) => {
 }
 
 export const filterProducts = (type, filter) => async (dispatch) => {
-    let response = await axios.get('http://localhost:3000/api/products', reqConfig)
+    let response = await axios.get('/api/products', reqConfig)
                   .then(res => res.data)
                   .catch(e => console.log(e));
     dispatch({

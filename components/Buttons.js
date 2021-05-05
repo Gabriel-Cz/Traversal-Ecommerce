@@ -12,7 +12,7 @@ const stripePromise = loadStripe("pk_test_51IcujzEZ6RTsruQyD67ngSbKcBzZkwqOVptnH
 
 const handleCheckout = async ({cartDetails}) => {
     const stripe = await stripePromise;
-    const response = await axios.post("/api/cart", cartDetails);
+    const response = await axios.post("http://localhost:3000/api/cart", cartDetails);
     const session = await response.data;
     const result = await stripe.redirectToCheckout({
         sessionId: session.id
