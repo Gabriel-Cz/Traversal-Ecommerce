@@ -29,10 +29,14 @@ export const getProduct = (id) => async (dispatch) => {
 }
 
 export const filterProducts = (type, filter) => async (dispatch) => {
-    let response = await axiosModule.get('/products', reqConfig)
-                  .then(res => res.data)
-                  .catch(e => console.log(e));
-    dispatch({
+    let response = await fetch('http://localhost:3000/api/products', reqConfig)
+                         .then(response => {
+                             return response.json()
+                             .then(data => {
+                                 return data
+                             })
+                         })
+    await dispatch({
         type: types.FILTER_PRODUCTS,
         payload: response.filter(product => product[type] === filter),
     });
