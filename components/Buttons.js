@@ -7,12 +7,19 @@ import styles from '../styles/Buttons.module.scss';
 /* import ProductAlert from './ProductAlert'; */
 
 const stripePromise = loadStripe("pk_test_51IcujzEZ6RTsruQyD67ngSbKcBzZkwqOVptnHLgGW03YIsWf3kWwqipopF3soMKPJ4OFAg9ULLiQMLrTwHXg2Mz800FmGYz55w")
+const reqConfig = {
+    mode: 'cors', 
+    headers: {
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': "*"
+    }
+}
 
 //Checkout Buttons
 
 const handleCheckout = async ({cartDetails}) => {
     const stripe = await stripePromise;
-    const response = await axiosModule.post("/cart", cartDetails);
+    const response = await axiosModule.post("/cart", cartDetails, reqConfig);
     const session = await response.data;
     const result = await stripe.redirectToCheckout({
         sessionId: session.id

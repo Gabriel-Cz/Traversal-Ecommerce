@@ -6,30 +6,15 @@ const stripe = new Stripe("sk_test_51IcujzEZ6RTsruQylOd6Sz2jYm3nOiBmzvdmhDvDUmHx
     apiVersion: "2020-08-27"
 })
 
-const CHECKOUT_DOMAIN = "http://localhost:3000/products/checkout"
+const CHECKOUT_DOMAIN = "https://traversal.vercel.app/products/checkout"
 
 export default async function handler(req, res) {
+    const { cartDetails } = req.body;
     if (req.method === 'POST') {
-        const cartDetails = req.body;
         try {
-            const line_items = cartDetails;
-            /* const cartDetails = req.body;
-            const line_items = validateCartItems(inventory, cartDetails); */
             const session = await stripe.checkout.sessions.create({
                 payment_method_types: ['card'],
-                line_items: [
-                    {
-                        price_data: {
-                          currency: 'usd',
-                          product_data: {
-                            name: 'Stubborn Attachments',
-                            images: ['https://i.imgur.com/EHyR2nP.png'],
-                          },
-                          unit_amount: 2000,
-                        },
-                        quantity: 1,
-                      },
-                ],
+                line_items: cartDetails,
                 mode: 'payment',
                 success_url: `${CHECKOUT_DOMAIN}?success=true`,
                 cancel_url: `${CHECKOUT_DOMAIN}?canceled=true`
