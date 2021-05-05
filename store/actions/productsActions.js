@@ -1,17 +1,15 @@
-import axios from 'axios'
+import axiosModule from '../../utils/axiosModule';
 import * as types from '../types'
 
 const reqConfig = {
     mode: 'cors', 
-    cache: 'no-cache', 
-    credentials: 'same-origin', 
     headers: {
       'Content-Type': 'application/json',
     }
 }
 
 export const getProducts = () => async (dispatch) => {
-    let response = await axios.get('http://localhost:3000/api/products', reqConfig)
+    let response = await axiosModule.get('/products', reqConfig)
                   .then(res => res.data)
                   .catch(e => console.log(e));
     dispatch({
@@ -21,7 +19,7 @@ export const getProducts = () => async (dispatch) => {
 }
 
 export const getProduct = (id) => async (dispatch) => {
-    let response = await axios.get('http://localhost:3000/api/products', reqConfig)
+    let response = await axiosModule.get('/products', reqConfig)
                   .then(res => res.data)
                   .catch(e => console.log(e));
     dispatch({
@@ -31,7 +29,7 @@ export const getProduct = (id) => async (dispatch) => {
 }
 
 export const filterProducts = (type, filter) => async (dispatch) => {
-    let response = await axios.get('http://localhost:3000/api/products', reqConfig)
+    let response = await axiosModule.get('/products', reqConfig)
                   .then(res => res.data)
                   .catch(e => console.log(e));
     dispatch({

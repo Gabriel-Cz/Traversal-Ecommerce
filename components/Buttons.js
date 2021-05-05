@@ -1,7 +1,7 @@
 import React from 'react';
 import { useShoppingCart } from 'use-shopping-cart'
 import { loadStripe } from "@stripe/stripe-js";
-import axios from 'axios';
+import axiosModule from '../utils/axiosModule';
 import Link from 'next/link';
 import styles from '../styles/Buttons.module.scss';
 /* import ProductAlert from './ProductAlert'; */
@@ -12,7 +12,7 @@ const stripePromise = loadStripe("pk_test_51IcujzEZ6RTsruQyD67ngSbKcBzZkwqOVptnH
 
 const handleCheckout = async ({cartDetails}) => {
     const stripe = await stripePromise;
-    const response = await axios.post("http://localhost:3000/api/cart", cartDetails);
+    const response = await axiosModule.post("http://localhost:3000/api/cart", cartDetails);
     const session = await response.data;
     const result = await stripe.redirectToCheckout({
         sessionId: session.id
