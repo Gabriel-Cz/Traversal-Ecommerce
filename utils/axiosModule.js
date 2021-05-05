@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 let axiosInstace = axios.create({
-    baseURL: 'http://localhost:3000/api'
+    baseURL: 'https://traversal.vercel.app/api'
 });
 
 module.exports = axiosInstace;
