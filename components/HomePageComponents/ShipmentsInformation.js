@@ -11,8 +11,8 @@ export function Quote() {
               We Have an amazing shippment experience even when we are on the other corner of the map.
             </p>
             <footer className="blockquote-footer">
-                <small className="text-muted">
-                    <cite title="Diane Von Furstenberg">Happy Customer</cite>
+                <small className={styles.quoteAuthor}>
+                    <cite title="Happy Customer">Happy Customer</cite>
                 </small>
             </footer>
         </blockquote>
@@ -28,9 +28,9 @@ export default function ShipmentsInformation() {
                   <Col xs={12} md={12}>
                       <div className="px-4 py-2">
                           <div className={styles.textOverflow}>
-                            <div className="text-center">
+                            <div className="text-center align-content-center">
                                 <Quote></Quote>
-                                <small className={styles.headerText}>We deliver from <bold>3</bold> to <bold>7</bold> days around the world.</small>
+                                <small className={styles.blockFooter}>We deliver from <bold>3</bold> to <bold>7</bold> days around the world.</small>
                             </div>
                           </div>
                       </div>

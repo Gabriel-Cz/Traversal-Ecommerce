@@ -22,11 +22,12 @@ $fontSubheader: italic 16px 'Unna', serif;
 }
 .customContainer {
     @include mixin.media(lg) {
-        margin-top: 50px;
+        padding-top: 100px;
+        padding-bottom: 100px;
     }
     position: relative;
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
     box-sizing: border-box;
     .header {
         color: rgb(119, 119, 119);

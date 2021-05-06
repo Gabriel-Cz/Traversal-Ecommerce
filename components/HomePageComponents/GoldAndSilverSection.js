@@ -9,7 +9,7 @@ import styles from '../../styles/GoldAndSilver.module.scss'
 function OverflowGoldInfo() {
     return(
         <div className={styles.textOverflowWrapper}>
-            <p className={styles.textOverflow}>See the latest deals with <i className={styles.goldSentence}>Gold</i> Jewellery</p>
+            <p className={styles.textOverflow}>See the latest deals with <b className={styles.goldSentence}>Gold</b> Jewellery</p>
         </div>
     ); 
 }
@@ -17,7 +17,7 @@ function OverflowGoldInfo() {
 function OverflowSilverInfo() {
     return(
         <div className={styles.textOverflowWrapper}>
-            <p className={styles.textOverflow}>See the latest deals with <i className={styles.silverSentence}>Silver</i> Jewellery</p>
+            <p className={styles.textOverflow}>See the latest deals with <b className={styles.silverSentence}>Silver</b> Jewellery</p>
         </div>
     );
 }

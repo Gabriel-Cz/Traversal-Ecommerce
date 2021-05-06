@@ -2,7 +2,7 @@
 @use '../styles/fontsMixin' as fonts;
 
 $linksHeadersFont: 18px 'Unna', serif;
-$linksFont: 14px 'Unna', serif;
+$linksFont: 15px 'Unna', serif;
 
 .footer{
     background-image: url('../public/FooterBackground.jpg');
@@ -19,6 +19,7 @@ $linksFont: 14px 'Unna', serif;
     margin-bottom: 0px !important;
     height: 100% !important;
     border-bottom: none;
+    position: relative;
 } 
  
 .footerSlogan{
@@ -67,8 +68,8 @@ $linksFont: 14px 'Unna', serif;
         align-items: center;
     }
     .aboutLink {
-        font-family: 'Unna', serif;
-        font-size: 16px; 
+        font-family: 'Lora', serif;
+        font-size: 18px; 
         line-height: 36px;
         display: flex;
         align-items: center;
@@ -96,7 +97,7 @@ $linksFont: 14px 'Unna', serif;
         @include media.media(xs) {
             font-size: 12px;
         }
-        font: 18px 'Roboto', sans-serif;
+        font: $linksHeadersFont;
         letter-spacing: 1px;
         display: flex;
         align-items: center;
@@ -112,16 +113,27 @@ $linksFont: 14px 'Unna', serif;
         border-radius: 2px 0px 2px 2px; 
         color: floralwhite;
         border: none;
+        font-style: italic;
     }
     .customButton {
         @include media.media(xs) {
             font-size: 12px;
-            letter-spacing: 1px;
         } 
         background: #1a3b49;
+        font-family: 'Lora', serif;
+        letter-spacing: 1px;
         border-radius: 0px 0px 2px 0px;
     }
-    .smallLetters {
-        align-self: flex-end;
-    }
 } 
+
+.smallLettersWrapper {
+    position: absolute;
+    text-align: center;
+    color: rgba($color: floralwhite, $alpha: 0.80);
+    letter-spacing: 1px;
+    font-family: 'Unna', serif;
+    transform: translate(-50%, 0) !important; 
+    bottom: 0;
+    left: 50%;
+    margin-bottom: 20px;
+}

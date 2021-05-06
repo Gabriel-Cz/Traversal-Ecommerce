@@ -14,6 +14,8 @@ const customContainer = {
 export default function CategorieContent({filteredProducts, categorie}) {
     return(
         <>
+          <div className={styles.containerWrapper}>
+          <div className={styles.backgroundDiv}></div>
           <Container className={styles.container}>
               <span className={styles.categorieName}>{categorie}</span>
               <div className={styles.firstDiv}>
@@ -36,6 +38,7 @@ export default function CategorieContent({filteredProducts, categorie}) {
                   </div>
               </div>
           </Container>
+          </div>
         </>
     );
 }

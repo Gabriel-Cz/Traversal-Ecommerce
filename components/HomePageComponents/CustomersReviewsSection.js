@@ -29,13 +29,6 @@ const customers = [
     }
 ]
 
-function RightBlocks() {
-    return(
-        <div className={styles.blockBehind}>
-        </div>
-    );
-}
-
 export default class CustomersReviewsSection extends React.Component {
     constructor(props) {
         super(props)
@@ -47,11 +40,11 @@ export default class CustomersReviewsSection extends React.Component {
               <div className={styles.blockBehind}></div>
               <Container className={styles.customContainer}>
                   <Row className={styles.header}>
-                      <Col md={9} className="text-center pb-5">What's our customers are saying?</Col>
+                      <Col xs={11} md={9} className="text-center pb-sm-5">What's our customers are saying?</Col>
                   </Row>
-                  <Row className="justify-content-md-center my-5 py-5">
+                  <Row className="justify-content-center my-5 py-5">
                       {customers.map(customer => (
-                          <Col md={5} lg={3} key={customer.id} className="mx-4">
+                          <Col xs={9} sm={6} md={5} lg={3} key={customer.id} className="mx-2 mx-sm-4">
                               <CustomerCard name={customer.name} image={customer.image} review={customer.review} rating={customer.rating}></CustomerCard>
                           </Col>
                     ))}

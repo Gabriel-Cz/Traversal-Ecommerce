@@ -90,13 +90,11 @@ export default function FooterComponent() {
                             </div>
                         </Col>
                     </Row>
-                    <Row className="d-flex justify-content-center">
-                        <Col xs={10} md={3} className="text-center align-end">                            
-                                <small className={styles.smallLetters}>
-                                   TraverSal - 2021
-                                </small>
-                        </Col>
-                    </Row>
+                    <div className={styles.smallLettersWrapper}>
+                        <small className={styles.smallLetters}>
+                            Traversal 2021 
+                        </small>
+                    </div>
             </Jumbotron>
             </footer>
         );

@@ -12,6 +12,7 @@ $border: 4px double rgba($color: gray, $alpha: 0.25);
     }
     @include mixin.media(lg) {
         margin-top: 100px;
+        margin-bottom: 100px;
     }
     position: relative;
     padding-top: 75px;
@@ -58,6 +59,8 @@ $border: 4px double rgba($color: gray, $alpha: 0.25);
             position: absolute;
             letter-spacing: 1px;
             margin-top: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
             padding: 15px 15px;
             z-index: 9;
             color: rgba($color: white, $alpha: 0.8);

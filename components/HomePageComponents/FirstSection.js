@@ -34,6 +34,10 @@ export default function FirstSection() {
     return(
         <>
           <Container fluid className={styles.customContainer}>
+              <div className={styles.videoWrapper}>
+                <video width="100%" height="100%" src="GlobeVideo.mp4" type="video/mp4" AutoPlay>
+                </video>
+              </div>
               <div className={styles.divOverflow}></div>
               <Row className="justify-content-md-start mt-5">
                   <Col xs={12} sm={5} md={7} lg={{span: 6, offset: 2}} xl={6} xxl={5} className="justify-center mt-5">
