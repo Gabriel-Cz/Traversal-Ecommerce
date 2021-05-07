@@ -3,7 +3,6 @@ import { useShoppingCart } from 'use-shopping-cart'
 import { loadStripe } from "@stripe/stripe-js";
 import axiosModule from '../utils/axiosModule';
 import Link from 'next/link';
-import ToastNotification from './UtilsComponents/ToastNotification';
 import styles from '../styles/Buttons.module.scss';
 /* import ProductAlert from './ProductAlert'; */
 
@@ -24,7 +23,7 @@ const handleCheckout = async (url, cartDetails) => {
 } 
 
 export const CheckoutButton = ({product}) => {
-    const url = "/checkout_sessions/product"
+    const url = "https://traversal.vercel.app/checkout_sessions/product"
     const setProductAndQuantity = async (url ,product) => {
         product.quantity === undefined ? product.quantity = 1 : product.quantity = product.quantity;
         await handleCheckout(url, product);
@@ -71,7 +70,13 @@ export const AddToCartButton = ({product}) => {
     return(
         <>
         <button onClick={() => addItemAndShowToast(product)} className={styles.addToCartButton}>
-            {buttonText}
+            {
+            buttonText === false 
+            ?
+              <span className={styles.buttonIcon}><i className="bi bi-check-circle"></i></span> 
+            : 
+              <span className={styles.textFadeIn}>Add To Cart</span>
+            }
         </button>
         </>
     );
@@ -90,7 +95,7 @@ export const RemoveFromCartButton = ({product}) => {
 
 export const CheckoutCartButton = () => {
     const { cartDetails } = useShoppingCart();
-    const url = "/cart"
+    const url = "https://traversal.vercel.app/checkout_sessions/cart"
     return(
         <button onClick={() => handleCheckout(url, cartDetails)} role="link" className={styles.checkoutCartButton}>
             Checkout Cart

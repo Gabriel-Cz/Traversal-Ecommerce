@@ -66,6 +66,16 @@ $base-Shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     &:hover {
         @include buttonColor(floralwhite, #4469A0)
     }
+    .buttonIcon {
+        animation: fadeIn 1s 1;
+    }
+    .textFadeIn {
+        animation:  fadeIn 1s 1;
+    }
+}
+
+.removeProductButton {
+    @extend .clearCartButton;
 }
 
 .clearCartButton {
@@ -90,4 +100,13 @@ $base-Shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     background-color: transparent;
     border: none;
     display: flex;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

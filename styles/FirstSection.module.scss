@@ -1,18 +1,8 @@
 @use "../styles/mediaMixin" as mixin;
+
 //*Main Container
+
 .customContainer{
-  /*@include mixin.media(xs) {
-      padding-bottom: 100px;
-  }
-  @include mixin.media(sm) {
-      padding-bottom: 1px;
-} 
-  @include mixin.media(md) {
-      padding-bottom: 200px;
-  }
-  @include mixin.media(lg) {
-    padding-bottom: 200px;
-  }*/
   position: relative;
   padding-top: 100px;
   padding-bottom: 100px;
@@ -76,7 +66,7 @@
   align-content: center;
   .moreInfoWrapper {
     @include mixin.media(xs) {
-      width: 100%;
+      width: 90%;
     }
     @include mixin.media(sm) {
       width: 60%;
@@ -99,6 +89,10 @@
       width: 50%;
     }
     .moreInfoContent {
+      @include mixin.media(xs)
+      {
+        font-size: 18px;
+      }
       position: absolute;
       width: 100%;
       bottom: 0;
@@ -114,29 +108,4 @@
     }
   }
 }
-/* .moreInfoContainer {
-  position: relative;
-  width: 50%;
-  left: 50%;
-  bottom: 0;
-  transform: translate(-50%, 0);
-  .img {
-    width: 50%;
-  }
-  .moreInfoDiv {
-    position: absolute;
-    left: 50%;
-    bottom: 25%;
-    transform: translate(-50%, 0);
-    width: 100%;
-    z-index: 9 !important;
-    color: rgb(26, 32, 104);
-    font-family: 'Unna', serif;
-    font-weight: lighter;
-    font-size: 22px;
-    text-align: center;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  }
-} */
-
 

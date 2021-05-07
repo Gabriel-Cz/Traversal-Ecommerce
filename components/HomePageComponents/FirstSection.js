@@ -34,7 +34,13 @@ const MoreInfo = () => {
 
 export function GlobleVideo() {
   return(
-    {__html: '<video width="100%" height="100%" src="GlobeVideo.mp4" type="video/mp4" loop autoplay></video>'}
+    {__html: '<video width="100%" height="100%" src="GlobeVideo.mp4" alt="GlobeVideo.mp4" type="video/mp4" loop autoplay></video>'}
+  );
+}
+
+export function GlobleVideo() {
+  return(
+    {__html: '<video width="100%" height="100%" src="GlobeVideo.mp4" alt="GlobeGif.Gif" type="video/mp4" loop autoplay></video>'}
   );
 }
 
@@ -43,7 +49,7 @@ export default function FirstSection() {
         <>
           <Container fluid className={styles.customContainer}>
               <div className={styles.videoWrapper}
-                 dangerouslySetInnerHTML={GlobleVideo()}>
+                 dangerouslySetInnerHTML={GlobeVideo()}>
               </div>
               <div className={styles.divOverflow}></div>
               <div class={styles.phantomDiv}>phantom div</div>
@@ -52,8 +58,3 @@ export default function FirstSection() {
         </>
     )
 }
-
-/*<div className={styles.divTest}>-</div>
-              <div className={styles.moreInfoContainer}>
-                <MoreInfo></MoreInfo>
-</div>*/

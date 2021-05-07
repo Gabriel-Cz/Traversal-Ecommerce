@@ -52,22 +52,9 @@ $tableFontSmall: 18px 'Lora', serif;
 }
 
 .avatarGrid {
-    /*@include media.media(xs) {
-        flex-direction: column;
+    @include media.media(xs) {
+        grid-template-columns: repeat(1, 1fr);
     }
-    display: flex;
-    position: relative;    
-    .productImage {
-        @include media.media(xs) {
-          width: 50%;
-        }
-        position: absolute;
-        width: 15%;
-    }
-    .productName {
-        width: 75%;
-        margin-left: 50px;
-    }*/
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     .cols2 {

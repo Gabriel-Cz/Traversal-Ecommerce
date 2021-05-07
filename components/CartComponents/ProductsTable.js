@@ -57,7 +57,7 @@ export default function TableContent({products}) {
                           <tr>
                               <td className="w-25">
                                  <Link href={`/products/${product.id}`} passHref>
-                                   <a>
+                                   <a style={{textDecoration: "none", color: "black"}}>
                                    <div className={styles.avatarGrid}>   
                                     <div className={styles.cols2}>
                                      <Image className={styles.productImage} fluid src={product.image}></Image>
@@ -76,7 +76,6 @@ export default function TableContent({products}) {
                               <td>
                                   <div classname={styles.buttonsGrid}>
                                       <CheckoutButton className="mx-1" product={product} />
-                                      <RemoveFromCartButton className="mx-1" product={product}></RemoveFromCartButton>
                                       <RemoveFromCartButton className="mx-1" product={product}></RemoveFromCartButton>
                                   </div>
                               </td>

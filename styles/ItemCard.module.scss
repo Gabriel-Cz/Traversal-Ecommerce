@@ -16,6 +16,9 @@ $fontSubheader: italic 14px 'Unna', serif;
 }
 
 .overflowInfoXs {
+    @include media.media(xs) {
+        display: flex;
+    }
     @include media.media(lg) {
         display: none;
     }
