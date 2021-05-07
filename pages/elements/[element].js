@@ -1,24 +1,25 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import ElementHeader from '../../components/ElementsComponents/ElementHeader'
 import ElementContent from '../../components/ElementsComponents/ElementContent'
-import { useSelector, useDispatch } from 'react-redux'
 import { wrapper } from '../../store' 
 import { filterProducts } from '../../store/actions/productsActions'
-import { useRouter } from 'next/router'
 
 export const getServerSideProps = wrapper.getServerSideProps(async ({store, query}) => {
   const params = query.element;
   await store.dispatch(filterProducts('element', params));
+  return {
+    props: {
+      filteredProducts: store.getState().productsReducer.server.filteredProducts,
+      elementName: params
+    }
+  }
 })
 
-function Element() {
-  const router = useRouter();
-  const {element} = router.query;
-  const {filteredProducts} = useSelector(state => state.productsReducer.server)
+function Element({filteredProducts, elementName}) {
   return(
     <>
-      <ElementHeader elementName={element}></ElementHeader>
-      <ElementContent filteredProducts={filteredProducts}></ElementContent>
+      <ElementHeader elementName={elementName}></ElementHeader>
+      <ElementContent filteredProducts={filteredProducts} elementName={elementName}></ElementContent>
     </>
 );
 }

@@ -11,7 +11,7 @@ import { useShoppingCart } from 'use-shopping-cart'
 import { linksCategories } from '../../components/NavbarComponent'
 import styles from '../../styles/Cart.module.scss' 
 
-const EmptyCartMessage = () => {
+export const EmptyCartMessage = () => {
     return(
         <>
           <Container className={styles.containerMessageWrapper}>
@@ -21,7 +21,7 @@ const EmptyCartMessage = () => {
                   </h1>
                   <Row className="mt-5" justify-content-center>
                       {linksCategories.map(link => (
-                          <Col xs={6} md={3} key={link.name}>
+                          <Col xs={6} md={3} className="mt-4 mt-md-0" key={link.name}>
                               <Link href={'/categories' + link.path} passHref>
                                 <a>
                                 <div className={styles.thumbnailContainer}>

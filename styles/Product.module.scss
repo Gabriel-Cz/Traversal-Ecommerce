@@ -42,11 +42,23 @@ $boxShadow: 0 50px 100px -20px rgb(50 50 93 / 25%), 0 30px 60px -30px rgb(0 0 0 
         @include media.media(xs) {
             display: flex;
         }
+        @include media.media(sm) {
+            display: flex;
+        }
         display: none;
     }
     .colImageWrapper {
         @include media.media(xs) {
             display: none;
+        }
+        @include media.media(sm) {
+            display: none;
+        }
+        @include media.media(md) {
+            padding-right: 40px;
+        }
+        @include media.media(lg) {
+            padding-right: 40px;
         }
     }
     .checkoutSection {
@@ -77,6 +89,9 @@ $boxShadow: 0 50px 100px -20px rgb(50 50 93 / 25%), 0 30px 60px -30px rgb(0 0 0 
     @include media.media(xs) {
         text-align: center;
     }
+    @include media.media(sm) {
+        text-align: center;
+    }
     @include media.media(lg) {
         font: $productNameFontLg;
     }
@@ -87,6 +102,9 @@ $boxShadow: 0 50px 100px -20px rgb(50 50 93 / 25%), 0 30px 60px -30px rgb(0 0 0 
     @include media.media(xs) {
         text-align: center;
         font: $productDescriptionFont;
+    }
+    @include media.media(sm) {
+        text-align: center;
     }
     text-align: left;
     margin-top: 20px;
@@ -108,5 +126,21 @@ $boxShadow: 0 50px 100px -20px rgb(50 50 93 / 25%), 0 30px 60px -30px rgb(0 0 0 
         font: $subheaders;
         margin-left: 20px;
         margin-top: 5px;
+        .link-gold {
+            color: rgba($color: rgb(212, 187, 44), $alpha: 1);
+            text-decoration: none;
+            text-transform: capitalize;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        .link-silver {
+            color: rgba($color: rgb(124, 122, 122), $alpha: 1);
+            text-decoration: none;
+            text-transform: capitalize;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 }

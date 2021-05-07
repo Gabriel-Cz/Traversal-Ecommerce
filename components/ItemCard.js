@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'react-bootstrap/Image'
 import Card from 'react-bootstrap/Card'
-import AddToCartInput from '../components/CartComponents/AddToCartInput'
+import { AddToCartButton } from '../components/Buttons.js'
 import styles from '../styles/ItemCard.module.scss'
 import Rating from 'react-rating'
 
@@ -12,7 +12,7 @@ const OverflowInfo = ({product}) => {
       <div className={styles.overflowInfo}>
           <div className="text-center justify-content-center d-flex justify-items-center">
             <div>
-              <AddToCartInput product={product} />
+              <AddToCartButton product={product} />
             </div>
           </div>
           <div className="text-center mt-5">
@@ -33,7 +33,7 @@ const OverflowInfoXs = ({product}) => {
       <div className={styles.overflowInfoXs}>
           <div className="text-center justify-content-center d-flex justify-items-center">
             <div>
-              <AddToCartInput product={product} />
+              <AddToCartButton product={product} />
             </div>
           </div>
           <div className="text-center mt-3">
@@ -49,22 +49,6 @@ const OverflowInfoXs = ({product}) => {
 }
 
 export default function ItemCard({product}) {
-    /* const [product, setProduct] = seState('')
-     useEffect(() => {
-      setProduct({
-        id: prop.,
-          "sku": "S8",
-          "title": "consequatur autem ",
-          "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
-          "price": "$500",
-          "image": "../ProductsImages/SilverWatch2.jpg",
-          "rating": 3,
-          "state": "",
-          "categorie": "watches",
-          "element": "silver",
-          "currency": "USD"
-      })
-    }, [input]) */
     return(
         <>
         <Card className={styles.card}>
@@ -83,7 +67,7 @@ export default function ItemCard({product}) {
                 <Card.Text className={styles.cardDescription}>{product.description}</Card.Text>
                 <OverflowInfoXs product={product} />
                 <div className={styles.productRating}>
-                  <Rating readonly emptySymbol={<img src="./EmptyStar.png" className="icon" />} fullSymbol={<img src="./FullStar.png" className="icon" />} initialRating={product.rating} />
+                  <Rating readonly emptySymbol={<img src="../EmptyStar.png" className="icon" />} fullSymbol={<img src="../FullStar.png" className="icon" />} initialRating={product.rating} />
                 </div>
               </div>
           </Card.Body>

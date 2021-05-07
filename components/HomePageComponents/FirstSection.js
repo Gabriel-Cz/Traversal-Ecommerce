@@ -20,31 +20,40 @@ const MoreInfo = () => {
     return(
         <>
         <div className={styles.moreInfoContainer}>
-          <Image className={styles.img} src="BlueEllipse.png" />
-          <div className={styles.moreInfoWrapper}>
-            <p>Find Out why traversal is one of the Jewellery Market Leads around the world. </p>
-            <SeeMoreButton></SeeMoreButton>
-          </div>
+            <div className={styles.moreInfoWrapper}>
+              <Image className={styles.img} fluid src="BlueEllipse.png" />
+              <div className={styles.moreInfoContent}>
+                <p>Find Out why traversal is one of the Jewellery Market Leads around the world. </p>
+                <SeeMoreButton></SeeMoreButton>
+              </div>
+            </div>
         </div>
         </>
     );
+}
+
+export function GlobleVideo() {
+  return(
+    {__html: '<video width="100%" height="100%" src="GlobeVideo.mp4" type="video/mp4" loop autoplay></video>'}
+  );
 }
 
 export default function FirstSection() {
     return(
         <>
           <Container fluid className={styles.customContainer}>
-              <div className={styles.videoWrapper}>
-                <video width="100%" height="100%" src="GlobeVideo.mp4" type="video/mp4" AutoPlay>
-                </video>
+              <div className={styles.videoWrapper}
+                 dangerouslySetInnerHTML={GlobleVideo()}>
               </div>
               <div className={styles.divOverflow}></div>
-              <Row className="justify-content-md-start mt-5">
-                  <Col xs={12} sm={5} md={7} lg={{span: 6, offset: 2}} xl={6} xxl={5} className="justify-center mt-5">
-                    <MoreInfo></MoreInfo>
-                  </Col>
-              </Row>
+              <div class={styles.phantomDiv}>phantom div</div>
+              <MoreInfo></MoreInfo>
           </Container>
         </>
     )
 }
+
+/*<div className={styles.divTest}>-</div>
+              <div className={styles.moreInfoContainer}>
+                <MoreInfo></MoreInfo>
+</div>*/

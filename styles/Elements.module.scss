@@ -1,0 +1,115 @@
+@use '../styles//mediaMixin' as mixin;
+ 
+// Element Header
+
+$fontHeader: 52px 'Parisienne';
+$fontSubheader: 22px 'Unna';
+$headerTextShadow: 0px 2px 5px rgba(255, 255, 255, 1);
+
+@mixin parallaxSetup($image) {
+  height: 100%;
+  overflow: hidden;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover !important;
+  backdrop-filter: brightness(40%) !important;
+  background-image: $image !important;
+}
+
+.container-gold {
+  background-image: url('../public/ParallaxImages/ParallaxGold.jpg');
+}
+
+.container-silver {
+  @include parallaxSetup(url('../public/ParallaxImages/ParallaxSilver.jpg'));
+}
+
+.overflowDiv {
+    @include mixin.media(xs) {
+      width: 100%;
+    }
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 37%;
+    transform: skew(46deg) !important;
+    background-color: rgba($color: white, $alpha: 0.55);
+    backdrop-filter: grayscale(100%);
+}
+
+.header {
+    text-transform: capitalize;
+    font: $fontHeader;
+    color: rgba($color: #1a1818, $alpha: 1);
+    text-shadow: $headerTextShadow;
+  }
+  
+.subHeader {
+    @include mixin.media(xs) {
+      font-size: 18px;
+    }
+    padding: 20px 40px;
+    font: $fontSubheader;
+    color: rgba($color: #1a1818, $alpha: 1.0);
+    letter-spacing: 1px;
+    line-height: 30px;
+    text-shadow: $headerTextShadow;
+  }
+
+  // Element Content
+
+.container {
+    @include mixin.media(xs) {
+      margin-top: 50px;
+      margin-bottom: 25px;
+    }
+    position: relative;
+    margin-top: 100px;
+    text-align: center;
+    margin-bottom: 50px;
+    .elementName {
+      position: absolute;
+      left: 50%;
+      top: 0%;
+      transform: translate(-50%, -50%);
+      font: 300 24px 'Lora', serif;
+      text-transform: capitalize;
+      padding: 20px 30px;
+      background-color: white;
+    }
+    .elementName-silver {
+        position: absolute;
+        left: 50%;
+        top: 0%;
+        transform: translate(-50%, -50%);
+        font: 300 24px 'Lora', serif;
+        text-transform: capitalize;
+        padding: 20px 30px;
+        background-color: white;
+        color: rgba($color: rgb(124, 122, 122), $alpha: 1);
+    }
+    .elementName-gold {
+        position: absolute;
+        left: 50%;
+        top: 0%;
+        transform: translate(-50%, -50%);
+        font: 300 24px 'Lora', serif;
+        text-transform: capitalize;
+        padding: 20px 30px;
+        background-color: white;
+        color: rgba($color: rgb(212, 187, 44), $alpha: 1);
+    }
+    .firstDiv-gold {
+      border-radius: 20px;
+      margin-bottom: 30px;
+      padding-top: 40px;
+      border: 4px double rgba($color: rgb(212, 187, 44), $alpha: 1);
+    }
+    .firstDiv-silver {
+      border-radius: 20px;
+      margin-bottom: 30px;
+      padding-top: 40px;
+      border: 4px double rgba($color: rgb(124, 122, 122), $alpha: 1);;
+    }
+  }

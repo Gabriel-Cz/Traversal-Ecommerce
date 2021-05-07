@@ -8,23 +8,23 @@ import styles from '../../styles/CustomersReviewsSection.module.scss'
 const customers = [
     {
         id: "01",
-        name: "Alejandra Quiroga",
-        review: "One of my favorites sites to buy Gifts to my family and friend. Perfect for the asdasd as  erterteterter Christmas eve!",
-        image: "customer1.jpg",
+        name: "Alexandra Quiroga",
+        review: "One of my favorites sites to buy Gifts to my family and friend. And it's Perfect for thw Christmas eve!",
+        image: "./CustomersImages/customer1.jpg",
         rating: "3"
     },
     {
         id: "02",
         name: "Akzhim Nash",
-        review: "Great shipping and Quality!!!",
-        image: "customer2.jpg", 
+        review: "Great shipping and Quality!",
+        image: "./CustomersImages/customer2.jpg", 
         rating: "5"
     },
     {
         id: "03",
         name: "Carlos Mejilla",
-        review: "The best thing that i could bought to my wife for her birthday was that light Shappire.",
-        image: "customer3.jpg",
+        review: "The best thing that i could bought to my wife for our aniversary, was that light Shappire.",
+        image: "./CustomersImages/customer3.jpg",
         rating: "4"
     }
 ]

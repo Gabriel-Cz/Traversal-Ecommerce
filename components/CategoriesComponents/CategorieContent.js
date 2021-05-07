@@ -16,13 +16,13 @@ export default function CategorieContent({filteredProducts, categorie}) {
         <>
           <div className={styles.containerWrapper}>
           <div className={styles.backgroundDiv}></div>
-          <Container className={styles.container}>
+          <Container fluid className={styles.container}>
               <span className={styles.categorieName}>{categorie}</span>
               <div className={styles.firstDiv}>
               <div className={styles.secondDiv}>
               <Row className="justify-content-center align-items-center">
                 {filteredProducts.map(product => (
-                    <Col className="my-4 mx-xl-2" key={product.id} xs={11} sm={6} md={6} xl={{span: 2, offset: 2}} xl={5}>
+                    <Col className="my-4 mx-xl-2" key={product.id} xs={11} sm={6} md={4} xl={{span: 2, offset: 2}} xl={3}>
                       <ItemCard 
                        product={product}
                       >

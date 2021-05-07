@@ -62,6 +62,7 @@ $base-Shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     @include buttonColor(#4469A0, transparent);
     box-shadow: none;
     border: 1px ridge #4469A0;
+    transition: width 2s;
     &:hover {
         @include buttonColor(floralwhite, #4469A0)
     }

@@ -5,22 +5,22 @@ import PropTypes from 'prop-types';
 import ItemCard from '../ItemCard'
 import Container from 'react-bootstrap/Container'
 import { Quote } from '../HomePageComponents/GoldAndSilverSection';
+import styles from '../../styles/Elements.module.scss'
 
-function CategorieContent({filteredProducts}) {
+function ElementContent({filteredProducts, elementName}) {
     return(
         <>
-          <Container className="mx-auto my-5 py-5" fluid>
+          <div className={styles.containerWrapper}>
+          <div className={styles.backgroundDiv}></div>
+          <Container className={styles.container}>
+              <span className={styles[`elementName-${elementName}`]}>{elementName}</span>
+              <div className={styles[`firstDiv-${elementName}`]}>
+              <div className={styles.secondDiv}>
               <Row className="justify-content-center align-items-center">
-                  {filteredProducts.map(product => (
-                    <Col className="my-4 mx-5" key={product.id} xs={12} sm={4} lg={{span: 2, offset: 2}} xl={3}>
+                {filteredProducts.map(product => (
+                    <Col className="my-4 mx-xl-2" key={product.id} xs={11} sm={6} md={6} xl={{span: 2, offset: 2}} xl={5}>
                       <ItemCard 
-                       productId={product.id}
-                       productTitle={product.title} 
-                       productImage={product.image} 
-                       productsPrice={product.price} 
-                       productPrice={product.price} 
-                       productDescription={product.description}
-                       productRating={product.rating}
+                       product={product}
                       >
                       </ItemCard>
                     </Col>
@@ -31,13 +31,17 @@ function CategorieContent({filteredProducts}) {
                       <Quote></Quote>
                   </Col>
               </Row>
+                  </div>
+              </div>
           </Container>
+          </div>
         </>
     );
 }
 
-CategorieContent.PropTypes = {
-    filteredProducts: PropTypes.array
+ElementContent.PropTypes = {
+    filteredProducts: PropTypes.array,
+    elementName: PropTypes.string
 }
 
-export default CategorieContent;
+export default ElementContent;

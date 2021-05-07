@@ -17,19 +17,19 @@ $headerTextShadow: 0px 2px 5px rgba(255, 255, 255, 1);
 }
 
 .rings {
-  @include parallaxSetup(url('../public/ParallaxRings.jpg'))
+  @include parallaxSetup(url('../public/ParallaxImages/ParallaxRings.jpg'))
 }
 
 .earrings {
-  @include parallaxSetup((url('../public/ParallaxEarrings.jpg')))
+  @include parallaxSetup((url('../public/ParallaxImages/ParallaxEarrings.jpg')))
 }
 
-.necks {
-  @include parallaxSetup(url('../public/ParallaxImage.jpg'))
+.necklaces {
+  @include parallaxSetup(url('../public/ParallaxImages/ParallaxNecklaces.jpg'))
 }
 
 .watches {
-  @include parallaxSetup(url('../public/ParallaxWatch1.jpg'))
+  @include parallaxSetup(url('../public/ParallaxImages/ParallaxWatch1.jpg'))
 }
 
 .overflowDiv {
@@ -38,6 +38,7 @@ $headerTextShadow: 0px 2px 5px rgba(255, 255, 255, 1);
   width: 100%;
   left: 0;
   background-color: rgba($color: white, $alpha: 0.55);
+  backdrop-filter: grayscale(100%);
 }
 
 .shape {
@@ -107,7 +108,6 @@ $headerTextShadow: 0px 2px 5px rgba(255, 255, 255, 1);
   }
   position: relative;
   margin-top: 100px;
-  text-align: center;
   margin-bottom: 50px;
   .categorieName {
     position: absolute;

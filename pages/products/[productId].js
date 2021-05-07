@@ -1,11 +1,12 @@
 import React from 'react'
-import { wrapper } from '../../store'
-import { getProduct } from '../../store/actions/productsActions'
+import { getProduct, filterProducts } from '../../store/actions/productsActions'
+import { wrapper } from '../../store' 
 import Container from 'react-bootstrap/Container'
 import ProductInformation from '../../components/ProductsPageComponents/ProductInformation'
 import Image from 'react-bootstrap/Image'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import TrendingSection from '../../components/HomePageComponents/TrendingSection'
 import styles from '../../styles/Product.module.scss'
 
 const SvgTruck = () => {
@@ -48,24 +49,26 @@ const ShipmentInformation = () => {
 export const getServerSideProps = wrapper.getServerSideProps(async ({store, query}) => {
   const params = query.productId;
   await store.dispatch(getProduct(params));
+  await store.dispatch(filterProducts('state', 'trending'));
   const product = store.getState().productsReducer.server.product
   return { 
     props: {
-      product: product
+      product: product,
+      filteredProducts: store.getState().productsReducer.server.filteredProducts
     }
   };
 })
 
-function Product({product}) {
+function Product({product, filteredProducts}) {
   return(
         <>
           <Container fluid className={styles.container}>
           <div className={styles.productCard}>
               <Row className="d-flex align-items-center justify-center">
-                  <Col xs={12} sm={8} md={6}>
+                  <Col xs={12} sm={12} md={6}>
                     <ProductInformation product={product} />
                   </Col>
-                  <Col xs={12} sm={4} md={6} className={styles.colImageWrapper}>
+                  <Col xs={12} sm={12} md={6} className={styles.colImageWrapper}>
                     <Image src={product.image} fluid/>
                   </Col>
               </Row>
@@ -74,6 +77,7 @@ function Product({product}) {
           <Container className="mb-5">
             <ShipmentInformation />
           </Container>
+          <TrendingSection trendingProducts={filteredProducts} />
         </>
   );
 }

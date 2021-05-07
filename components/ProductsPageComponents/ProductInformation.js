@@ -1,33 +1,50 @@
 import React from 'react'
+import Link from 'next/link'
 import Image from 'react-bootstrap/Image' 
-import { CheckoutButton } from '../Buttons'
-import AddToCartInput from '../CartComponents/AddToCartInput'
+import { CheckoutButton, AddToCartButton } from '../Buttons'
 import styles from '../../styles/Product.module.scss'
+
+const ElementLink = ({link}) => {
+  return(
+    <>
+      <Link href={`/elements/${link}`} passHref>
+        <a className={styles[`link-${link}`]}>
+          {link}
+        </a>
+      </Link>
+    </>
+  );
+}
 
 export default function ProductInformation({product}) {
     return(
         <>
               <div className="py-3 px-2 py-sm-4 px-sm-5">
                   <h2 className={styles.productName}>{product.name}</h2>
-                  <div className={styles.productInformationImage}><Image fluid className="mt-2" src={product.image}></Image></div>
+                  <div className={styles.productInformationImage}>
+                    <Image fluid src={product.image}></Image>
+                  </div>
                   <p className={styles.productInformationDescription}><i>{product.description}</i></p>
                   <div className={styles.extraProductInfo}>
-                    <div className="d-flex my-sm-2">
-                       <h4 className={styles.headers}>Element:</h4><p className={styles.subheaders}>{product.element}</p>
+                    <div className="d-flex my-sm-0">
+                       <h4 className={styles.headers}>Element:</h4><p className={styles.subheaders}><ElementLink link={product.element} /></p>
                     </div>
-                    <div className="d-flex my-sm-2">
+                    <div className="d-flex my-sm-0">
                       <h4 className={styles.headers}>General Rating:</h4><p className={styles.subheaders}>{product.rating} of 5</p> 
+                    </div>
+                    <div className="d-flex my-sm-0">
+                      <h4 className={styles.headers}>Price:</h4><p className={styles.subheaders}>{product.price}</p> 
                     </div>
                   </div>
               </div>
               <div className={styles.checkoutSection}>
                 <div className="mx-2">
-                  <AddToCartInput product={product}></AddToCartInput>
+                  <AddToCartButton product={product}></AddToCartButton>
                 </div>
                 <div className="px-2 px-sm-5 mt-4 mb-3 d-flex justify-content-center text-center text-sm-left align-items-center" >
                   <small style={{fontFamily: "Lora"}}>Or you can checkout <b>{product.name}</b> directly</small>
                   <div className="ml-3" >
-                  <CheckoutButton />
+                  <CheckoutButton product={product} />
                   </div>
                 </div>
               </div>

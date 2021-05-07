@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useShoppingCart } from 'use-shopping-cart'
 import { loadStripe } from "@stripe/stripe-js";
 import axiosModule from '../utils/axiosModule';
 import Link from 'next/link';
+import ToastNotification from './UtilsComponents/ToastNotification';
 import styles from '../styles/Buttons.module.scss';
 /* import ProductAlert from './ProductAlert'; */
 
@@ -10,20 +11,9 @@ const stripePromise = loadStripe("pk_test_51IcujzEZ6RTsruQyD67ngSbKcBzZkwqOVptnH
 
 //Checkout Buttons
 
-const handleCheckout = async (cartDetails) => {
-    /* const product = {
-        price_data: {
-          currency: 'usd',
-          product_data: {
-            name: 'Stubborn Attachments',
-            images: ['https://i.imgur.com/EHyR2nP.png'],
-          },
-          unit_amount: 2000,
-        },
-        quantity: 1,
-      } */
+const handleCheckout = async (url, cartDetails) => {
     const stripe = await stripePromise;
-    const response = await axiosModule.post("/cart", cartDetails);
+    const response = await axiosModule.post(url, cartDetails);
     const session = await response.data;
     const result = await stripe.redirectToCheckout({
         sessionId: session.id
@@ -33,9 +23,14 @@ const handleCheckout = async (cartDetails) => {
     }
 } 
 
-export const CheckoutButton = () => {
+export const CheckoutButton = ({product}) => {
+    const url = "/checkout_sessions/product"
+    const setProductAndQuantity = async (url ,product) => {
+        product.quantity === undefined ? product.quantity = 1 : product.quantity = product.quantity;
+        await handleCheckout(url, product);
+    }
     return(
-        <button className={styles.checkoutButton} role="link">
+        <button className={styles.checkoutButton} onClick={() => setProductAndQuantity(url, product)} role="link">
             Checkout
         </button>
     );
@@ -63,35 +58,30 @@ export function CartButton() {
     );
 }
 
-export const AddToCartButton = ({product, quantity}) => {
-    const { addItem, setItemQuantity, incrementItem } = useShoppingCart()
-    product.quantity = quantity;
-    const setProductWithQuantity = (productToAdd, quantityToAdd) => {
-        addItem(productToAdd);
+export const AddToCartButton = ({product}) => {
+    const [buttonText, setButtonText] = useState('Add To Cart');
+    const { addItem } = useShoppingCart()
+    const addItemAndShowToast = (product) => {
+        addItem(product);
+        setButtonText(`${product.name} added to your cart.`);
         setTimeout(() => {
-            const productSku = productToAdd.sku;
-            if (productToAdd.quantity === 8) {
-                setItemQuantity(productSku, quantityToAdd);
-            } else {
-                incrementItem(productSku, quantityToAdd);
-            }
-        }, 20)
+            setButtonText('Add To Cart');
+        }, 1000)
     }
-    console.log(quantity)
     return(
         <>
-        <button onClick={() => setProductWithQuantity(product, quantity)} className={styles.addToCartButton}>
-            Add To Cart
+        <button onClick={() => addItemAndShowToast(product)} className={styles.addToCartButton}>
+            {buttonText}
         </button>
         </>
     );
 }
 
-export const RemoveFromCartButton = ({sku}) => {
+export const RemoveFromCartButton = ({product}) => {
     const { removeItem } = useShoppingCart();
     return(
         <>
-        <button onClick={() => removeItem(sku)} className={styles.removeProductButton}>
+        <button onClick={() => removeItem(product.sku)} className={styles.removeProductButton}>
             Remove
         </button>
         </>
@@ -100,8 +90,9 @@ export const RemoveFromCartButton = ({sku}) => {
 
 export const CheckoutCartButton = () => {
     const { cartDetails } = useShoppingCart();
+    const url = "/cart"
     return(
-        <button onClick={() => handleCheckout(cartDetails)} role="link" className={styles.checkoutCartButton}>
+        <button onClick={() => handleCheckout(url, cartDetails)} role="link" className={styles.checkoutCartButton}>
             Checkout Cart
         </button>
     )

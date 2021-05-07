@@ -127,6 +127,9 @@ $linksFont: 15px 'Unna', serif;
 } 
 
 .smallLettersWrapper {
+    @include media.media(xs) {
+        margin-bottom: 0;
+    }
     position: absolute;
     text-align: center;
     color: rgba($color: floralwhite, $alpha: 0.80);

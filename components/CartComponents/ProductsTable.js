@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import Table from 'react-bootstrap/Table'
+import Link from 'next/link'
+import Image from 'react-bootstrap/Image'
 import { CheckoutButton, RemoveFromCartButton } from '../Buttons'
 import { useShoppingCart } from 'use-shopping-cart'
 import styles from '../../styles/Cart.module.scss' 
@@ -22,14 +24,13 @@ const ProductQuantity = ({currentQuantity, sku}) => {
     const { incrementItem, decrementItem } = useShoppingCart();
     return(
         <>
-          <div className="d-flex">
-              <span>{currentQuantity}</span>
+          <div className="d-flex justify-content-center">
               <div className="d-flex">
               <button style={resetButtonsStyle} onClick={() => decrementItem(sku)}>
-                  <i className="bi bi-minus"></i>
+                  <i className="bi bi-dash"></i>
               </button>
-              <div>
-                  <input className={styles.input} type="number" onChange={handleInput} defaultValue="1" min="1" max="20"/>
+              <div className={styles.ProductQuantity}>
+                  <span>{currentQuantity}</span>
               </div>
               <button style={resetButtonsStyle} onClick={() => incrementItem(sku)}>
                   <i className="bi bi-plus"></i>
@@ -54,14 +55,30 @@ export default function TableContent({products}) {
               <tbody>
                       {products.map(product => (
                           <tr>
-                              <td>{product.name}</td>
+                              <td className="w-25">
+                                 <Link href={`/products/${product.id}`} passHref>
+                                   <a>
+                                   <div className={styles.avatarGrid}>   
+                                    <div className={styles.cols2}>
+                                     <Image className={styles.productImage} fluid src={product.image}></Image>
+                                    </div>
+                                    <div className={styles.cols4}>
+                                      <span className={styles.productName}>{product.name}</span>
+                                     </div>
+                                   </div>
+                                   </a>
+                                 </Link>
+                              </td>
                               <td>
                                   <ProductQuantity sku={product.sku} currentQuantity={product.quantity} />
                               </td>
                               <td>{product.price}</td>
-                              <td classname="d-flex">
-                                  <CheckoutButton product={product} />
-                                  <RemoveFromCartButton product={product.sku}></RemoveFromCartButton>
+                              <td>
+                                  <div classname={styles.buttonsGrid}>
+                                      <CheckoutButton className="mx-1" product={product} />
+                                      <RemoveFromCartButton className="mx-1" product={product}></RemoveFromCartButton>
+                                      <RemoveFromCartButton className="mx-1" product={product}></RemoveFromCartButton>
+                                  </div>
                               </td>
                           </tr>
                       ))}

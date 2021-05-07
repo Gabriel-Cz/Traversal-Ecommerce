@@ -10,6 +10,7 @@ export default async function handler(req, res) {
   const cartDetails = req.body;
   const products = Object.values(cartDetails)
   const productsFormated = stripeModel(products);
+  console.log(productsFormated)
     if (req.method === 'POST') {
         try {
           console.log(productsFormated);

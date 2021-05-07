@@ -31,10 +31,10 @@ export default function CategorieHeader(props) {
               </Col>
             </Row>
             <Row className="justify-content-center py-2 pb-5">
-              <Col xs={10} md={4}>
+              <Col xs={10} sm={12} md={6}>
                   <div className="text-center">
                       <p className={styles.subHeader}>
-                         Amazing <i style={{textTransform: "capitalize"}}>{props.categorieName}</i> that gonna make you look <br></br> <span style={{textTransform: "uppercase", borderBottom: "1px ridge #6C1D13", fontWeight: "bold", color: "#6C1D13"}}>Invincible</span> <br></br> whenever you go.
+                         Amazing <b style={{textTransform: "capitalize"}}>{props.categorieName}</b> that gonna make you look <br></br> <span style={{textTransform: "uppercase", borderBottom: "1px ridge #6C1D13", fontWeight: "bold", color: "#6C1D13"}}>Invincible</span> <br></br> whenever you go.
                       </p>
                   </div>
               </Col>
