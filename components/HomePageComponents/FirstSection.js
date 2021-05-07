@@ -38,18 +38,18 @@ export function GlobleVideo() {
   );
 }
 
-export function GlobleVideo() {
+/*export function GlobleGif() {
   return(
     {__html: '<video width="100%" height="100%" src="GlobeVideo.mp4" alt="GlobeGif.Gif" type="video/mp4" loop autoplay></video>'}
   );
-}
+}*/
 
 export default function FirstSection() {
     return(
         <>
           <Container fluid className={styles.customContainer}>
               <div className={styles.videoWrapper}
-                 dangerouslySetInnerHTML={GlobeVideo()}>
+                 dangerouslySetInnerHTML={GlobleVideo()}>
               </div>
               <div className={styles.divOverflow}></div>
               <div class={styles.phantomDiv}>phantom div</div>
