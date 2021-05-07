@@ -4,7 +4,7 @@ const stripe = new Stripe("sk_test_51IcujzEZ6RTsruQylOd6Sz2jYm3nOiBmzvdmhDvDUmHx
     apiVersion: "2020-08-27"
 })
 
-const CHECKOUT_DOMAIN = "http://localhost:3000/products/checkout"
+const CHECKOUT_DOMAIN = "https://traversal.vercel.app/products/checkout"
 
 export default async function handler(req, res) {
   const product = req.body;
