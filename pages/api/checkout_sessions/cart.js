@@ -25,8 +25,8 @@ export default async function handler(req, res) {
         } catch (err) {
             console.log('error from server:', err);
         }
-    } /* else {
+    } else {
         res.setHeader('Allow', 'POST');
         res.status(405).end('Method Not Allowed');
-    } */
+    }
 }

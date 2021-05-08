@@ -31,12 +31,12 @@ const OverflowInfoXs = ({product}) => {
   return(
     <>
       <div className={styles.overflowInfoXs}>
-          <div className="text-center justify-content-center d-flex justify-items-center">
+          <div className="text-center mx-2">
             <div>
               <AddToCartButton product={product} />
             </div>
           </div>
-          <div className="text-center mt-3">
+          <div className="text-center mx-2">
             <Link href={'/products/' + `${product.id}`} passHref>
               <a style={{fontFamily: "'Unna', serif"}}>
                 Product Details

@@ -67,10 +67,12 @@ $base-Shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         @include buttonColor(floralwhite, #4469A0)
     }
     .buttonIcon {
-        animation: fadeIn 1s 1;
+        animation: fadeIn 700ms 1;
+        opacity: 0;
     }
     .textFadeIn {
-        animation:  fadeIn 1s 1;
+        animation:  fadeIn 700ms 1;
+        opacity: 0;
     }
 }
 

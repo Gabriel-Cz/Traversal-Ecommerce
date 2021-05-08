@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import Table from 'react-bootstrap/Table'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 import Link from 'next/link'
 import Image from 'react-bootstrap/Image'
 import { CheckoutButton, RemoveFromCartButton } from '../Buttons'
@@ -9,7 +11,7 @@ import styles from '../../styles/Cart.module.scss'
 const headers = [
     'Product',
     'Quantity',
-    'Price',
+    'Total Price',
     'Checkout Single Product'
 ]
 
@@ -60,7 +62,7 @@ export default function TableContent({products}) {
                                    <a style={{textDecoration: "none", color: "black"}}>
                                    <div className={styles.avatarGrid}>   
                                     <div className={styles.cols2}>
-                                     <Image className={styles.productImage} fluid src={product.image}></Image>
+                                     <Image className={styles.productImage} rounded fluid src={product.image}></Image>
                                     </div>
                                     <div className={styles.cols4}>
                                       <span className={styles.productName}>{product.name}</span>
@@ -69,14 +71,18 @@ export default function TableContent({products}) {
                                    </a>
                                  </Link>
                               </td>
-                              <td>
+                              <td className="pt-4">
                                   <ProductQuantity sku={product.sku} currentQuantity={product.quantity} />
                               </td>
-                              <td>{product.price}</td>
-                              <td>
-                                  <div classname={styles.buttonsGrid}>
-                                      <CheckoutButton className="mx-1" product={product} />
-                                      <RemoveFromCartButton className="mx-1" product={product}></RemoveFromCartButton>
+                              <td className="pt-4">{`$${product.price.replace('$', '') * product.quantity}.00`}</td>
+                              <td className="pt-4">
+                                  <div className="d-flex justify-content-center">
+                                      <div className="mx-1" sm={3}>
+                                        <CheckoutButton product={product} />
+                                      </div>
+                                      <div className="mx-1" sm={3}>
+                                        <RemoveFromCartButton product={product}></RemoveFromCartButton>
+                                      </div>
                                   </div>
                               </td>
                           </tr>

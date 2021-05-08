@@ -58,24 +58,23 @@ export function CartButton() {
 }
 
 export const AddToCartButton = ({product}) => {
-    const [buttonText, setButtonText] = useState('Add To Cart');
+    const [buttonText, setButtonText] = useState(true);
     const { addItem } = useShoppingCart()
     const addItemAndShowToast = (product) => {
         addItem(product);
-        setButtonText(`${product.name} added to your cart.`);
+        setButtonText(false);
         setTimeout(() => {
-            setButtonText('Add To Cart');
-        }, 1000)
+            setButtonText(true);
+        }, 700);
     }
     return(
         <>
         <button onClick={() => addItemAndShowToast(product)} className={styles.addToCartButton}>
-            {
-            buttonText === false 
+            {buttonText === true 
             ?
-              <span className={styles.buttonIcon}><i className="bi bi-check-circle"></i></span> 
+              `Add To Cart`
             : 
-              <span className={styles.textFadeIn}>Add To Cart</span>
+              <i className="bi bi-check"></i>  
             }
         </button>
         </>
