@@ -17,7 +17,7 @@ const OverflowInfo = ({product}) => {
           </div>
           <div className="text-center mt-5">
             <Link href={'/products/' + `${product.id}`} passHref>
-              <a style={{fontFamily: "'Unna', serif"}}>
+              <a style={{fontFamily: "'Unna', serif", color: "#7CB342"}}>
                 Product Details
               </a>
             </Link>
@@ -38,7 +38,7 @@ const OverflowInfoXs = ({product}) => {
           </div>
           <div className="text-center mx-2">
             <Link href={'/products/' + `${product.id}`} passHref>
-              <a style={{fontFamily: "'Unna', serif"}}>
+              <a style={{fontFamily: "'Unna', serif", color: "#7CB342"}}>
                 Product Details
               </a>
             </Link>

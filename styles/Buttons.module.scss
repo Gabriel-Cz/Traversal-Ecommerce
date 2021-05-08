@@ -59,6 +59,12 @@ $base-Shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 .addToCartButton {
     @extend .button;
+    @include media.media(xs) {
+        @include buttonColor(floralwhite, #4469A0)
+    }
+    @include media.media(sm) {
+        @include buttonColor(floralwhite, #4469A0)
+    }
     @include buttonColor(#4469A0, transparent);
     box-shadow: none;
     border: 1px ridge #4469A0;
