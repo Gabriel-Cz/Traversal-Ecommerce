@@ -23,7 +23,7 @@ const handleCheckout = async (url, cartDetails) => {
 } 
 
 export const CheckoutButton = ({product}) => {
-    const url = "https://traversal.vercel.app/api/checkout_sessions/product"
+    const url = "/api/checkout_sessions/product"
     const setProductAndQuantity = async (url ,product) => {
         product.quantity === undefined ? product.quantity = 1 : product.quantity = product.quantity;
         await handleCheckout(url, product);
@@ -94,7 +94,7 @@ export const RemoveFromCartButton = ({product}) => {
 
 export const CheckoutCartButton = () => {
     const { cartDetails } = useShoppingCart();
-    const url = "https://traversal.vercel.app/api/checkout_sessions/cart"
+    const url = "/api/checkout_sessions/cart"
     return(
         <button onClick={() => handleCheckout(url, cartDetails)} role="link" className={styles.checkoutCartButton}>
             Checkout Cart
