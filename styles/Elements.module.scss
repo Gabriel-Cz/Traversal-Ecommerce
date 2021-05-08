@@ -8,6 +8,7 @@ $headerTextShadow: 0px 2px 5px rgba(255, 255, 255, 1);
 
 @mixin parallaxSetup($image) {
   height: 100%;
+  position: relative;
   overflow: hidden;
   background-attachment: fixed;
   background-position: center;
@@ -18,7 +19,7 @@ $headerTextShadow: 0px 2px 5px rgba(255, 255, 255, 1);
 }
 
 .container-gold {
-  background-image: url('../public/ParallaxImages/ParallaxGold.jpg');
+  @include parallaxSetup(url('../public/ParallaxImages/ParallaxGold.jpg'));
 }
 
 .container-silver {
@@ -28,11 +29,12 @@ $headerTextShadow: 0px 2px 5px rgba(255, 255, 255, 1);
 .overflowDiv {
     @include mixin.media(xs) {
       width: 100%;
+      height: 150%;
     }
     position: absolute;
     height: 100%;
     width: 100%;
-    left: 37%;
+    left: 0%;
     transform: skew(46deg) !important;
     background-color: rgba($color: white, $alpha: 0.55);
     backdrop-filter: grayscale(100%);
@@ -54,6 +56,7 @@ $headerTextShadow: 0px 2px 5px rgba(255, 255, 255, 1);
     color: rgba($color: #1a1818, $alpha: 1.0);
     letter-spacing: 1px;
     line-height: 30px;
+    text-align: center;
     text-shadow: $headerTextShadow;
   }
 
@@ -66,7 +69,6 @@ $headerTextShadow: 0px 2px 5px rgba(255, 255, 255, 1);
     }
     position: relative;
     margin-top: 100px;
-    text-align: center;
     margin-bottom: 50px;
     .elementName {
       position: absolute;
@@ -85,7 +87,7 @@ $headerTextShadow: 0px 2px 5px rgba(255, 255, 255, 1);
         transform: translate(-50%, -50%);
         font: 300 24px 'Lora', serif;
         text-transform: capitalize;
-        padding: 20px 30px;
+        padding: 20px 15px;
         background-color: white;
         color: rgba($color: rgb(124, 122, 122), $alpha: 1);
     }

@@ -2,7 +2,7 @@ import React from 'react'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import PropTypes from 'prop-types';
-import ItemCard from '../ItemCard'
+import ItemCard from '../CardsComponents/ItemCard'
 import Container from 'react-bootstrap/Container'
 import { Quote } from '../HomePageComponents/GoldAndSilverSection';
 import styles from '../../styles/Elements.module.scss'

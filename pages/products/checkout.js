@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
-import { linksCategories } from '../../components/NavbarComponent'
+import { linksCategories } from '../../components/LayoutComponents/NavbarComponent'
 import styles from '../../styles/Cart.module.scss'
 
 const styleVariants = {

@@ -79,7 +79,6 @@ $headerTextShadow: 0px 2px 5px rgba(255, 255, 255, 1);
   }
 }
 
-
 .header {
   text-transform: capitalize;
   font: $fontHeader;
@@ -116,7 +115,7 @@ $headerTextShadow: 0px 2px 5px rgba(255, 255, 255, 1);
     transform: translate(-50%, -50%);
     font: 300 24px 'Lora', serif;
     text-transform: capitalize;
-    padding: 20px 30px;
+    padding: 20px 15px;
     background-color: white;
   }
   .firstDiv {

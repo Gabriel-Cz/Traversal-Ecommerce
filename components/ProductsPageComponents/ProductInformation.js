@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'react-bootstrap/Image' 
-import { CheckoutButton, AddToCartButton } from '../Buttons'
+import { CheckoutButton, AddToCartButton } from '../UtilsComponents/Buttons'
 import styles from '../../styles/Product.module.scss'
 
 const ElementLink = ({link}) => {

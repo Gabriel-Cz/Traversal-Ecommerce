@@ -2,7 +2,7 @@ import React from 'react'
 import Card from 'react-bootstrap/Card'
 import Image from 'react-bootstrap/Image'
 import Rating from 'react-rating'
-import styles from '../styles/CustomerCard.module.scss'
+import styles from '../../styles/CustomerCard.module.scss'
 
 const VerifiedIcon = () => {
     return(

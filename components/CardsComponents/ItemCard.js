@@ -2,8 +2,8 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'react-bootstrap/Image'
 import Card from 'react-bootstrap/Card'
-import { AddToCartButton } from '../components/Buttons.js'
-import styles from '../styles/ItemCard.module.scss'
+import { AddToCartButton } from '../UtilsComponents/Buttons.js'
+import styles from '../../styles/ItemCard.module.scss'
 import Rating from 'react-rating'
 
 const OverflowInfo = ({product}) => {

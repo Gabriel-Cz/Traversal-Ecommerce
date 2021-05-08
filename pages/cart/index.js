@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useShoppingCart } from 'use-shopping-cart'
 import Link from 'next/link'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -7,8 +8,7 @@ import Image from 'react-bootstrap/Image'
 import ProductsTable from '../../components/CartComponents/ProductsTable'
 import CartFooter from '../../components/CartComponents/CartFooter'
 import { Quote } from '../../components//HomePageComponents/GoldAndSilverSection'
-import { useShoppingCart } from 'use-shopping-cart'
-import { linksCategories } from '../../components/NavbarComponent'
+import { linksCategories } from '../../components/LayoutComponents/NavbarComponent'
 import styles from '../../styles/Cart.module.scss' 
 
 export const EmptyCartMessage = () => {

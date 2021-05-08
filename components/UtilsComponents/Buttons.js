@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useShoppingCart } from 'use-shopping-cart'
 import { loadStripe } from "@stripe/stripe-js";
-import axiosModule from '../utils/axiosModule';
+import axiosModule from '../../utils/axiosModule';
 import Link from 'next/link';
-import styles from '../styles/Buttons.module.scss';
+import styles from '../../styles/Buttons.module.scss';
 /* import ProductAlert from './ProductAlert'; */
 
 const stripePromise = loadStripe("pk_test_51IcujzEZ6RTsruQyD67ngSbKcBzZkwqOVptnHLgGW03YIsWf3kWwqipopF3soMKPJ4OFAg9ULLiQMLrTwHXg2Mz800FmGYz55w")
@@ -23,7 +23,7 @@ const handleCheckout = async (url, cartDetails) => {
 } 
 
 export const CheckoutButton = ({product}) => {
-    const url = "/api/checkout_sessions/product"
+    const url = "/checkout_sessions/product"
     const setProductAndQuantity = async (url ,product) => {
         product.quantity === undefined ? product.quantity = 1 : product.quantity = product.quantity;
         await handleCheckout(url, product);
@@ -33,6 +33,16 @@ export const CheckoutButton = ({product}) => {
             Checkout
         </button>
     );
+}
+
+export const CheckoutCartButton = () => {
+    const { cartDetails } = useShoppingCart();
+    const url = "/checkout_sessions/cart"
+    return(
+        <button onClick={() => handleCheckout(url, cartDetails)} role="link" className={styles.checkoutCartButton}>
+            Checkout Cart
+        </button>
+    )
 }
 
 //Cart Buttons
@@ -90,16 +100,6 @@ export const RemoveFromCartButton = ({product}) => {
         </button>
         </>
     );
-}
-
-export const CheckoutCartButton = () => {
-    const { cartDetails } = useShoppingCart();
-    const url = "/api/checkout_sessions/cart"
-    return(
-        <button onClick={() => handleCheckout(url, cartDetails)} role="link" className={styles.checkoutCartButton}>
-            Checkout Cart
-        </button>
-    )
 }
 
 export const ClearCartButton = () => {

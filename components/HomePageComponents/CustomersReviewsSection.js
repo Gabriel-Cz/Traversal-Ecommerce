@@ -2,7 +2,7 @@ import React from 'react'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import CustomerCard from '../CustomerCard'
+import CustomerCard from '../../components/CardsComponents/CustomerCard'
 import styles from '../../styles/CustomersReviewsSection.module.scss'
 
 const customers = [

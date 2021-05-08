@@ -1,10 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Table from 'react-bootstrap/Table'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
 import Link from 'next/link'
 import Image from 'react-bootstrap/Image'
-import { CheckoutButton, RemoveFromCartButton } from '../Buttons'
+import { CheckoutButton, RemoveFromCartButton } from '../UtilsComponents/Buttons'
 import { useShoppingCart } from 'use-shopping-cart'
 import styles from '../../styles/Cart.module.scss' 
 
@@ -21,8 +19,6 @@ const resetButtonsStyle = {
 }
 
 const ProductQuantity = ({currentQuantity, sku}) => {
-    const [quantity, setQuantity] = useState(0)
-    const handleInput = e => setQuantity(e.target.value);
     const { incrementItem, decrementItem } = useShoppingCart();
     return(
         <>

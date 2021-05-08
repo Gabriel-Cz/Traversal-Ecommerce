@@ -1,9 +1,5 @@
 import React, { useState } from 'react'
-import { useSelector } from 'react-redux'
-import FormControl from 'react-bootstrap/FormControl'
-import Button from 'react-bootstrap/Button'
-import InputGroup from 'react-bootstrap/InputGroup'
-import {AddToCartButton} from '../Buttons'
+import {AddToCartButton} from '../UtilsComponents/Buttons'
 import styles from '../../styles/Cart.module.scss'
 
 export default function AddToCartInput({product}) {

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useShoppingCart } from 'use-shopping-cart';
-import { ClearCartButton, CheckoutCartButton } from '../Buttons'
+import { ClearCartButton, CheckoutCartButton } from '../UtilsComponents/Buttons'
 
 export default function CartFooter() {
     return(
