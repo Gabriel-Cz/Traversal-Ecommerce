@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import ReactPlayer from 'react-player'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -32,24 +33,23 @@ const MoreInfo = () => {
     );
 }
 
-export function GlobleVideo() {
-  return(
-    {__html: '<video width="100%" height="100%" src="GlobeVideo.mp4" alt="GlobeVideo.mp4" type="video/mp4" loop autoplay></video>'}
-  );
-}
-
-/*export function GlobleGif() {
-  return(
-    {__html: '<video width="100%" height="100%" src="GlobeVideo.mp4" alt="GlobeGif.Gif" type="video/mp4" loop autoplay></video>'}
-  );
-}*/
-
 export default function FirstSection() {
     return(
         <>
           <Container fluid className={styles.customContainer}>
-              <div className={styles.videoWrapper}
-                 dangerouslySetInnerHTML={GlobleVideo()}>
+              <div className={styles.videoWrapper}>
+                <ReactPlayer 
+                  width="100%" height="100%" url="GlobeVideo.mp4" playing muted
+                  config={{
+                    file: {
+                      attributes: {
+                        autoPlay: true,
+                        muted: true,
+                        loop: true,
+                        poster: "GlobeVideo.gif",
+                      }}
+                    }}
+                ></ReactPlayer>
               </div>
               <div className={styles.divOverflow}></div>
               <div class={styles.phantomDiv}>phantom div</div>

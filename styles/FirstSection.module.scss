@@ -9,7 +9,7 @@
   overflow: hidden;
   .divOverflow{
     @include mixin.media(xs) {
-      height: 80%;
+      height: 75%;
     }
     @include mixin.media(sm) {
       height: 75%;

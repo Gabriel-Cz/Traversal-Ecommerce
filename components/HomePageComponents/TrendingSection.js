@@ -27,8 +27,8 @@ function TrendingSection({trendingProducts}) {
               <Carousel className="mt-5" fade={true}>
                 {trendingProducts.map(product => (
                   <Carousel.Item key={product.id}>
-                      <Row class="d-flex justify-content-center">
-                        <Col xs={12} sm={8} style={{height: "100%"}}>
+                      <Row class="d-flex justify-content-center pb-2 pb-sm-0">
+                        <Col xs={11} sm={8} style={{height: "100%"}}>
                             <ItemCard product={product}></ItemCard>
                         </Col>
                       </Row>

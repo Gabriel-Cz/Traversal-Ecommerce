@@ -13,4 +13,4 @@ const bindMiddleware = (middleware) => {
 
 export const store = context => createStore(reducers, bindMiddleware([thunkMiddleware]))
 
-export const wrapper = createWrapper(store, {debug: true});
+export const wrapper = createWrapper(store);
