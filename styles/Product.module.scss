@@ -7,7 +7,7 @@ $productDescriptionFont: 12px 'Lora', serif;
 $headersLg: 18px 'Lora', serif;
 $headers: 14px 'Lora', serif;
 $subheadersLg: 14px 'Lora', serif;
-$subheaders: 10px 'Lora', serif;
+$subheaders: 12px 'Lora', serif;
 $bgCard: #ECEFF1;
 $boxShadow: 0 50px 100px -20px rgb(50 50 93 / 25%), 0 30px 60px -30px rgb(0 0 0 / 30%);
 
@@ -88,6 +88,7 @@ $boxShadow: 0 50px 100px -20px rgb(50 50 93 / 25%), 0 30px 60px -30px rgb(0 0 0 
 .productName {
     @include media.media(xs) {
         text-align: center;
+        margin-bottom: 20px;
     }
     @include media.media(sm) {
         text-align: center;
@@ -125,22 +126,38 @@ $boxShadow: 0 50px 100px -20px rgb(50 50 93 / 25%), 0 30px 60px -30px rgb(0 0 0 
         }
         font: $subheaders;
         margin-left: 20px;
-        margin-top: 5px;
+        margin-top: 2px;
         .link-gold {
+            @include media.media(xs) {
+                font-size: 14px;
+            }
             color: rgba($color: rgb(212, 187, 44), $alpha: 1);
             text-decoration: none;
             text-transform: capitalize;
+            font-size: 16px;
+            margin-top: 0px;
             &:hover {
                 text-decoration: underline;
             }
         }
         .link-silver {
+            @include media.media(xs) {
+                font-size: 14px;
+            }
             color: rgba($color: rgb(124, 122, 122), $alpha: 1);
             text-decoration: none;
             text-transform: capitalize;
+            font-size: 16px;
             &:hover {
                 text-decoration: underline;
             }
         }
     }
+}
+
+.shipmentInformation {
+    font-family: 'Lora', serif;
+    margin-left: 10px;
+    opacity: 0.8;
+    line-height: 10px;
 }

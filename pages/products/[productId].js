@@ -40,7 +40,7 @@ const ShipmentInformation = () => {
       <>
         <div className="d-flex justify-content-center align-items-center ">
             <SvgTruck></SvgTruck>
-            <small className="ml-4 text-muted" styles={{fontFamily: "Lora"}}>Shipment from 3 to 5 days</small>
+            <small className={styles.shipmentInformation}>Shipment from 3 to 5 days</small>
         </div>
       </>
   );

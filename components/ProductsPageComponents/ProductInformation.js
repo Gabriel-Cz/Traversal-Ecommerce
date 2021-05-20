@@ -27,13 +27,13 @@ export default function ProductInformation({product}) {
                   <p className={styles.productInformationDescription}><i>{product.description}</i></p>
                   <div className={styles.extraProductInfo}>
                     <div className="d-flex my-sm-0">
-                       <h4 className={styles.headers}>Element:</h4><p className={styles.subheaders}><ElementLink link={product.element} /></p>
+                       <h4 className={styles.headers}>Element:</h4><span className={styles.subheaders}><ElementLink link={product.element} /></span>
                     </div>
                     <div className="d-flex my-sm-0">
-                      <h4 className={styles.headers}>General Rating:</h4><p className={styles.subheaders}>{product.rating} of 5</p> 
+                      <h4 className={styles.headers}>General Rating:</h4><span className={styles.subheaders}>{product.rating} of 5</span> 
                     </div>
                     <div className="d-flex my-sm-0">
-                      <h4 className={styles.headers}>Price:</h4><p className={styles.subheaders}>{product.price}</p> 
+                      <h4 className={styles.headers}>Price:</h4><span className={styles.subheaders}>{product.price}</span> 
                     </div>
                   </div>
               </div>
