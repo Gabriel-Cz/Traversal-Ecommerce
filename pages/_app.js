@@ -1,12 +1,10 @@
 import React from 'react'
 import { wrapper } from '../store'
-import NavbarComponent from '../components/LayoutComponents/NavbarComponent'
-import FooterComponent from '../components/LayoutComponents/FooterComponent'
+import AppNavbar from '../components/AppNavbar/AppNavbar'
+import AppFooter from '../components/AppFooter/AppFooter'
 import { CartProvider } from 'use-shopping-cart' 
 import { loadStripe } from '@stripe/stripe-js'
 import '../styles/globals.scss'
-
-const stripePromise = loadStripe("pk_test_51IcujzEZ6RTsruQyD67ngSbKcBzZkwqOVptnHLgGW03YIsWf3kWwqipopF3soMKPJ4OFAg9ULLiQMLrTwHXg2Mz800FmGYz55w")
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -15,9 +13,9 @@ function MyApp({ Component, pageProps }) {
           mode="client-only"
           currency="usd"
         >
-          <NavbarComponent></NavbarComponent>
+          <AppNavbar />
           <Component {...pageProps} />
-          <FooterComponent></FooterComponent>
+          <AppFooter />
         </CartProvider>
       </>
   )

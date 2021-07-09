@@ -1,6 +1,6 @@
 import React from 'react'
-import ElementHeader from '../../components/ElementsComponents/ElementHeader'
-import ElementContent from '../../components/ElementsComponents/ElementContent'
+import ElementHeader from '../../components/ElementPageHeader/ElementHeader'
+import ElementContent from '../../components/ElementPageContent/ElementContent'
 import { wrapper } from '../../store' 
 import { filterProducts } from '../../store/actions/productsActions'
 

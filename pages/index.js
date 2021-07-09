@@ -1,29 +1,31 @@
 import React from 'react'
-import FirstSection from '../components/HomePageComponents/FirstSection'
-import TrendingSection from '../components/HomePageComponents/TrendingSection'
-import GoldAndSilverSection from '../components/HomePageComponents/GoldAndSilverSection'
-import CustomersReviewsSection from '../components/HomePageComponents/CustomersReviewsSection'
-import ShipmentsInformation from '../components/HomePageComponents/ShipmentsInformation'
+import FirstSection from '../components/HomePageFirstSection/FirstSection'
+import TrendingProducts from '../components/TrendingProducts/TrendingProducts'
+import GoldAndSilverSection from '../components/HomePageGoldAndSilverSection/GoldAndSilverSection'
+import CustomersReviewsSection from '../components/HomePageCustomersReviewsSection/CustomersReviewsSection'
+import AboutShipments from '../components/HomePageAboutShipments/AboutShipments'
 import { wrapper } from '../store' 
-import { filterProducts } from '../store/actions/productsActions'
+import { filterProducts, filterByElement } from '../store/actions/productsActions'
 
 export const getServerSideProps = wrapper.getServerSideProps(async ({store}) => {
-  await store.dispatch(filterProducts('state', 'trending'))
+  await store.dispatch(filterProducts('state', 'trending'));
+  await store.dispatch(filterByElement('element'));
   return {
     props: {
-      trendingProducts: store.getState().productsReducer.server.filteredProducts
+      trendingProducts: store.getState().productsReducer.server.filteredProducts,
+      productsByElement: store.getState().productsReducer.server.productsByElement,
     }
   }
 }) 
 
-export function Home({trendingProducts}) {
+export function Home({trendingProducts, productsByElement}) {
   return (
     <>
-      <FirstSection></FirstSection>
-      <TrendingSection trendingProducts={trendingProducts}></TrendingSection>
-      <GoldAndSilverSection></GoldAndSilverSection>
-      <CustomersReviewsSection></CustomersReviewsSection>
-      <ShipmentsInformation></ShipmentsInformation>
+      <FirstSection />
+      <TrendingProducts trendingProducts={trendingProducts} />
+      <GoldAndSilverSection products={productsByElement} />
+      <CustomersReviewsSection />
+      <AboutShipments />
     </>
   )
 }

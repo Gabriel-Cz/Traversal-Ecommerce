@@ -6,7 +6,7 @@ import ProductInformation from '../../components/ProductsPageComponents/ProductI
 import Image from 'react-bootstrap/Image'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import TrendingSection from '../../components/HomePageComponents/TrendingSection'
+import TrendingSection from '../../components/TrendingProducts/TrendingProducts'
 import styles from '../../styles/Product.module.scss'
 
 const SvgTruck = () => {
@@ -77,7 +77,7 @@ function Product({product, filteredProducts}) {
           <Container className="mb-5">
             <ShipmentInformation />
           </Container>
-          <TrendingSection trendingProducts={filteredProducts} />
+          <TrendingProducts trendingProducts={filteredProducts} />
         </>
   );
 }

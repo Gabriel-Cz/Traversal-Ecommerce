@@ -35,6 +35,14 @@ const setProducts = (state = initialState, action) => {
                     filteredProducts: action.payload
                 }
             }
+        case types.FILTER_ELEMENTS:
+            return {
+                ...state,
+                server: {
+                    ...state.server,
+                    productsByElement: action.payload
+                }
+            }
         default:
             return state;
     }
