@@ -1,21 +1,28 @@
 import React from 'react';
+import Link from 'next/link';
 import { useSelector } from 'react-redux';
 import Carousel from 'react-bootstrap/Carousel'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import ProductCard from '../ProductCard/ProductCard';
+import Image from 'react-bootstrap/Image';
+import styles from './GoldAndSilverCarousel.module.scss';
 
 export default function GoldAndSilverCarousel() {
     const { productsByElement } = useSelector(state => state.productsReducer.server);
     return(
-        <Carousel fade={true}>
+        <Carousel fade={true} className={styles.carousel}>
             {productsByElement.map(product => (
-                <Carousel.Item key={product.id}>
-                  <Row class="d-flex justify-content-center pb-2 pb-sm-0 mx-2 mx-sm-0">
-                    <Col xs={12} sm={8} style={{height: "100%"}}>
-                      <ProductCard product={product} />
-                    </Col>
-                  </Row>
+                <Carousel.Item className={styles.imageContainer} key={product.id}>
+                        <Link href={`/products/${product.id}`} passHref>
+                           <a>
+                              <Image fluid src={product.image} className={styles.image} />
+                              <div className={styles.textOverflowWrapper}>
+                                <p className={styles.textOverflow} >
+                                  {product.name}
+                                </p>
+                              </div>
+                            </a>
+                        </Link>
                 </Carousel.Item>
             ))}
         </Carousel>

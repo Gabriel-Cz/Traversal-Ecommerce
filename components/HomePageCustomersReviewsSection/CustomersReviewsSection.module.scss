@@ -18,7 +18,7 @@ $blockBg: linear-gradient(267.59deg, rgba(52, 79, 94, 0.4) 0%, rgba(66, 78, 120,
         transform: skewY(-15deg);
         background: $blockBg;
         z-index: -1;
-        border: 10px double white;
+        opacity: 0.25;
     }  
 }
 .customContainer {
