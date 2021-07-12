@@ -18,7 +18,7 @@ export default function About() {
                   <h1 style={{font: containerStyle.headerFont}}>About Traversal</h1>
                   <div className="mx-2 mt-5 text-center">
                       <p style={{font: containerStyle.contentFont}}>
-                          Traversal is an open source project. Based in a Fiction Jewelry Ecommerce Site.
+                          Traversal is a Fictional Jewelry Ecommerce. Build by <a target="_blank" href="https://github.com/Gabriel-Cz">Gabriel Cz</a>.
                       </p>
                   </div>
               </div>
