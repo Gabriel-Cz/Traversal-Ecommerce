@@ -12,17 +12,19 @@ export default function GoldAndSilverCarousel() {
     return(
         <Carousel fade={true} className={styles.carousel}>
             {productsByElement.map(product => (
-                <Carousel.Item className={styles.imageContainer} key={product.id}>
-                        <Link href={`/products/${product.id}`} passHref>
-                           <a>
-                              <Image fluid src={product.image} className={styles.image} />
-                              <div className={styles.textOverflowWrapper}>
-                                <p className={styles.textOverflow} >
-                                  {product.name}
-                                </p>
-                              </div>
-                            </a>
-                        </Link>
+                <Carousel.Item key={product.id}>
+                  <Link href={`/products/${product.id}`} passHref>
+                    <a>
+                      <div className={styles.imageContainer}>
+                        <Image fluid src={product.image} className={styles.image} />
+                        <div className={styles.textOverflowWrapper}>
+                          <p className={styles.textOverflow} >
+                            {product.name}
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </Link>
                 </Carousel.Item>
             ))}
         </Carousel>

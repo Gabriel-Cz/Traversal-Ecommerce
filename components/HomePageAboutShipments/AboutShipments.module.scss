@@ -1,5 +1,5 @@
 $fontHeader: 22px 'Unna', serif;
-$fontSubheader: 16px 'Unna', serif;
+$fontSubheader: 18px 'Unna', serif;
 
 .customContainer{
     margin-top: 75px; 
@@ -14,7 +14,7 @@ $fontSubheader: 16px 'Unna', serif;
         left: 0;
         top: 50%;
         width: 100%;
-        height: 75%;
+        height: 100%;
         transform: translate(0%, -50%);
         background-color: rgba($color: black, $alpha: 0.5);
     }

@@ -3,15 +3,16 @@ $background: linear-gradient(249.27deg, rgba(247, 247, 247, 0.15) 0%, rgba(230, 
 $font: 16px 'Unna', serif;  
 
 .carousel {
-    border-radius: 2px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0);
     box-shadow: 0 50px 100px -20px rgb(50 50 93 / 25%), 0 30px 60px -30px rgb(0 0 0 / 30%);
 }
 
 .imageContainer {
     position: relative;
-    border-radius: 2px;
+    border-radius: 5px;
     .image {
-        border-radius: 2px;
+        border-radius: 5px;
     }
     &:hover .textOverflowWrapper {
         background-color: rgba($color: white, $alpha: 0.1);
@@ -30,7 +31,7 @@ $font: 16px 'Unna', serif;
     transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
-    border-radius: 2px;
+    border-radius: 5px;
     background: rgba(0, 0, 0, 0.6);
     font: $font;
     font-weight: lighter;

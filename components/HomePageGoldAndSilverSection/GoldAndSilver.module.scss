@@ -3,7 +3,7 @@ $background: linear-gradient(249.27deg, rgba(247, 247, 247, 0.15) 0%, rgba(230, 
 
 $bg-overlay: rgba($color: #C4C4C4, $alpha: 0.5);
 $fontSubheader: 'Unna', serif;
-$font: 16px 'Unna', serif;  
+$font: 18px 'Unna', serif;  
 $border: 4px double rgba($color: gray, $alpha: 0.25);
 
 .customContainer{
@@ -29,10 +29,10 @@ $border: 4px double rgba($color: gray, $alpha: 0.25);
     }  
     .imageContainer {
         position: relative;
-        border-radius: 2px;
+        border-radius: 5px;
         box-shadow: 0 50px 100px -20px rgb(50 50 93 / 25%), 0 30px 60px -30px rgb(0 0 0 / 30%);
         .image {
-            border-radius: 2px;
+            border-radius: 5px;
         }
         &:hover .textOverflowWrapper {
             background-color: rgba($color: white, $alpha: 0.1);

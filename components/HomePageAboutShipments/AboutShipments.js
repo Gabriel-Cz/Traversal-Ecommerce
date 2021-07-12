@@ -30,7 +30,7 @@ export default function AboutShipments() {
                           <div className={styles.textOverflow}>
                             <div className="text-center align-content-center">
                                 <Quote></Quote>
-                                <small className={styles.blockFooter}>We deliver from <bold>3</bold> to <bold>7</bold> days around the world.</small>
+                                <small className={styles.blockFooter}>We deliver in 3 days. Worldwide.</small>
                             </div>
                           </div>
                       </div>

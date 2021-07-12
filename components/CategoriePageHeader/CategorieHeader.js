@@ -34,7 +34,7 @@ export default function CategorieHeader(props) {
               <Col xs={10} sm={12} md={6}>
                   <div className="text-center">
                       <p className={styles.subHeader}>
-                         Amazing <b style={{textTransform: "capitalize"}}>{props.categorieName}</b> that gonna make you look <br></br> <span style={{textTransform: "uppercase", borderBottom: "1px ridge #6C1D13", fontWeight: "bold", color: "#6C1D13"}}>Invincible</span> <br></br> whenever you go.
+                         Amazing {props.categorieName} that gonna make you look <br></br> <span style={{textTransform: "uppercase"}}>Invincible</span> <br></br> whenever you go.
                       </p>
                   </div>
               </Col>

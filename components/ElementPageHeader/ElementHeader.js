@@ -21,7 +21,7 @@ function ElementHeader({elementName}) {
               <Col xs={11} md={6}>
                   <div className="text-center">
                       <p className={styles.subHeader}>
-                        <b style={{textTransform: "capitalize"}}>{elementName}</b> One of the most beautiful and more <br></br> <span style={{textTransform: "uppercase", fontWeight: "bold", color: "#546E7A"}}>Pure</span> <br></br> elements in the earth bringing to you by us.
+                        <span style={{textTransform: "capitalize"}}>{elementName}</span> One of the most <br></br> <span>BEAUTIFUL</span> <br></br> elements in the earth bringing to you by Traversal.
                       </p>
                   </div>
               </Col>

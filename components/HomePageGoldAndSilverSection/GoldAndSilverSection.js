@@ -67,7 +67,7 @@ function SilverBlock() {
 const SilverBlocksSvg = () => {
     return(
         <div className={styles.goldBlockSvg}>
-           <svg width="1196" height="513" viewBox="0 0 1196 513" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <svg width="100%" height="100%" viewBox="0 0 1196 513" fill="none" xmlns="http://www.w3.org/2000/svg">
                <circle cx="198" cy="320" r="140" stroke="url(#paint0_radial)" stroke-opacity="0.25" stroke-width="10"/>
                <circle cx="145" cy="368" r="140" stroke="url(#paint1_radial)" stroke-opacity="0.25" stroke-width="10"/>
                <circle cx="1028" cy="168" r="140" transform="rotate(170 1028 168)" stroke="url(#paint2_radial)" stroke-opacity="0.25" stroke-width="10"/>
@@ -103,15 +103,15 @@ export default function GoldAndSilverSection() {
                 <Col xs={12} lg={4}>
                     <Quote />
                 </Col>
-                <Col lg={5}>
+                <Col xs={12} lg={5}>
                     <SilverBlock />
                 </Col>
             </Row>
             <Row className="d-flex justify-content-center align-items-center py-4 py-1-sm">
-                <Col lg={5}>
+                <Col xs={12} lg={5}>
                     <GoldBlock />
                 </Col>
-                <Col xs={12} lg={4}>
+                <Col xs={12} lg={4} className="ml-0 ml-lg-4 mt-4 mt-lg-0">
                     <GoldAndSilverCarousel />
                 </Col>
             </Row>

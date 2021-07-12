@@ -38,7 +38,9 @@ export default function AppFooter() {
                                 <h1 className={styles.headers}>Get Help</h1>
                                 <div className={styles.links}>
                                     {linksHelp.map(link =>  (
-                                        <a className={styles.a}>{link}</a>
+                                        <a className={styles.a} key={link.name}>
+                                            {link}
+                                        </a>
                                     ))} 
                                 </div>
                             </div>
@@ -48,7 +50,7 @@ export default function AppFooter() {
                                 <h1 className={styles.headers}>Categories</h1>
                                 <div className={styles.links}>
                                     {linksCategories.map(link => (
-                                        <Link shallow passHref href={'/categories' + link.link}>
+                                        <Link key={link.name} shallow passHref href={'/categories' + link.path}>
                                             <a className={styles.a}>
                                               {link.name}
                                             </a>
@@ -62,7 +64,7 @@ export default function AppFooter() {
                                 <h1 className={styles.headers}>Contact Us</h1>
                                 <div className={styles.linksMedia}>
                                     {linksMedia.map(link => (
-                                        <a className={styles.a}>
+                                        <a className={styles.a} key={link.name}>
                                             <i className={link}></i>
                                         </a>
                                     ))}
