@@ -1,7 +1,7 @@
 import React from 'react'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import ProductCard from '../ProductCard/ProductCard'
+import ProductCard from '../../molecules/ProductCard/ProductCard'
 import Container from 'react-bootstrap/Container'
 import { Quote } from '../HomePageGoldAndSilverSection/GoldAndSilverSection';
 import styles from '../../styles/Categories.module.scss'

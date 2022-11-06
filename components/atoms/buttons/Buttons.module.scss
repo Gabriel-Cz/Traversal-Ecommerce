@@ -1,0 +1,132 @@
+@use '../styles/mediaMixin' as media;
+@use '../styles/fontsMixin' as fonts;
+
+$base-padding: 10px 15px;
+$base-opacity: 0.75;
+$base-Shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+@mixin buttonColor($color, $bgColor) {
+	color: $color;
+	background-color: $bgColor;
+
+	&:hover {
+		transition: 0.5s ease-in-out;
+		opacity: 1;
+	}
+}
+
+@mixin linkColor($color) {
+	color: $color;
+
+	&:hover {
+		transition: 0.5s ease-in-out;
+		opacity: 1;
+	}
+}
+
+.default {
+	@include fonts.fontMixin("fontButton");
+
+	border: none;
+	opacity: $base-opacity;
+	padding: $base-padding;
+	box-shadow: $base-Shadow;
+	transition: 0.5s ease-in-out;
+	letter-spacing: 1px;
+}
+
+.link {
+	@include fonts.fontMixin("fontButton");
+
+	opacity: $base-opacity;
+	padding: $base-padding;
+	border: none;
+	transition: 0.5s ease-in-out;
+}
+
+.silverLink {
+	@extend .link;
+	@include linkColor(silver);
+}
+
+.goldLink {
+	@extend .link;
+	@include linkColor(gold);
+}
+
+.seeMoreBtn {
+	@extend .default;
+	@include buttonColor(#4384A9, transparent);
+
+	font-style: italic;
+}
+
+.add {
+	@extend .default;
+
+	@include media.media(xs) {
+		@include buttonColor(floralwhite, #4469A0)
+	}
+
+	@include media.media(sm) {
+		@include buttonColor(floralwhite, #4469A0)
+	}
+
+	@include buttonColor(floralwhite, #4469A0);
+	box-shadow: none;
+	transition: width 2s;
+
+	&:hover {
+		@include buttonColor(floralwhite, #1a345c)
+	}
+
+	.buttonIcon {
+		animation: fadeIn 700ms 1;
+		opacity: 0;
+	}
+
+	.textFadeIn {
+		animation: fadeIn 700ms 1;
+		opacity: 0;
+	}
+}
+
+.remove {
+	@extend .clearCartButton;
+}
+
+.clear {
+	@extend .default;
+	@include buttonColor(#B71C1C, transparent);
+
+	border: 1px ridge #B71C1C;
+
+	&:hover {
+		@include buttonColor(floralwhite, #B71C1C)
+	}
+}
+
+.checkout-cart {
+	@extend .checkoutButton;
+}
+
+.checkout {
+	@extend .default;
+	@include buttonColor(floralwhite, #7CB342);
+}
+
+.cart {
+	background-color: transparent;
+	border: none;
+	display: flex;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
