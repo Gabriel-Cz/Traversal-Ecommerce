@@ -1,0 +1,49 @@
+.cartTable {
+  font-family: $tableFont;
+  text-align: center;
+  margin-top: 50px;
+  place-items: center;
+}
+
+.avatarGrid {
+  @include media.media(xs) {
+    display: flex;
+  }
+
+  @include media.media(sm) {
+    display: flex;
+  }
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+
+  .cols2 {
+    @include media.media(xs) {
+      display: none;
+    }
+
+    @include media.media(sm) {
+      display: none;
+    }
+
+    grid-area: 1 / 1 / 2 / 3;
+  }
+
+  .cols4 {
+    @include media.media(xs) {
+      grid-area: none;
+    }
+
+    @include media.media(sm) {
+      grid-area: none;
+    }
+
+    grid-area: 1 / 3 / 2 / 7;
+
+    .productName {
+      @include media.media(xs) {
+        font-size: 12px;
+      }
+    }
+  }
+}

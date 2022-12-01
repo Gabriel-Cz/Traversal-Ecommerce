@@ -1,0 +1,83 @@
+.productName {
+  @include media.media(xs) {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  @include media.media(sm) {
+    text-align: center;
+  }
+
+  @include media.media(lg) {
+    font: $productNameFontLg;
+  }
+
+  font: $productNameFont;
+}
+
+.productInformationDescription {
+  @include media.media(xs) {
+    text-align: center;
+    font: $productDescriptionFont;
+  }
+
+  @include media.media(sm) {
+    text-align: center;
+  }
+
+  text-align: left;
+  margin-top: 20px;
+  color: rgba($color: black, $alpha: 0.75);
+  font: $productDescriptionFontLg;
+}
+
+.extraProductInfo {
+  .headers {
+    @include media.media(lg) {
+      font: $headersLg;
+    }
+
+    font: $headers;
+  }
+
+  .subheaders {
+    @include media.media(lg) {
+      font: $subheadersLg;
+    }
+
+    font: $subheaders;
+    margin-left: 20px;
+    margin-top: 2px;
+
+    .link-gold {
+      @include media.media(xs) {
+        font-size: 14px;
+      }
+
+      color: rgba($color: rgb(212, 187, 44), $alpha: 1);
+      text-decoration: none;
+      text-transform: capitalize;
+      font-size: 16px;
+      margin-top: 0px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .link-silver {
+      @include media.media(xs) {
+        font-size: 14px;
+      }
+
+      color: rgba($color: rgb(124, 122, 122), $alpha: 1);
+      text-decoration: none;
+      text-transform: capitalize;
+      font-size: 16px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

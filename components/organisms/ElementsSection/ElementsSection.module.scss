@@ -1,0 +1,41 @@
+@use "../styles/mediaMixin" as mixin;
+$background: linear-gradient(249.27deg, rgba(247, 247, 247, 0.15) 0%, rgba(230, 229, 229, 0.25) 21.87%, #D5D4D4 39.06%, #D4D4D4 58.33%, rgba(230, 230, 230, 0.25) 79.17%, rgba(247, 247, 247, 0.15) 100%);
+
+$bg-overlay: rgba($color: #C4C4C4, $alpha: 0.5);
+$fontSubheader: 'Unna', serif;
+$font: 18px 'Unna', serif;
+$border: 4px double rgba($color: gray, $alpha: 0.25);
+
+.customContainer {
+    @include mixin.media(xs) {
+        margin-top: 20px;
+    }
+
+    @include mixin.media(lg) {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    position: relative;
+    padding-top: 75px;
+    padding-bottom: 75px;
+
+    .goldBlockSvg {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        overflow: hidden;
+        line-height: 0;
+    }
+
+    .goldSentence {
+        color: rgba($color: gold, $alpha: 1);
+    }
+
+    .silverSentence {
+        color: rgba($color: silver, $alpha: 1);
+    }
+}

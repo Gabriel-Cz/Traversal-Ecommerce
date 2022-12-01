@@ -17,13 +17,23 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "@/public/*": ["public/*"],
+      "@/components/*": ["components/*"],
+      "@/types": ["types"],
+      "@/modules/*": ["modules/*"],
+      "@/store": ["store"],
+      "@/styles/*": ["styles/*"],
+      "@/utils/*": ["utils/*"]
+    }
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "components/organisms/ProductsCarousel"  ],
   "exclude": [
     "node_modules"
   ]

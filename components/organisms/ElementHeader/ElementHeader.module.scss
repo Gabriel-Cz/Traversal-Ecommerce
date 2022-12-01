@@ -1,0 +1,60 @@
+@use '../styles//mediaMixin' as mixin;
+
+$fontHeader: 52px 'Parisienne';
+$fontSubheader: italic 18px 'Unna';
+$headerTextShadow: 2px 2px 4px rgba($color: floralwhite, $alpha: 0.5);
+
+@mixin parallaxSetup($image) {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover !important;
+  backdrop-filter: brightness(40%) !important;
+  background-image: $image !important;
+}
+
+.container-gold {
+  @include parallaxSetup(url('../public/ParallaxImages/ParallaxGold.jpg'));
+}
+
+.container-silver {
+  @include parallaxSetup(url('../public/ParallaxImages/ParallaxSilver.jpg'));
+}
+
+.overflowDiv {
+  @include mixin.media(xs) {
+    width: 100%;
+    height: 150%;
+  }
+
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0%;
+  transform: skew(46deg) !important;
+  background-color: rgba($color: rgb(0, 0, 0), $alpha: 0.55);
+  backdrop-filter: grayscale(100%);
+}
+
+.header {
+  text-transform: capitalize;
+  font: $fontHeader;
+  text-shadow: $headerTextShadow;
+  color: rgba($color: floralwhite, $alpha: 1);
+}
+
+.subHeader {
+  @include mixin.media(xs) {
+    font-size: 18px;
+  }
+
+  font-weight: 300;
+  padding: 20px 40px;
+  font: $fontSubheader;
+  color: rgba($color: floralwhite, $alpha: 0.80);
+  letter-spacing: 1px;
+  line-height: 30px;
+}

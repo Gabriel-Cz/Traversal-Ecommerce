@@ -1,0 +1,97 @@
+@use '@/styles//mediaMixin' as mixin;
+ 
+$fontHeader: 52px 'Parisienne';
+$fontSubheader: italic 18px 'Unna';
+$headerTextShadow: 0px 2px 5px rgba(255, 255, 255, 1);
+
+@mixin parallaxSetup($image) {
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  backdrop-filter: brightness(40%);
+  background-image: $image;
+}
+
+.rings {
+  @include parallaxSetup(url('../public/ParallaxImages/ParallaxRings.jpg'))
+}
+
+.earrings {
+  @include parallaxSetup((url('../public/ParallaxImages/ParallaxEarrings.jpg')))
+}
+
+.necklaces {
+  @include parallaxSetup(url('../public/ParallaxImages/ParallaxNecklaces.jpg'))
+}
+
+.watches {
+  @include parallaxSetup(url('../public/ParallaxImages/ParallaxWatch1.jpg'))
+}
+
+.overflowDiv {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  background-color: rgba($color: rgb(36, 35, 35), $alpha: 0.75);
+  backdrop-filter: grayscale(100%);
+}
+
+.shape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.shape svg {
+  position: relative;
+  display: block;
+  width: calc(160% + 1.3px);
+  height: 150px;
+}
+
+.pathOpacity1 {
+  @include mixin.media(xs) {
+    display: none;
+  }
+}
+
+.pathOpacity2 {
+  @include mixin.media(xs) {
+    display: none;
+  }
+}
+
+.shape, .shapeFill1, .shapeFill2{
+  fill: #FFFFFF;
+}
+
+.shapeFill1 {
+  @include mixin.media(xs) {
+    display: none;
+  }
+}
+
+.header {
+  text-transform: capitalize;
+  font: $fontHeader;
+  text-shadow: 2px 2px 4px rgba($color: floralwhite, $alpha: 0.5);
+  color: rgba($color: floralwhite, $alpha: 1);
+}
+
+.subHeader {
+  @include mixin.media(xs) {
+    font-size: 18px;
+  }
+  font-weight: 300;
+  padding: 20px 40px;
+  font: $fontSubheader;
+  color: rgba($color: floralwhite, $alpha: 0.80);
+  letter-spacing: 1px;
+  line-height: 30px;
+}

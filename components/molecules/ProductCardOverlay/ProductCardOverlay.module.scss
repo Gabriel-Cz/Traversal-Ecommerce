@@ -1,0 +1,33 @@
+@use '@/styles/mediaMixin' as media;
+
+.overflowInfo {
+  @include media.media(xs) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  @include media.media(sm) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  @include media.media(md) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  @include media.media(lg) {
+    display: none;
+  }
+}
+
+.detailsLink {
+  font-family: 'Unna', serif;
+  color: "#7CB342";
+}

@@ -1,0 +1,61 @@
+@use '../styles//mediaMixin' as mixin;
+
+.container {
+  @include mixin.media(xs) {
+    margin-top: 50px;
+    margin-bottom: 25px;
+  }
+
+  position: relative;
+  margin-top: 100px;
+  margin-bottom: 50px;
+
+  .elementName {
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    transform: translate(-50%, -50%);
+    font: 300 24px 'Lora', serif;
+    text-transform: capitalize;
+    padding: 20px 10px;
+    background-color: white;
+  }
+
+  .elementName-silver {
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    transform: translate(-50%, -50%);
+    font: 300 24px 'Lora', serif;
+    text-transform: capitalize;
+    padding: 20px 10px;
+    background-color: white;
+    color: rgba($color: rgb(124, 122, 122), $alpha: 1);
+  }
+
+  .elementName-gold {
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    transform: translate(-50%, -50%);
+    font: 300 24px 'Lora', serif;
+    text-transform: capitalize;
+    padding: 20px 10px;
+    background-color: white;
+    color: rgba($color: rgb(194, 161, 17), $alpha: 1);
+  }
+
+  .firstDiv-gold {
+    border-radius: 5px;
+    margin-bottom: 30px;
+    padding-top: 40px;
+    border: 4px double rgba($color: rgb(194, 161, 17), $alpha: 0.25);
+  }
+
+  .firstDiv-silver {
+    border-radius: 5px;
+    margin-bottom: 30px;
+    padding-top: 40px;
+    border: 4px double rgba($color: rgb(124, 122, 122), $alpha: 0.25);
+  }
+}

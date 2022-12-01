@@ -1,0 +1,58 @@
+.moreInfoContainer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  .moreInfoWrapper {
+    @include mixin.media(xs) {
+      width: 90%;
+    }
+
+    @include mixin.media(sm) {
+      width: 60%;
+    }
+
+    @include mixin.media(md) {
+      width: 40%;
+    }
+
+    @include mixin.media(lg) {
+      width: 35%;
+    }
+
+    position: relative;
+    width: 25%;
+
+    .img {
+      @include mixin.media(xs) {
+        width: 75%;
+      }
+
+      @include mixin.media(md) {
+        width: 60%;
+      }
+
+      width: 50%;
+    }
+
+    .moreInfoContent {
+      @include mixin.media(xs) {
+        font-size: 18px;
+      }
+
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+      z-index: 9 !important;
+      color: rgb(26, 32, 104);
+      font-family: 'Unna',
+      serif;
+      font-weight: lighter;
+      font-size: 22px;
+      text-align: center;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+}

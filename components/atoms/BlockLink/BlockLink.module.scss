@@ -1,0 +1,14 @@
+.imageContainer {
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0 50px 100px -20px rgb(50 50 93 / 25%), 0 30px 60px -30px rgb(0 0 0 / 30%);
+
+  .image {
+    border-radius: 5px;
+  }
+
+  &:hover .textOverflowWrapper {
+    background-color: rgba($color: white, $alpha: 0.1);
+    transition: ease-in-out 1s;
+  }
+}
