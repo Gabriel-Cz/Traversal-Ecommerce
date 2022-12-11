@@ -1,0 +1,14 @@
+#about-container {
+  box-shadow: 0 50px 100px -20px rgb(50 50 93 / 25%), 0 30px 60px -30px rgb(0 0 0 / 30%);
+	border-top: 3px ridge rgba(0, 0, 0, 0.25);
+	text-align: center;
+	margin: 100px 50px;
+
+  .header {
+    font: 26px 'Unna', serif;
+  }
+
+  .content {
+    font: 18px 'Unna', serif;
+  }
+}
