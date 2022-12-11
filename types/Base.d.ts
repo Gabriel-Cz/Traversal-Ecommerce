@@ -12,3 +12,10 @@ export type BaseNavLinkType = {
 	path: string;
 	image: string;
 }
+
+const MessageVariant = {
+  error: "red",
+	success: "green"
+} as const
+
+export type MessageVariantType = typeof MessageVariant;
