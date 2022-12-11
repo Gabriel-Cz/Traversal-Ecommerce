@@ -1,12 +1,16 @@
 import React from 'react'
 import Image from 'react-bootstrap/Image'
-import { CheckoutButton, AddToCartButton, CustomLink } from '@/components/atoms';
-import { ProductType } from 'types/Product';
 import getStripe from '@/utils/get-stripe';
 import axiosInstance from '@/utils/axios-instance';
-import styles from '../../styles/ProductInformation.module.scss'
+import { CheckoutButton, AddToCartButton, CustomLink } from '@/components/atoms';
+import type { ProductType } from 'types/Product';
+import styles from './ProductInformation.module.scss'
 
-export const ProductInformation: React.FC<ProductType> = ({ product }) => {
+interface ProductInformationProps {
+  product: ProductType;
+};
+
+export const ProductInformation: React.FC<ProductInformationProps> = ({ product }) => {
 
   const handleCheckout = async (url: string, productDetails: ProductType) => {
 		try {

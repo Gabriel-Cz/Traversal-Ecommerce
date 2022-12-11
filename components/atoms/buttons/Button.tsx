@@ -1,7 +1,7 @@
-import { ButtonBaseProps } from 'types/Base';
-import styles from './Button.module.scss';
+import type { ButtonBaseType } from 'types/Base';
+import styles from './Buttons.module.scss';
 
-export interface ButtonProps extends ButtonBaseProps {
+export interface ButtonProps extends ButtonBaseType {
 	children: React.ReactNode
 }
 

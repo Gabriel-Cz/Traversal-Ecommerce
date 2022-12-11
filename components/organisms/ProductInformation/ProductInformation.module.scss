@@ -1,14 +1,25 @@
+@use "@/styles/mediaMixin" as mixin;
+
+$productNameFontLg: 22px 'Lora', serif;
+$productNameFont: 20px 'Lora', serif;
+$productDescriptionFontLg: 16px 'Lora', serif;
+$productDescriptionFont: 12px 'Lora', serif;
+$headersLg: 18px 'Lora', serif;
+$headers: 14px 'Lora', serif;
+$subheadersLg: 14px 'Lora', serif;
+$subheaders: 12px 'Lora', serif;
+
 .productName {
-  @include media.media(xs) {
+  @include mixin.media(xs) {
     text-align: center;
     margin-bottom: 20px;
   }
 
-  @include media.media(sm) {
+  @include mixin.media(sm) {
     text-align: center;
   }
 
-  @include media.media(lg) {
+  @include mixin.media(lg) {
     font: $productNameFontLg;
   }
 
@@ -16,12 +27,12 @@
 }
 
 .productInformationDescription {
-  @include media.media(xs) {
+  @include mixin.media(xs) {
     text-align: center;
     font: $productDescriptionFont;
   }
 
-  @include media.media(sm) {
+  @include mixin.media(sm) {
     text-align: center;
   }
 
@@ -33,7 +44,7 @@
 
 .extraProductInfo {
   .headers {
-    @include media.media(lg) {
+    @include mixin.media(lg) {
       font: $headersLg;
     }
 
@@ -41,7 +52,7 @@
   }
 
   .subheaders {
-    @include media.media(lg) {
+    @include mixin.media(lg) {
       font: $subheadersLg;
     }
 
@@ -50,7 +61,7 @@
     margin-top: 2px;
 
     .link-gold {
-      @include media.media(xs) {
+      @include mixin.media(xs) {
         font-size: 14px;
       }
 
@@ -66,7 +77,7 @@
     }
 
     .link-silver {
-      @include media.media(xs) {
+      @include mixin.media(xs) {
         font-size: 14px;
       }
 

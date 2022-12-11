@@ -1,6 +1,6 @@
 import { useShoppingCart } from 'use-shopping-cart';
 import Link from 'next/link';
-import styles from './Button.module.scss';
+import styles from './Buttons.module.scss';
 
 export const CartButton: React.FC = () => {
   const { cartCount } = useShoppingCart()

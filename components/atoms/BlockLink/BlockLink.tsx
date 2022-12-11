@@ -1,5 +1,4 @@
 import Link from "next/link";
-import React from "react";
 import styles from './BlockLink.module.scss';
 
 interface BlockLinkProps {

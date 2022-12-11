@@ -15,19 +15,19 @@ $headerTextShadow: 0px 2px 5px rgba(255, 255, 255, 1);
 }
 
 .rings {
-  @include parallaxSetup(url('../public/ParallaxImages/ParallaxRings.jpg'))
+  @include parallaxSetup(url('/public/assets/ParallaxImages/ParallaxRings.jpg'))
 }
 
 .earrings {
-  @include parallaxSetup((url('../public/ParallaxImages/ParallaxEarrings.jpg')))
+  @include parallaxSetup((url('/public/assets/ParallaxImages/ParallaxEarrings.jpg')))
 }
 
 .necklaces {
-  @include parallaxSetup(url('../public/ParallaxImages/ParallaxNecklaces.jpg'))
+  @include parallaxSetup(url('/public/assets/ParallaxImages/ParallaxNecklaces.jpg'))
 }
 
 .watches {
-  @include parallaxSetup(url('../public/ParallaxImages/ParallaxWatch1.jpg'))
+  @include parallaxSetup(url('/public/assets/ParallaxImages/ParallaxWatch1.jpg'))
 }
 
 .overflowDiv {

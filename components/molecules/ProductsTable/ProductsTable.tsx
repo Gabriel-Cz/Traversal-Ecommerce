@@ -1,12 +1,12 @@
-import React, { useState } from 'react'
-import Table from 'react-bootstrap/Table'
-import Link from 'next/link'
-import Image from 'react-bootstrap/Image'
+import { useState } from 'react';
+import Table from 'react-bootstrap/Table';
+import Link from 'next/link';
+import Image from 'react-bootstrap/Image';
 import { CheckoutButton, ProductQuantity, RemoveProductButton } from '@/components/atoms';
-import { ProductType } from '@/types'
-import styles from '../../styles/Cart.module.scss'
+import type { ProductType } from '@/types';
 import getStripe from '@/utils/get-stripe';
-import axiosInstance from '@/utils/axios-instance'
+import axiosInstance from '@/utils/axios-instance';
+import styles from './ProductsTable.module.scss';
 
 interface ProductsTableProps {
 	products: ProductType[];

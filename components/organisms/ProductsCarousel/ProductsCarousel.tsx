@@ -1,7 +1,5 @@
-import React from 'react';
-import Carousel from 'react-bootstrap/Carousel'
-import { CarouselItem } from 'react-bootstrap';
-import styles from './GoldAndSilverCarousel.module.scss';
+import { Carousel, CarouselItem } from 'react-bootstrap';
+import styles from './ProductsCarousel.module.scss';
 
 interface Props {
   children: React.ReactElement<CarouselItem[]>;

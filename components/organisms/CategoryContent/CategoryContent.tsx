@@ -2,10 +2,10 @@ import React from 'react'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
-import { ProductCard } from '../../molecules'
+import { ProductCard } from '@/components/molecules'
 import { Quote } from '@/components/atoms';
-import { ProductType } from '@/types';
-import styles from '../../styles/Categories.module.scss'
+import type { ProductType } from '@/types';
+import styles from './CategoryContent.module.scss'
 
 interface CategoryContentProps {
 	filteredProducts: ProductType[];

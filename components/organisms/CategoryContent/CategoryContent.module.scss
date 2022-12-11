@@ -1,3 +1,5 @@
+@use '@/styles/mediaMixin' as mixin;
+
 .container {
   @include mixin.media(xs) {
     margin-top: 50px;

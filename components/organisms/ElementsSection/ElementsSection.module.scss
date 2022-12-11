@@ -1,6 +1,6 @@
-@use "../styles/mediaMixin" as mixin;
-$background: linear-gradient(249.27deg, rgba(247, 247, 247, 0.15) 0%, rgba(230, 229, 229, 0.25) 21.87%, #D5D4D4 39.06%, #D4D4D4 58.33%, rgba(230, 230, 230, 0.25) 79.17%, rgba(247, 247, 247, 0.15) 100%);
+@use "@/styles/mediaMixin" as mixin;
 
+$background: linear-gradient(249.27deg, rgba(247, 247, 247, 0.15) 0%, rgba(230, 229, 229, 0.25) 21.87%, #D5D4D4 39.06%, #D4D4D4 58.33%, rgba(230, 230, 230, 0.25) 79.17%, rgba(247, 247, 247, 0.15) 100%);
 $bg-overlay: rgba($color: #C4C4C4, $alpha: 0.5);
 $fontSubheader: 'Unna', serif;
 $font: 18px 'Unna', serif;

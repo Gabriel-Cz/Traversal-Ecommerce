@@ -1,14 +1,17 @@
-import React from 'react'
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import Image from 'react-bootstrap/Image'
-import { ProductsCarousel } from '@/components/organisms'
-import { BlockLink, Quote, OverlayInfo } from '@/components/atoms';
-import styles from './GoldAndSilver.module.scss'
-import { Carousel, CarouselItem } from 'react-bootstrap'
-import { useSelector } from 'react-redux'
 import Link from 'next/link'
+import { useSelector } from 'react-redux'
+import {
+	Container,
+	Row,
+	Col,
+	Image,
+	Carousel,
+	CarouselItem
+} from 'react-bootstrap'
+import { ProductsCarousel } from '@/components/organisms'
+import { BlockLink, Quote, OverlayInfo } from '@/components/atoms'
+import type { ProductType } from '@/types'
+import styles from './ElementsSection.module.scss'
 
 const SilverBlocksSvg: React.FC = () => {
 	return (
@@ -41,8 +44,11 @@ const SilverBlocksSvg: React.FC = () => {
 	);
 }
 
-export const ElementsSection: React.FC = () => {
-	const { productsByElement } = useSelector(state => state.productsReducer.server);
+interface ElementsSectionProps {
+	products: ProductType[];
+}
+
+export const ElementsSection: React.FC<ElementsSectionProps> = ({ products }) => {
 	return (
 		<Container fluid className={styles.customContainer}>
 			<SilverBlocksSvg />
@@ -73,7 +79,7 @@ export const ElementsSection: React.FC = () => {
 				<Col xs={12} lg={4} className="ml-0 ml-lg-4 mt-4 mt-lg-0">
 					<ProductsCarousel>
 						<CarouselItem>
-							{productsByElement.map(product => (
+							{products.map(product => (
 								<Carousel.Item key={product.id}>
 									<Link href={`/products/${product.id}`} passHref>
 										<a>

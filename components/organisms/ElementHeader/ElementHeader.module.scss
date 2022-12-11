@@ -1,4 +1,4 @@
-@use '../styles//mediaMixin' as mixin;
+@use '@/styles//mediaMixin' as mixin;
 
 $fontHeader: 52px 'Parisienne';
 $fontSubheader: italic 18px 'Unna';
@@ -17,11 +17,11 @@ $headerTextShadow: 2px 2px 4px rgba($color: floralwhite, $alpha: 0.5);
 }
 
 .container-gold {
-  @include parallaxSetup(url('../public/ParallaxImages/ParallaxGold.jpg'));
+  @include parallaxSetup(url('/public/assets/ParallaxImages/ParallaxGold.jpg'));
 }
 
 .container-silver {
-  @include parallaxSetup(url('../public/ParallaxImages/ParallaxSilver.jpg'));
+  @include parallaxSetup(url('/public/assets/ParallaxImages/ParallaxSilver.jpg'));
 }
 
 .overflowDiv {

@@ -1,10 +1,10 @@
-import { ButtonBaseProps, ProductProps } from '@/types';
+import { ButtonBaseType, ProductType } from '@/types';
 import { useState } from 'react';
 import { useShoppingCart } from 'use-shopping-cart';
-import styles from './Button.module.scss';
+import styles from './Buttons.module.scss';
 
-interface AddToCartButtonProps extends ButtonBaseProps {
-  product: ProductProps
+interface AddToCartButtonProps extends ButtonBaseType {
+  product: ProductType
 }
 
 export const AddToCartButton: React.FC<AddToCartButtonProps> = ({
@@ -15,7 +15,7 @@ export const AddToCartButton: React.FC<AddToCartButtonProps> = ({
 	const [buttonText, setButtonText] = useState(true);
 	const { addItem } = useShoppingCart()
 
-	const addItemAndShowToast = (item: ProductProps) => {
+	const addItemAndShowToast = (item: ProductType) => {
 		addItem(item);
 		setButtonText(false);
 		setTimeout(() => {

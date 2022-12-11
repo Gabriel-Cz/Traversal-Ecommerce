@@ -2,7 +2,7 @@ import React from 'react';
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import styles from '../../styles/Categories.module.scss'
+import styles from './CategoryHeader.module.scss'
 
 const Shape: React.FC = () => {
   return (

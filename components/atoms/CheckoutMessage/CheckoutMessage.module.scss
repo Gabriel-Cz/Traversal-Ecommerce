@@ -1,0 +1,15 @@
+.containerMessageWrapper {
+  animation: fadeIn 2s ease-in-out 1;
+  margin-top: 50px;
+}
+
+.messageHeader {
+  font: 22px 'Lora', serif;
+  text-align: center;
+}
+
+.links {
+  font-family: 'Lora', serif;
+  text-decoration: none;
+  color: rgba($color: black, $alpha: 0.5);
+}

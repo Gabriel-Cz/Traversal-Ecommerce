@@ -2,10 +2,10 @@ import React from 'react'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import { ProductType } from '@/types';
+import type { ProductType } from '@/types';
 import { Quote } from '@/components/atoms';
 import { ProductCard } from '@/components/molecules';
-import styles from '../../styles/Elements.module.scss'
+import styles from './ElementContent.module.scss'
 
 
 interface ElementContentProps {

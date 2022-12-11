@@ -1,8 +1,10 @@
-import { ButtonBaseProps } from '@/types';
 import { useShoppingCart } from 'use-shopping-cart';
-import styles from './Button.module.scss';
+import type { ButtonBaseType } from '@/types';
+import styles from './Buttons.module.scss';
 
-export const ClearCartButton: React.FC<ButtonBaseProps> = ({ className, ...rest }) => {
+interface ClearCartButtonProps extends ButtonBaseType {};
+
+export const ClearCartButton: React.FC<ClearCartButtonProps> = ({ className, ...rest }) => {
 	const { clearCart } = useShoppingCart();
 	return (
 		<button

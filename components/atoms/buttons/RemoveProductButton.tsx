@@ -1,10 +1,9 @@
-import { ProductProps } from "@/types";
-import { ButtonBaseProps } from "types/Base";
 import { useShoppingCart } from 'use-shopping-cart';
-import styles from './Button.module.scss';
+import type { ButtonBaseType, ProductType } from "types";
+import styles from './Buttons.module.scss';
 
-interface RemoveProductButton extends ButtonBaseProps {
-  productSku: ProductProps['sku']
+interface RemoveProductButton extends ButtonBaseType {
+  productSku: ProductType['sku']
 }
 
 export const RemoveProductButton: React.FC<RemoveProductButton> = ({

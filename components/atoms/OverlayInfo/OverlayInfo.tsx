@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from 'OverlayInfo.module.scss';
+import styles from './OverlayInfo.module.scss';
 
 interface OverlayInfoProps {
 	children: React.ReactNode;

@@ -1,7 +1,6 @@
-import React from 'react';
-import { ButtonBaseType } from 'types/Base';
 import { useShoppingCart, CartDetails } from 'use-shopping-cart';
-import styles from './Button.module.scss';
+import type { ButtonBaseType } from 'types/Base';
+import styles from './Buttons.module.scss';
 
 interface CheckoutcartButtonProps extends ButtonBaseType {
   url?: string;

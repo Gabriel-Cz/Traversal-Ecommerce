@@ -1,5 +1,5 @@
-@use '../styles/mediaMixin' as media;
-@use '../styles/fontsMixin' as fonts;
+@use '@/styles/_mediaMixin' as media;
+@use '@/styles/_fontsMixin' as fonts;
 
 $base-padding: 10px 15px;
 $base-opacity: 0.75;
@@ -91,9 +91,9 @@ $base-Shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	}
 }
 
-.remove {
-	@extend .clearCartButton;
-}
+// .remove {
+// 	@extend .clearCartButton;
+// }
 
 .clear {
 	@extend .default;
@@ -106,9 +106,9 @@ $base-Shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	}
 }
 
-.checkout-cart {
-	@extend .checkoutButton;
-}
+// .checkout-cart {
+// 	@extend .checkoutButton;
+// }
 
 .checkout {
 	@extend .default;

@@ -1,8 +1,7 @@
-import React from 'react'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import styles from '../../styles/Elements.module.scss'
+import styles from './ElementHeader.module.scss'
 
 interface ElementHeaderProps {
   elementName: string;
