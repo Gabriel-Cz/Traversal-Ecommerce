@@ -1,19 +1,21 @@
 import { useRouter } from 'next/router'
 import { CategoryHeader, CategoryContent } from '@/components/organisms'
-import { wrapper } from '@/store'
 import { filterProducts } from '../../store/actions/productsActions'
+import { wrapper } from '@/store'
 import type { NextPage, GetServerSideProps } from 'next'
-import type { ProductType } from 'types/Product'
+import type { ProductType } from '@/types'
+import type { AppDispatch } from '@/store/typing'
+
 
 export const getServerSideProps: GetServerSideProps =
   wrapper.getServerSideProps(
     async ({ store, query }) => {
       const { productsReducer } = store.getState();
       const categoryName = query.category as string;
-      filterProducts('category', categoryName);
+      store.dispatch<AppDispatch>(filterProducts('category', categoryName));
       return {
         props: {
-          filteredProducts: productsReducer.server.filteredProducts
+          filteredProducts: productsReducer.filteredProducts
         }
       }
     }

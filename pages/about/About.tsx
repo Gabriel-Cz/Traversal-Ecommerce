@@ -11,7 +11,7 @@ export const About: NextPage = () => {
 				</h1>
 				<div className="mx-2 mt-5 text-center">
 					<p className={styles.content}>
-						Traversal is a Jewelry Ecommerce Concept. Build for Recreative purposes by
+						Traversal is a Jewelry Ecommerce Concept. Built for Recreative purposes by
 						<a target="_blank" href="https://github.com/Gabriel-Cz">
 							Gabriel Cz
 						</a>.

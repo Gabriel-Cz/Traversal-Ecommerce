@@ -10,7 +10,7 @@ import * as types from '../types'
 import StoreError from 'store/store-error';
 import { ProductType } from 'types/Product';
 
-const error = new StoreError('products');
+const errorBuilder = new StoreError('products');
 
 export const getProducts: AppThunk = () =>
 	async (dispatch: DispatchProducts) => {
@@ -23,7 +23,7 @@ export const getProducts: AppThunk = () =>
 		} catch (error) {
 			dispatch({
 				type: types.PRODUCTS_ERROR,
-				payload: error.dispatch(error, 'Try again later.')
+				payload: errorBuilder.dispatch(error, 'Try again later.')
 			})
 		}
 	}
@@ -40,7 +40,7 @@ export const getProduct = (id: string) =>
 		} catch (error) {
 			dispatch({
 				type: types.PRODUCTS_ERROR,
-				payload: error.dispatch(error, 'Try again later.')
+				payload: errorBuilder.dispatch(error, 'Try again later.')
 			})
 		}
 	}
@@ -57,7 +57,7 @@ export const filterProducts = (type: string, filter: string) =>
 		} catch (error) {
 			dispatch({
 				type: types.PRODUCTS_ERROR,
-				payload: error.dispatch(error, 'Try again later.')
+				payload: errorBuilder.dispatch(error, 'Try again later.')
 			})
 		}
 	}
@@ -74,7 +74,7 @@ export const filterByElement = (type: string) =>
 		} catch (error) {
 			dispatch({
 				type: types.PRODUCTS_ERROR,
-				payload: error.dispatch(error, 'Try again later.')
+				payload: errorBuilder.dispatch(error, 'Try again later.')
 			})
 		}
 	}

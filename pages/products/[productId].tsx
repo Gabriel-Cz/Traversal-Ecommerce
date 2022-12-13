@@ -5,13 +5,14 @@ import { ProductInformation, ShipmentsInfo, TrendingSection } from '@/components
 import type { ProductType } from '@/types'
 import type { GetServerSideProps, NextPage } from 'next';
 import styles from '../../styles/Product.module.scss'
+import { AppDispatch } from '@/store/typing';
 
 export const getServerSideProps: GetServerSideProps = wrapper.getServerSideProps(
   async ({ store, query }) => {
     const { productsReducer } = store.getState();
     const productId = query.productId as string;
-    getProduct(productId);
-    filterProducts('state', 'trending')
+    store.dispatch<AppDispatch>(getProduct(productId));
+    store.dispatch<AppDispatch>(filterProducts('state', 'trending'));
     return {
       props: {
         product: productsReducer.server.product,

@@ -10,16 +10,16 @@ import {
 import axiosInstance from '@/utils/axios-instance';
 import type { GetServerSideProps, NextPage } from 'next'
 import type { CustomerReviewType, ProductType } from '@/types';
+import { AppDispatch } from '@/store/typing';
 
 export const getServerSideProps: GetServerSideProps =
   wrapper.getServerSideProps(
     async ({ store }) => {
       try {
         const { productsReducer } = store.getState();
-        filterProducts('state', 'trending');
-        filterByElement('element');
+        store.dispatch<AppDispatch>(filterProducts('state', 'trending'));
+        store.dispatch<AppDispatch>(filterByElement('element'));
         const customerReviews = await axiosInstance.get<CustomerReviewType[]>('/api/reviews');
-        console.log('D', customerReviews);
         return {
           props: {
             trendingProducts: productsReducer.server.filteredProducts,

@@ -19,11 +19,11 @@ $headerTextShadow: 2px 2px 4px rgba($color: floralwhite, $alpha: 0.5);
 }
 
 .container-gold {
-  @include parallaxSetup(url('../public/ParallaxImages/ParallaxGold.jpg'));
+  @include parallaxSetup(url('../../../public/ParallaxImages/ParallaxGold.jpg'));
 }
 
 .container-silver {
-  @include parallaxSetup(url('../public/ParallaxImages/ParallaxSilver.jpg'));
+  @include parallaxSetup(url('../../../public/ParallaxImages/ParallaxSilver.jpg'));
 }
 
 .overflowDiv {

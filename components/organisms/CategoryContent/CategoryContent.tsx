@@ -24,7 +24,7 @@ export const CategoryContent: React.FC<CategoryContentProps> = ({
 			<div className={styles.firstDiv}>
 				<div>
 					<Row className="justify-content-center align-items-center">
-						{filteredProducts.map(product => (
+						{filteredProducts[0] && filteredProducts.map(product => (
 							<Col
 								key={product.id}
 								className="my-4 mx-xl-2"

@@ -43,7 +43,7 @@ export const ProductsTable: React.FC<ProductsTableProps> = ({ products }) => {
 				</tr>
 			</thead>
 			<tbody>
-				{products.map(product => (
+				{products[0] && products.map(product => (
 					<tr>
 						<td className="w-25">
 							<Link href={`/products/${product.id}`} passHref>

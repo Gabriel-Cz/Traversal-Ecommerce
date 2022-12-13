@@ -79,7 +79,7 @@ export const ElementsSection: React.FC<ElementsSectionProps> = ({ products }) =>
 				<Col xs={12} lg={4} className="ml-0 ml-lg-4 mt-4 mt-lg-0">
 					<ProductsCarousel>
 						<CarouselItem>
-							{products.map(product => (
+							{products[0] && products.map(product => (
 								<Carousel.Item key={product.id}>
 									<Link href={`/products/${product.id}`} passHref>
 										<a>

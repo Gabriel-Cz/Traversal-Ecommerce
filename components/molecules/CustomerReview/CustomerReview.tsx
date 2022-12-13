@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card'
 import Image from 'react-bootstrap/Image'
 import Rating from 'react-rating'
 import { CustomerReviewType } from 'types/Customer'
-import { VerifiedIcon } from '../..'
+import { VerifiedIcon } from '@/public/assets/icons';
 import styles from './CustomerReview.module.scss' 
 
 interface CustomerReviewProps extends CustomerReviewType {}
