@@ -4,17 +4,18 @@ import { filterProducts } from '@/store/actions'
 import { ElementHeader, ElementContent } from '@/components/organisms'
 import type { NextPage, GetServerSideProps } from 'next'
 import type { ProductType } from '@/types';
-import { AppDispatch } from '@/store/typing';
 
 export const getServerSideProps: GetServerSideProps =
   wrapper.getServerSideProps(
     async ({ store, query }) => {
-      const { productsReducer } = store.getState();
       const elementName = query.element as string;
-      store.dispatch<AppDispatch>(filterProducts('element', elementName));
+      console.log(elementName)
+      // @ts-ignore
+      await store.dispatch(filterProducts('element', elementName));
+      const { productsReducer } = store.getState();
       return {
         props: {
-          filteredProducts: productsReducer.server.filteredProducts,
+          filteredProducts: productsReducer.server.filteredProducts || [],
           elementName: elementName
         }
       }
@@ -28,7 +29,7 @@ interface ElementProps {
 const Element: NextPage<ElementProps> = ({ filteredProducts, elementName }) => {
   return (
     <>
-      <ElementHeader elementName={elementName}></ElementHeader>
+      <ElementHeader elementName={elementName} />
       <ElementContent filteredProducts={filteredProducts} elementName={elementName} />
     </>
   );

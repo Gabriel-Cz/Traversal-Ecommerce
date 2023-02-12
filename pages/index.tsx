@@ -1,5 +1,5 @@
 import { wrapper } from '@/store'
-import { filterProducts, filterByElement } from '@/store/actions/productsActions'
+import { filterProducts } from '@/store/actions/productsActions'
 import {
   FirstSection,
   TrendingSection,
@@ -15,25 +15,16 @@ import { AppDispatch } from '@/store/typing';
 export const getServerSideProps: GetServerSideProps =
   wrapper.getServerSideProps(
     async ({ store }) => {
-      try {
-        const { productsReducer } = store.getState();
-        store.dispatch<AppDispatch>(filterProducts('state', 'trending'));
-        store.dispatch<AppDispatch>(filterByElement('element'));
-        const customerReviews = await axiosInstance.get<CustomerReviewType[]>('/api/reviews');
-        return {
-          props: {
-            trendingProducts: productsReducer.server.filteredProducts,
-            productsByElement: productsReducer.server.productsByElement,
-            customerReviews: customerReviews
-          }
-        }
-      } catch (error) {
-        return {
-          props: {
-            trendingProducts: [],
-            productsByElement: [],
-            customerReviews: []
-          }
+      //@ts-ignore
+      await store.dispatch(filterProducts('state', 'trending'));
+      //@ts-ignore
+      const { productsReducer } = store.getState();
+      const { data } = await axiosInstance.get<CustomerReviewType[]>(`${process.env.REACT_URL}/api/reviews`);
+      return {
+        props: {
+          trendingProducts: productsReducer.server.filteredProducts,
+          productsByElement: productsReducer.server.productsByElement,
+          customerReviews: data
         }
       }
     });
