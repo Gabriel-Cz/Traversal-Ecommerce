@@ -45,7 +45,7 @@ export const getProduct = (id: string) =>
 		}
 	}
 
-export const filterProducts = (type: string, filter: string) =>
+export const filterProducts = (type: keyof ProductType, filter: string | string[]) =>
 	async (dispatch: DispatchFilter) => {
 		try {
 			const { data } = await axiosModule.get<ProductType[]>('/products');
@@ -54,23 +54,6 @@ export const filterProducts = (type: string, filter: string) =>
 				type: types.FILTER_PRODUCTS,
 				payload: products,
 			});
-		} catch (error) {
-			dispatch({
-				type: types.PRODUCTS_ERROR,
-				payload: errorBuilder.dispatch(error, 'Try again later.')
-			})
-		}
-	}
-
-export const filterByElement = (type: string) =>
-	async (dispatch: DispatchFilterByElement) => {
-		try {
-			let { data } = await axiosModule.get<ProductType[]>('/products');
-			const products = data.filter(product => product[type] === 'gold' || 'silver')
-			dispatch({
-				type: types.FILTER_ELEMENTS,
-				payload: products
-			})
 		} catch (error) {
 			dispatch({
 				type: types.PRODUCTS_ERROR,

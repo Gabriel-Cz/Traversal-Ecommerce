@@ -1,16 +1,31 @@
 import * as types from '../types'
 import { AnyAction } from 'redux';
 import { RootState } from 'store/typing';
+import { HYDRATE } from 'next-redux-wrapper';
 
 const initialState = {
   product: {},
   products: {},
   filteredProducts: {},
-  productsByElement: {}
+  productsByElement: {},
+  server: {
+    product: {},
+    products: {},
+    filteredProducts: {},
+    productsByElement: {},
+  }
 }
 
-const productsReducer = (state: RootState = initialState, action: AnyAction) => {
+const productsReducer = (state = initialState, action) => {
   switch (action.type) {
+    case HYDRATE:
+      return {
+        ...state,
+        server: {
+          ...state.server,
+          ...action.payload.productsReducer.server
+        },
+      }
     case types.GET_PRODUCTS:
       return {
         ...state,
