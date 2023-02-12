@@ -1,0 +1,52 @@
+.containerMessageWrapper {
+  animation: fadeIn 2s ease-in-out 1;
+  margin-top: 50px;
+}
+
+.messageHeader {
+  font: 22px 'Lora', serif;
+  text-align: center;
+}
+
+.links {
+  font-family: 'Lora', serif;
+  text-decoration: none;
+  color: rgba($color: black, $alpha: 0.5);
+}
+
+.thumbnailContainer {
+  position: relative;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba($color: black, $alpha: 0.5);
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s ease-in-out;
+
+  &:hover {
+    box-shadow: 5px 10px 20px rgba($color: black, $alpha: 0.5);
+    transition: 0.5s ease-in-out;
+    transform: scale(1.02);
+  }
+}
+
+.thumbnailOverflow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  color: white;
+  font: 22px 'Parisienne', serif;
+  background-color: rgba($color: black, $alpha: 0.75);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

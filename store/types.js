@@ -1,4 +1,0 @@
-export const GET_PRODUCTS = 'GET_PRODUCTS';
-export const GET_PRODUCT = 'GET_PRODUCT';
-export const FILTER_PRODUCTS = 'FILTER_PRODUCTS';
-export const FILTER_ELEMENTS = 'FILTER_ELEMENTS';

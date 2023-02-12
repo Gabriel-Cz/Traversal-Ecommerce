@@ -17,19 +17,19 @@ $headerTextShadow: 0px 2px 5px rgba(255, 255, 255, 1);
 }
 
 .rings {
-  @include parallaxSetup(url('../public/ParallaxImages/ParallaxRings.jpg'))
+  @include parallaxSetup(url('../../../public/ParallaxImages/ParallaxRings.jpg'))
 }
 
 .earrings {
-  @include parallaxSetup((url('../public/ParallaxImages/ParallaxEarrings.jpg')))
+  @include parallaxSetup((url('../../../public/ParallaxImages/ParallaxEarrings.jpg')))
 }
 
 .necklaces {
-  @include parallaxSetup(url('../public/ParallaxImages/ParallaxNecklaces.jpg'))
+  @include parallaxSetup(url('../../../public/ParallaxImages/ParallaxNecklaces.jpg'))
 }
 
 .watches {
-  @include parallaxSetup(url('../public/ParallaxImages/ParallaxWatch1.jpg'))
+  @include parallaxSetup(url('../../../public/ParallaxImages/ParallaxWatch1.jpg'))
 }
 
 .overflowDiv {
@@ -96,32 +96,4 @@ $headerTextShadow: 0px 2px 5px rgba(255, 255, 255, 1);
   color: rgba($color: floralwhite, $alpha: 0.80);
   letter-spacing: 1px;
   line-height: 30px;
-}
-
-// Categories content
-
-.container {
-  @include mixin.media(xs) {
-    margin-top: 50px;
-    margin-bottom: 25px;
-  }
-  position: relative;
-  margin-top: 100px;
-  margin-bottom: 50px;
-  .categorieName {
-    position: absolute;
-    left: 50%;
-    top: 0%;
-    transform: translate(-50%, -50%);
-    font: 300 24px 'Lora', serif;
-    text-transform: capitalize;
-    padding: 20px 10px;
-    background-color: white;
-  }
-  .firstDiv {
-    border-radius: 5px;
-    margin-bottom: 30px;
-    padding-top: 40px;
-    border: 4px double rgba(0, 0, 0, 0.25);
-  }
 }

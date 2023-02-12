@@ -1,0 +1,1 @@
+export { ShipmentTruck } from "./ShipmentTruck";

@@ -1,0 +1,194 @@
+@use '../styles/mediaMixin' as media;
+
+$productNameFontLg: 22px 'Lora', serif;
+$productNameFont: 20px 'Lora', serif;
+$productDescriptionFontLg: 16px 'Lora', serif;
+$productDescriptionFont: 12px 'Lora', serif;
+$headersLg: 18px 'Lora', serif;
+$headers: 14px 'Lora', serif;
+$subheadersLg: 14px 'Lora', serif;
+$subheaders: 12px 'Lora', serif;
+$bgCard: #ECEFF1;
+$boxShadow: 0 50px 100px -20px rgb(50 50 93 / 25%), 0 30px 60px -30px rgb(0 0 0 / 30%);
+
+.container {
+  @include media.media(lg) {
+    margin-top: 100px;
+    margin-bottom: 50px;
+  }
+
+  display: flex !important;
+  justify-content: center !important;
+  align-content: center !important;
+}
+
+.productCard {
+  @include media.media(md) {
+    width: 90%;
+  }
+
+  @include media.media(lg) {
+    width: 70%;
+  }
+
+  @include media.media(xs) {
+    border-left: 0;
+    border-top: 3px double rgba($color: gray, $alpha: 0.5);
+    ;
+  }
+
+  border-left: 3px double rgba($color: gray, $alpha: 0.5);
+  border-radius: 10px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  background-color: $bgCard;
+  box-shadow: $boxShadow;
+
+  .productInformationImage {
+    @include media.media(xs) {
+      display: flex;
+    }
+
+    @include media.media(sm) {
+      display: flex;
+    }
+
+    display: none;
+  }
+
+  .colImageWrapper {
+    @include media.media(xs) {
+      display: none;
+    }
+
+    @include media.media(sm) {
+      display: none;
+    }
+
+    @include media.media(md) {
+      padding-right: 40px;
+    }
+
+    @include media.media(lg) {
+      padding-right: 40px;
+    }
+  }
+
+  .checkoutSection {
+    @include media.media(xs) {
+      display: grid;
+      place-items: center;
+      font-size: 14px;
+    }
+
+    display: grid;
+    place-items: center;
+
+    .input {
+      @include media.media(xs) {
+        width: 50%;
+      }
+
+      width: 50%;
+      border: none;
+      border-bottom: 1px ridge #4469A0;
+      outline-color: azure;
+      background-color: rgba($color: azure, $alpha: 0.5);
+      padding: 10px 10px;
+      font-family: 'Unna',
+      serif;
+      font-style: italic;
+    }
+  }
+}
+
+.productName {
+  @include media.media(xs) {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  @include media.media(sm) {
+    text-align: center;
+  }
+
+  @include media.media(lg) {
+    font: $productNameFontLg;
+  }
+
+  font: $productNameFont;
+}
+
+.productInformationDescription {
+  @include media.media(xs) {
+    text-align: center;
+    font: $productDescriptionFont;
+  }
+
+  @include media.media(sm) {
+    text-align: center;
+  }
+
+  text-align: left;
+  margin-top: 20px;
+  color: rgba($color: black, $alpha: 0.75);
+  font: $productDescriptionFontLg;
+}
+
+.extraProductInfo {
+  .headers {
+    @include media.media(lg) {
+      font: $headersLg;
+    }
+
+    font: $headers;
+  }
+
+  .subheaders {
+    @include media.media(lg) {
+      font: $subheadersLg;
+    }
+
+    font: $subheaders;
+    margin-left: 20px;
+    margin-top: 2px;
+
+    .link-gold {
+      @include media.media(xs) {
+        font-size: 14px;
+      }
+
+      color: rgba($color: rgb(212, 187, 44), $alpha: 1);
+      text-decoration: none;
+      text-transform: capitalize;
+      font-size: 16px;
+      margin-top: 0px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .link-silver {
+      @include media.media(xs) {
+        font-size: 14px;
+      }
+
+      color: rgba($color: rgb(124, 122, 122), $alpha: 1);
+      text-decoration: none;
+      text-transform: capitalize;
+      font-size: 16px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.shipmentInformation {
+  font-family: 'Lora', serif;
+  margin-left: 10px;
+  opacity: 0.8;
+  line-height: 10px;
+}

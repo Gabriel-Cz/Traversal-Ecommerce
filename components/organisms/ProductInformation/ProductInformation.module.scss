@@ -1,0 +1,94 @@
+@use "@/styles/mediaMixin" as mixin;
+
+$productNameFontLg: 22px 'Lora', serif;
+$productNameFont: 20px 'Lora', serif;
+$productDescriptionFontLg: 16px 'Lora', serif;
+$productDescriptionFont: 12px 'Lora', serif;
+$headersLg: 18px 'Lora', serif;
+$headers: 14px 'Lora', serif;
+$subheadersLg: 14px 'Lora', serif;
+$subheaders: 12px 'Lora', serif;
+
+.productName {
+  @include mixin.media(xs) {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  @include mixin.media(sm) {
+    text-align: center;
+  }
+
+  @include mixin.media(lg) {
+    font: $productNameFontLg;
+  }
+
+  font: $productNameFont;
+}
+
+.productInformationDescription {
+  @include mixin.media(xs) {
+    text-align: center;
+    font: $productDescriptionFont;
+  }
+
+  @include mixin.media(sm) {
+    text-align: center;
+  }
+
+  text-align: left;
+  margin-top: 20px;
+  color: rgba($color: black, $alpha: 0.75);
+  font: $productDescriptionFontLg;
+}
+
+.extraProductInfo {
+  .headers {
+    @include mixin.media(lg) {
+      font: $headersLg;
+    }
+
+    font: $headers;
+  }
+
+  .subheaders {
+    @include mixin.media(lg) {
+      font: $subheadersLg;
+    }
+
+    font: $subheaders;
+    margin-left: 20px;
+    margin-top: 2px;
+
+    .link-gold {
+      @include mixin.media(xs) {
+        font-size: 14px;
+      }
+
+      color: rgba($color: rgb(212, 187, 44), $alpha: 1);
+      text-decoration: none;
+      text-transform: capitalize;
+      font-size: 16px;
+      margin-top: 0px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .link-silver {
+      @include mixin.media(xs) {
+        font-size: 14px;
+      }
+
+      color: rgba($color: rgb(124, 122, 122), $alpha: 1);
+      text-decoration: none;
+      text-transform: capitalize;
+      font-size: 16px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
