@@ -5,10 +5,10 @@
       "name": "Gold Light",
       "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
       "price": "$500.00",
-      "image": "https://traversal.vercel.app/ProductsImages/GoldEarring1.jpg",
+      "image": "/assets/ProductsImages/GoldEarring1.jpg",
       "rating": 4.5,
       "state": "trending",
-      "categorie": "earrings",
+      "category": "earrings",
       "element": "gold"
     }
   ,
@@ -18,10 +18,10 @@
       "name": "Gold Earrings With Diamonds",
       "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
       "price": "$559.00",
-      "image": "https://traversal.vercel.app/ProductsImages/GoldEarring2.jpg",
+      "image": "/assets/ProductsImages/GoldEarring2.jpg",
       "rating": 4.5,
       "state": "",
-      "categorie": "earrings",
+      "category": "earrings",
       "element": "gold"
     }
   ,
@@ -31,10 +31,10 @@
       "name": "Gold Ring",
       "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
       "price": "$349.00",
-      "image": "https://traversal.vercel.app/ProductsImages/GoldRing1.jpg",
+      "image": "/assets/ProductsImages/GoldRing1.jpg",
       "rating": 4.5,
       "state": "trending",
-      "categorie": "rings",
+      "category": "rings",
       "element": "gold"
     },
     {
@@ -43,10 +43,10 @@
       "name": "Greek Watch",
       "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
       "price": "$500.00",
-      "image": "https://traversal.vercel.app/ProductsImages/GoldWatch1.jpg",
+      "image": "/assets/ProductsImages/GoldWatch1.jpg",
       "rating": 4,
       "state": "trending",
-      "categorie": "watches",
+      "category": "watches",
       "element": "gold"
     },
     {
@@ -55,10 +55,10 @@
       "name": "White Stones Necklace",
       "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
       "price": "$500.00",
-      "image" : "https://traversal.vercel.app/ProductsImages/SilverNeck1.jpg",
+      "image" : "/assets/ProductsImages/SilverNeck1.jpg",
       "rating" : 4,
       "state": "dealOffer",
-      "categorie": "necklaces",
+      "category": "necklaces",
       "element": "silver"
     }
   ,
@@ -68,10 +68,10 @@
       "name": "Zhapire Silver light",
       "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
       "price": "$500.00",
-      "image": "https://traversal.vercel.app/ProductsImages/SilverNeck2.jpg",
+      "image": "/assets/ProductsImages/SilverNeck2.jpg",
       "rating": 4,
       "state": "dealOffer",
-      "categorie": "necklaces",
+      "category": "necklaces",
       "element": "silver"
     }
   ,
@@ -81,10 +81,10 @@
       "name": "Shapire Silver ring",
       "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
       "price": "$999.00",
-      "image": "https://traversal.vercel.app/ProductsImages/SilverRing1.jpg",
+      "image": "/assets/ProductsImages/SilverRing1.jpg",
       "rating": 4,
       "state": "",
-      "categorie": "rings",
+      "category": "rings",
       "element": "silver"
     }
   ,
@@ -94,10 +94,10 @@
       "name": "Diamond Heart Ring",
       "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
       "price": "$799.00",
-      "image": "https://traversal.vercel.app/ProductsImages/SilverRing3.jpg",
+      "image": "/assets/ProductsImages/SilverRing3.jpg",
       "rating": 5,
       "state": "",
-      "categorie": "rings",
+      "category": "rings",
       "element": "silver"
     }
   ,
@@ -107,10 +107,10 @@
       "name": "Consequatur Cutem ",
       "description" : "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",  
       "price": "$500.00",
-      "image": "https://traversal.vercel.app/ProductsImages/SilverWatch2.jpg",
+      "image": "/assets/ProductsImages/SilverWatch2.jpg",
       "rating": 3,
       "state": "",
-      "categorie": "watches",
+      "category": "watches",
       "element": "silver"
     }
 ]
