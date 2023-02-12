@@ -3,36 +3,47 @@ import Image from 'react-bootstrap/Image'
 import Card from 'react-bootstrap/Card'
 import styles from './ProductCard.module.scss'
 import Rating from 'react-rating'
-import { ProductCardOverlay } from '../ProductCardOverlay/ProductCardOverlay'
-import { ProductProps } from '@/types'
+import { ProductCardOverlay } from '@/components/molecules/ProductCardOverlay'
+import { ProductType } from '@/types'
+import useIsMobile from '@/utils/useIsMobile'
 
 interface ProductCardProps {
-	product: ProductProps
+	product: ProductType
 	isMobile?: boolean
 }
 
-export const ProductCard: React.FC<ProductCardProps> = ({ product, isMobile }) => {
+export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+	const isMobileView = useIsMobile();
 	return (
 		<Card className={styles.card}>
 			<div className={styles.topImage}>
 				<Image className={styles.cardImage} fluid src={product.image} />
-				<Card.Title className={styles.cardTitle}>{product.name}</Card.Title>
+				<Card.Title className={styles.cardTitle}>
+					{product.name}
+				</Card.Title>
 				<div className={styles.divOverflowCartWrapper}>
-					<ProductCardOverlay product={product} />
+					{!isMobileView && (
+						<ProductCardOverlay product={product} isMobile={isMobileView} />
+					)}
 				</div>
 			</div>
 			<Card.Body className={styles.cardBody}>
 				<div className={styles.cardPriceWrapper}>
-					<div className={styles.cardPrice}>{product.price}</div>
+					<div className={styles.cardPrice}>
+						{product.price}
+					</div>
 				</div>
 				<div>
 					<Card.Text className={styles.cardDescription}>{product.description}</Card.Text>
-					<ProductCardOverlay product={product} />
+					{isMobileView && (
+						<ProductCardOverlay product={product} isMobile={isMobileView} />
+					)}
 					<div className={styles.productRating}>
+						{/* @ts-ignore */}
 						<Rating
 							readonly
-							emptySymbol={<img src="../EmptyStar.png" className="icon" />}
-							fullSymbol={<img src="../FullStar.png" className="icon" />}
+							emptySymbol={<img src="/assets/EmptyStar.png" className="icon" />}
+							fullSymbol={<img src="/assets/FullStar.png" className="icon" />}
 							initialRating={product.rating}
 						/>
 					</div>

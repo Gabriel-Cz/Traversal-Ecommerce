@@ -23,11 +23,12 @@ export const CustomerReview: React.FC<CustomerReviewProps> = ({
 				<Card.Text bsPrefix={styles.cardTextReview} className="mt-4 px-4">
 					{review.description}
 				</Card.Text>
+				{/* @ts-ignore */}
 				<Rating
 					initialRating={review.rating}
 					readonly
-					emptySymbol={<img src="./EmptyStar.png" className="icon" />}
-					fullSymbol={<img src="./FullStar.png" className="icon" />}
+					emptySymbol={<img src="/assets/EmptyStar.png" className="icon" />}
+					fullSymbol={<img src="/assets/FullStar.png" className="icon" />}
 				/>
 			</Card.Body>
 			<Card.Footer bsPrefix={styles.cardFooter}>

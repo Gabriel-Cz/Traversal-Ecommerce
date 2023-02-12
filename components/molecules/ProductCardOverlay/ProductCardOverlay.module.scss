@@ -21,10 +21,6 @@
     align-items: center;
     margin-bottom: 10px;
   }
-
-  @include media.media(lg) {
-    display: none;
-  }
 }
 
 .detailsLink {

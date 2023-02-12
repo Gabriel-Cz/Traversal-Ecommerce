@@ -32,7 +32,7 @@ export const ProductCardOverlay: React.FC<ProductCardOverlayProps> = ({ product,
           </div>
         </div>
         <div className="text-center mx-2">
-          <Link href={'/products/' + `${product.id}`} passHref>
+          <Link href={`/products/${product.id}`} passHref>
             <a className={styles.detailsLink}>
               Product Details
             </a>
