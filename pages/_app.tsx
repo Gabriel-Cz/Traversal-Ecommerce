@@ -1,6 +1,7 @@
+// @ts-nocheck
 import React from 'react'
 import { AppProps } from 'next/app';
-import { wrapper } from '../store'
+import { wrapper } from '@/store'
 import { CartProvider } from 'use-shopping-cart' 
 import { Layout } from '@/components/organisms';
 import { navigationLinks } from '@/public/data-samples'

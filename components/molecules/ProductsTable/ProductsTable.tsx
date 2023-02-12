@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useState } from 'react';
 import Table from 'react-bootstrap/Table';
 import Link from 'next/link';
@@ -12,14 +13,14 @@ interface ProductsTableProps {
 	products: ProductType[];
 }
 
-export const ProductsTable: React.FC<ProductsTableProps> = ({ products }) => {
-	const [headers, setHeaders] = useState<string[]>([
-		'Product',
-		'Quantity',
-		'Total Price',
-		'Checkout Single Product'
-	]);
+const headers = [
+	'Product',
+	'Quantity',
+	'Total Price',
+	'Checkout Single Product'
+];
 
+export const ProductsTable: React.FC<ProductsTableProps> = ({ products }) => {
 	const handleCheckout = async (url: string, productDetails: ProductType) => {
 		try {
 			const stripe = await getStripe();

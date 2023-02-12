@@ -13,7 +13,7 @@ export type BaseNavLinkType = {
 	image: string;
 }
 
-const MessageVariant = {
+export const MessageVariant = {
   error: "red",
 	success: "green"
 } as const

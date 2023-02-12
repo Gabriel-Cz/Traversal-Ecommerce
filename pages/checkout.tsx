@@ -2,9 +2,9 @@ import { CheckoutMessage } from '@/components/atoms';
 import { Container } from 'react-bootstrap';
 import { navigationLinks } from '@/public/data-samples';
 import { NavigationThumbnails } from '@/components/molecules';
-import { MessageVariant } from '@/types';
 import type { NextPage, GetServerSideProps } from 'next';
-import styles from './Products.module.scss';
+import { MessageVariant } from '@/types';
+import styles from '../styles/Product.module.scss';
 
 interface CheckoutProps {
 	message: string;
