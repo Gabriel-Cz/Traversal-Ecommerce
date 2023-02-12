@@ -15,7 +15,7 @@ export const RemoveProductButton: React.FC<RemoveProductButton> = ({
 	return (
 		<button
 			onClick={() => removeItem(productSku)}
-			className={[styles.removeProductButton, className].join(' ')}
+			className={[styles.remove, className].join(' ')}
 			{...rest}
 		>
 			Remove

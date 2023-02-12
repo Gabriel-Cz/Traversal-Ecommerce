@@ -24,7 +24,8 @@ export const AddToCartButton: React.FC<AddToCartButtonProps> = ({
 	}
 	return (
 		<button
-			className={[styles.addToCartButton, className].join(' ')}
+			className={[styles.add, className].join(' ')}
+			type="button"
 			onClick={() => addItemAndShowToast(product)}
 			{...rest}
 		>

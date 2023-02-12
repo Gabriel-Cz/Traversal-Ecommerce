@@ -30,6 +30,8 @@ $base-Shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	border: none;
 	opacity: $base-opacity;
 	padding: $base-padding;
+	text-transform: uppercase;
+	font-size: 14px;
 	box-shadow: $base-Shadow;
 	transition: 0.5s ease-in-out;
 	letter-spacing: 1px;
@@ -113,6 +115,7 @@ $base-Shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 .checkout {
 	@extend .default;
 	@include buttonColor(floralwhite, #7CB342);
+	box-shadow: none;
 }
 
 .cart {

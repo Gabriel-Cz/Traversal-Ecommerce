@@ -7,10 +7,10 @@ export const CartButton: React.FC = () => {
   return (
     <Link href="/cart" passHref>
       <a>
-        <button className={styles.cartButton}>
+        <button className={styles.cart}>
           <span className="d-flex">
             <h4>
-              <i className="bi bi-cart2"></i>
+              <i className="bi bi-cart2" />
             </h4>
             <h6>{cartCount}</h6>
           </span>

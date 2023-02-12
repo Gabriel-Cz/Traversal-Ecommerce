@@ -1,11 +1,11 @@
 import React from 'react';
-import { ButtonBaseProps, ProductProps } from '@/types';
+import { ButtonBaseType, ProductType } from '@/types';
 import styles from './Buttons.module.scss';
 
-interface CheckoutButtonProps extends ButtonBaseProps {
-  product: ProductProps;
+interface CheckoutButtonProps extends ButtonBaseType {
+  product: ProductType;
   url?: string;
-  onCheckout: (url: string, product: ProductProps) => void;
+  onCheckout: (url: string, product: ProductType) => void;
 }
 
 export const CheckoutButton: React.FC<CheckoutButtonProps> = ({
@@ -15,13 +15,13 @@ export const CheckoutButton: React.FC<CheckoutButtonProps> = ({
 	className,
 	...rest
 }) => {
-	const setProductAndQuantity = (url: string, product: ProductProps) => {
+	const setProductAndQuantity = (url: string, product: ProductType) => {
 		!product.quantity ? product.quantity = 1 : product.quantity = product.quantity;
 		return onCheckout(url, product);
 	}
 	return(
 		<button
-      className={[styles.checkoutButton, className].join(' ')}
+      className={[styles.checkout, className].join(' ')}
       onClick={() => setProductAndQuantity(url, product)}
       role="link"
 			{...rest}

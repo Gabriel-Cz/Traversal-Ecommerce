@@ -9,7 +9,7 @@ export const ClearCartButton: React.FC<ClearCartButtonProps> = ({ className, ...
 	return (
 		<button
 			onClick={() => clearCart()}
-			className={[styles.clearCartButton, className].join(' ')}
+			className={[styles.clear, className].join(' ')}
 			{...rest}
 		>
 			Clear Cart

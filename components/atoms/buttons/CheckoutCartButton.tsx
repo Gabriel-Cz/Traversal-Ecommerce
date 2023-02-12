@@ -18,7 +18,7 @@ export const CheckoutCartButton: React.FC<CheckoutcartButtonProps> = ({
 		<button
       onClick={() => onCheckout(url, cartDetails)}
       role="link"
-      className={[styles.checkoutCartButton, className].join(' ')}
+      className={[styles.checkout, className].join(' ')}
       {...rest}
     >
 			Checkout Cart
