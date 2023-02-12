@@ -29,9 +29,10 @@ export const CategoryContent: React.FC<CategoryContentProps> = ({
 								key={product.id}
 								className="my-4 mx-xl-2"
 								xs={11}
-								sm={6}
-								md={4}
-								xl={{ span: 2, offset: 2 }}
+								sm={{ span: 12 }}
+								md={{ span: 5 }}
+								lg={{ span: 4 }}
+								xl={{ span: 3 }}
 							>
 								<ProductCard product={{ ...product }} />
 							</Col>

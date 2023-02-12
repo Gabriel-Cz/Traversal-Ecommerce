@@ -24,14 +24,15 @@ export const ElementContent: React.FC<ElementContentProps> = ({ filteredProducts
 				<div className={styles[`firstDiv-${elementName}`]}>
 					<div className={styles.secondDiv}>
 						<Row className="justify-content-center align-items-center">
-							{filteredProducts.map(product => (
+							{filteredProducts[0] && filteredProducts.map(product => (
 								<Col
 									className="my-4 mx-xl-2"
 									key={product.id}
 									xs={11}
-									sm={6}
-									md={6}
-									xl={{ span: 2, offset: 2 }}
+									sm={{ span: 12 }}
+									md={{ span: 5 }}
+									lg={{ span: 4 }}
+									xl={{ span: 3 }}
 								>
 									<ProductCard product={product} />
 								</Col>

@@ -14,10 +14,12 @@ interface TrendingProductsProps {
 export const TrendingSection: React.FC<TrendingProductsProps> = ({ trendingProducts }) => {
   return (
     <Container className={styles.container}>
-      <span className={styles.trendingHeader}>Trending</span>
+      <span className={styles.trendingHeader}>
+        Trending
+      </span>
       <div className={styles.contentForLargeScreen}>
         <Row className={styles.borderTrendingRow}>
-          {trendingProducts.map(product => (
+          {trendingProducts[0] && trendingProducts.map(product => (
             <Col md={4}>
               <ProductCard product={product} />
             </Col>
@@ -26,7 +28,7 @@ export const TrendingSection: React.FC<TrendingProductsProps> = ({ trendingProdu
       </div>
       <div className={styles.mobileCarousel}>
         <Carousel className="mt-5" fade={true}>
-          {trendingProducts.map(product => (
+          {trendingProducts[0] && trendingProducts.map(product => (
             <Carousel.Item key={product.id}>
               <Row className="d-flex justify-content-center pb-2 pb-sm-0 mx-2 mx-sm-0">
                 <Col xs={12} sm={8} style={{ height: "100%" }}>

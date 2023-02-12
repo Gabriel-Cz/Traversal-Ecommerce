@@ -58,7 +58,7 @@ export const ElementsSection: React.FC<ElementsSectionProps> = ({ products }) =>
 				</Col>
 				<Col xs={12} lg={5}>
 					<BlockLink to="/elements/silver">
-						<Image fluid className={styles.image} src="/SilverImage.jpg" />
+						<Image fluid className={styles.image} src="/assets/SilverImage.jpg" />
 						<OverlayInfo>
 							See the latest deals in
 							<b className={styles.silverSentence}>Silver</b> Jewellery
@@ -69,7 +69,7 @@ export const ElementsSection: React.FC<ElementsSectionProps> = ({ products }) =>
 			<Row className="d-flex justify-content-center align-items-center py-4 py-1-sm">
 				<Col xs={12} lg={5}>
 					<BlockLink to="/elements/gold">
-						<Image fluid className={styles.image} src="/GoldImage.jpg" />
+						<Image fluid className={styles.image} src="/assets/GoldImage.jpg" />
 						<OverlayInfo>
 							See the latest deals in
 							<b className={styles.goldSentence}>Gold</b> Jewellery

@@ -18,10 +18,9 @@ const Shape: React.FC = () => {
 
 interface CategoryHeaderProps {
   categoryName: string;
-  subHeader: string;
 }
 
-export const CategoryHeader: React.FC<CategoryHeaderProps> = ({ categoryName, subHeader }) => {
+export const CategoryHeader: React.FC<CategoryHeaderProps> = ({ categoryName }) => {
   return (
     <Container fluid className={styles[`${categoryName}`]}>
       <Shape />
@@ -29,7 +28,9 @@ export const CategoryHeader: React.FC<CategoryHeaderProps> = ({ categoryName, su
       <Row className="justify-content-center py-2 pt-5">
         <Col xs={10} md={3}>
           <div className="text-center mt-5">
-            <h1 className={styles.header}>{categoryName}</h1>
+            <h1 className={styles.header}>
+              {categoryName}
+            </h1>
           </div>
         </Col>
       </Row>
@@ -37,8 +38,7 @@ export const CategoryHeader: React.FC<CategoryHeaderProps> = ({ categoryName, su
         <Col xs={10} sm={12} md={6}>
           <div className="text-center">
             <p className={styles.subHeader}>
-              {subHeader}
-              Oustragious and Pure {categoryName}. It's going to make you of your look, a one to remember.
+              Oustragious {categoryName}. To make of your look, a one to remember.
             </p>
           </div>
         </Col>
